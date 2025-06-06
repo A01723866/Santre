@@ -1,0 +1,551 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Nuestros Clientes - Proyectos Realizados | Santre Industrial"
+  description="Clientes y proyectos de Santre Industrial: UNAM, ITESM, UDEM, UANL, Grupo México, John Deere, Bimbo, Sigma, Cemex. Más de 3,000 proyectos exitosos en 30 años."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-20 bg-gradient-to-br from-cyan-50 via-white to-indigo-50 py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="text-cyan-600 font-semibold text-sm uppercase tracking-wide mb-4">
+            Confianza y Resultados
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Nuestros <span class="text-cyan-600">Clientes</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Más de 3,000 proyectos exitosos en 30 años respaldados por las instituciones 
+            y empresas más prestigiosas de México y Latinoamérica.
+          </p>
+        </div>
+
+        <!-- Estadísticas principales -->
+        <div class="grid md:grid-cols-4 gap-8 mb-16">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-cyan-600 mb-2">3,000+</div>
+            <div class="text-gray-700 font-medium">Proyectos Completados</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-cyan-600 mb-2">30</div>
+            <div class="text-gray-700 font-medium">Años de Experiencia</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-cyan-600 mb-2">100%</div>
+            <div class="text-gray-700 font-medium">Satisfacción</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-cyan-600 mb-2">6</div>
+            <div class="text-gray-700 font-medium">Sectores Industriales</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clientes Principales -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Clientes que Confían en Nosotros
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Trabajamos con las organizaciones más prestigiosas de México y Latinoamérica
+          </p>
+        </div>
+
+        <!-- Logos de clientes por sector -->
+        <div class="space-y-16">
+          <!-- Sector Académico -->
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Sector Académico</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-2xl font-bold text-red-600 mb-2">UNAM</div>
+                <div class="text-xs text-gray-600">Universidad Nacional</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-2xl font-bold text-blue-600 mb-2">ITESM</div>
+                <div class="text-xs text-gray-600">Tecnológico de Monterrey</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-2xl font-bold text-green-600 mb-2">UDEM</div>
+                <div class="text-xs text-gray-600">Universidad de Monterrey</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-2xl font-bold text-orange-600 mb-2">UANL</div>
+                <div class="text-xs text-gray-600">Univ. Autónoma de NL</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-2xl font-bold text-purple-600 mb-2">IPN</div>
+                <div class="text-xs text-gray-600">Instituto Politécnico</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-2xl font-bold text-indigo-600 mb-2">UAM</div>
+                <div class="text-xs text-gray-600">Univ. Autónoma Metro</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sector Industrial -->
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Sector Industrial</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-red-700 mb-2">Grupo México</div>
+                <div class="text-xs text-gray-600">Minería</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-green-700 mb-2">John Deere</div>
+                <div class="text-xs text-gray-600">Maquinaria</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-orange-700 mb-2">Bimbo</div>
+                <div class="text-xs text-gray-600">Alimentaria</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-blue-700 mb-2">Sigma</div>
+                <div class="text-xs text-gray-600">Alimentos</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-gray-700 mb-2">Cemex</div>
+                <div class="text-xs text-gray-600">Construcción</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sector Salud -->
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Sector Salud</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-teal-700 mb-2">Tec Salud</div>
+                <div class="text-xs text-gray-600">Hospital Tecnológico</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-red-700 mb-2">IMSS</div>
+                <div class="text-xs text-gray-600">Inst. Mexicano S.S.</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-blue-700 mb-2">ISSSTE</div>
+                <div class="text-xs text-gray-600">Inst. Seg. Social</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-green-700 mb-2">Hospital ABC</div>
+                <div class="text-xs text-gray-600">Hospital Privado</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sector Investigación -->
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Centros de Investigación</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-yellow-700 mb-2">CIMMYT</div>
+                <div class="text-xs text-gray-600">Centro Internacional Maíz</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-purple-700 mb-2">CONACYT</div>
+                <div class="text-xs text-gray-600">Consejo Nacional C&T</div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <div class="text-xl font-bold text-indigo-700 mb-2">CINVESTAV</div>
+                <div class="text-xs text-gray-600">Centro de Investigación</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Proyectos Destacados
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Algunos de nuestros proyectos más significativos que demuestran nuestra capacidad y experiencia
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Proyecto UNAM -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="bg-gradient-to-br from-red-500 to-red-600 h-48 flex items-center justify-center">
+              <div class="text-white text-center">
+                <div class="text-4xl font-bold mb-2">UNAM</div>
+                <div class="text-lg">Campus Ciudad Universitaria</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Laboratorios de Química</h3>
+              <p class="text-gray-600 mb-4">
+                Modernización completa de 12 laboratorios de química con capacidad para 480 estudiantes.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex justify-between">
+                  <span>Año:</span>
+                  <span class="font-medium">2023</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Superficie:</span>
+                  <span class="font-medium">2,400 m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Duración:</span>
+                  <span class="font-medium">8 meses</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto ITESM -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+              <div class="text-white text-center">
+                <div class="text-4xl font-bold mb-2">ITESM</div>
+                <div class="text-lg">Campus Monterrey</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Centro de Biotecnología</h3>
+              <p class="text-gray-600 mb-4">
+                Laboratorios especializados en biotecnología con sistemas de bioseguridad nivel 2.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex justify-between">
+                  <span>Año:</span>
+                  <span class="font-medium">2022</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Superficie:</span>
+                  <span class="font-medium">1,800 m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Duración:</span>
+                  <span class="font-medium">6 meses</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto Grupo México -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
+              <div class="text-white text-center">
+                <div class="text-3xl font-bold mb-2">Grupo México</div>
+                <div class="text-lg">Planta Cananea</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Laboratorio Minero</h3>
+              <p class="text-gray-600 mb-4">
+                Laboratorio de análisis de minerales con resistencia química extrema y sistemas de extracción.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex justify-between">
+                  <span>Año:</span>
+                  <span class="font-medium">2023</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Superficie:</span>
+                  <span class="font-medium">1,200 m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Duración:</span>
+                  <span class="font-medium">4 meses</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto John Deere -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
+              <div class="text-white text-center">
+                <div class="text-3xl font-bold mb-2">John Deere</div>
+                <div class="text-lg">Planta Saltillo</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Lab. Control de Calidad</h3>
+              <p class="text-gray-600 mb-4">
+                Laboratorio para pruebas de materiales y control de calidad de componentes automotrices.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex justify-between">
+                  <span>Año:</span>
+                  <span class="font-medium">2022</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Superficie:</span>
+                  <span class="font-medium">900 m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Duración:</span>
+                  <span class="font-medium">3 meses</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto Bimbo -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="bg-gradient-to-br from-yellow-500 to-orange-500 h-48 flex items-center justify-center">
+              <div class="text-white text-center">
+                <div class="text-4xl font-bold mb-2">Bimbo</div>
+                <div class="text-lg">Centro I+D</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Lab. Desarrollo de Productos</h3>
+              <p class="text-gray-600 mb-4">
+                Laboratorios para desarrollo e innovación de productos alimentarios con estándares HACCP.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex justify-between">
+                  <span>Año:</span>
+                  <span class="font-medium">2023</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Superficie:</span>
+                  <span class="font-medium">1,500 m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Duración:</span>
+                  <span class="font-medium">5 meses</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto Tec Salud -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="bg-gradient-to-br from-teal-500 to-teal-600 h-48 flex items-center justify-center">
+              <div class="text-white text-center">
+                <div class="text-3xl font-bold mb-2">Tec Salud</div>
+                <div class="text-lg">Hospital San José</div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Laboratorio Clínico</h3>
+              <p class="text-gray-600 mb-4">
+                Laboratorio clínico de alta complejidad con áreas de microbiología, hematología y química.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex justify-between">
+                  <span>Año:</span>
+                  <span class="font-medium">2024</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Superficie:</span>
+                  <span class="font-medium">800 m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Duración:</span>
+                  <span class="font-medium">4 meses</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Lo que Dicen Nuestros Clientes
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Testimonios reales de clientes satisfechos con nuestros proyectos
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonio 1 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                <span class="text-red-600 font-bold text-lg">UN</span>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Dr. Carlos Méndez</div>
+                <div class="text-sm text-gray-600">Director de Laboratorios - UNAM</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Santre Industrial superó nuestras expectativas. El Sistema de las 7 Zonas 
+              optimizó completamente nuestros flujos de trabajo. Excelente calidad y servicio."
+            </p>
+            <div class="flex text-yellow-400 mt-4">
+              <span>★★★★★</span>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                <span class="text-blue-600 font-bold text-lg">IT</span>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Ing. Ana Rodríguez</div>
+                <div class="text-sm text-gray-600">Jefe de Proyecto - ITESM</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "La visualización 3D nos permitió ver exactamente cómo quedaría nuestro laboratorio. 
+              El resultado final fue idéntico a lo prometido. Profesionales de primer nivel."
+            </p>
+            <div class="flex text-yellow-400 mt-4">
+              <span>★★★★★</span>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                <span class="text-orange-600 font-bold text-lg">GM</span>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Lic. Roberto Silva</div>
+                <div class="text-sm text-gray-600">Gerente de Operaciones - Grupo México</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Los materiales son de una calidad excepcional. Después de 3 años de uso intensivo, 
+              el mobiliario se ve como nuevo. La inversión valió cada peso."
+            </p>
+            <div class="flex text-yellow-400 mt-4">
+              <span>★★★★★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Distribución por Sectores -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Distribución de Proyectos por Sector
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Experiencia diversificada en múltiples sectores industriales
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Sector Académico -->
+          <div class="bg-white rounded-xl p-6 text-center">
+            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sector Académico</h3>
+            <div class="text-3xl font-bold text-blue-600 mb-2">45%</div>
+            <p class="text-gray-600">1,350+ proyectos en universidades e instituciones educativas</p>
+          </div>
+
+          <!-- Sector Industrial -->
+          <div class="bg-white rounded-xl p-6 text-center">
+            <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sector Industrial</h3>
+            <div class="text-3xl font-bold text-orange-600 mb-2">25%</div>
+            <p class="text-gray-600">750+ proyectos en empresas manufactureras y mineras</p>
+          </div>
+
+          <!-- Sector Salud -->
+          <div class="bg-white rounded-xl p-6 text-center">
+            <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sector Salud</h3>
+            <div class="text-3xl font-bold text-red-600 mb-2">15%</div>
+            <p class="text-gray-600">450+ proyectos en hospitales y laboratorios clínicos</p>
+          </div>
+
+          <!-- Sector Farmacéutico -->
+          <div class="bg-white rounded-xl p-6 text-center">
+            <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2h3a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1h3z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sector Farmacéutico</h3>
+            <div class="text-3xl font-bold text-purple-600 mb-2">10%</div>
+            <p class="text-gray-600">300+ proyectos en laboratorios farmacéuticos</p>
+          </div>
+
+          <!-- Sector Alimentario -->
+          <div class="bg-white rounded-xl p-6 text-center">
+            <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zM3 9a2 2 0 002-2V5a2 2 0 012-2h10a2 2 0 012 2v2a2 2 0 002 2v0a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sector Alimentario</h3>
+            <div class="text-3xl font-bold text-yellow-600 mb-2">3%</div>
+            <p class="text-gray-600">90+ proyectos en laboratorios de análisis alimentario</p>
+          </div>
+
+          <!-- Sector Ambiental -->
+          <div class="bg-white rounded-xl p-6 text-center">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sector Ambiental</h3>
+            <div class="text-3xl font-bold text-green-600 mb-2">2%</div>
+            <p class="text-gray-600">60+ proyectos en laboratorios ambientales</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-r from-cyan-600 to-indigo-600 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Únete a Nuestros Clientes Satisfechos
+        </h2>
+        <p class="text-xl text-cyan-100 mb-8">
+          Más de 3,000 proyectos exitosos nos respaldan. Descubre por qué las mejores 
+          instituciones confían en Santre Industrial para sus laboratorios.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contacto" class="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
+            Solicitar Cotización
+          </a>
+          <a href="/diseno-de-laboratorio" class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            Ver Nuestro Proceso
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout> 

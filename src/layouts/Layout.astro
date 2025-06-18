@@ -13,28 +13,72 @@ const { title, description = "Santre Industrial - Especialistas en mobiliario y 
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<!-- Favicon - Using Santre Logo -->
+		<link rel="icon" type="image/x-icon" href="/Logo Santre.jpeg" />
+		<link rel="apple-touch-icon" href="/Logo Santre.jpeg" />
+		
 		<meta name="generator" content={Astro.generator} />
 		
-		<!-- SEO Meta Tags -->
-		<meta name="keywords" content="laboratorios, mobiliario laboratorio, mesas laboratorio, campanas humo, equipamiento laboratorio, Santre, México" />
+		<!-- Enhanced SEO Meta Tags -->
+		<meta name="keywords" content="laboratorios, mobiliario laboratorio, mesas laboratorio, campanas humo, equipamiento laboratorio, Santre Industrial, México, Sistema 7 Zonas, acero inoxidable, ISO 9001" />
 		<meta name="author" content="Santre Industrial" />
+		<meta name="robots" content="index, follow" />
+		<meta name="language" content="Spanish" />
+		<meta name="geo.region" content="MX" />
+		<meta name="geo.country" content="México" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://santre.com/" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/Santre Expanded.png" />
+		<meta property="og:site_name" content="Santre Industrial" />
+		<meta property="og:locale" content="es_MX" />
 		
-		<!-- Fonts -->
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://santre.com/" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="/Santre Expanded.png" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://santre.com/" />
+		
+		<!-- Fonts - Inter for professional look -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		
+		<!-- Schema.org structured data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Santre Industrial",
+			"description": "Especialistas en diseño, fabricación e instalación de mobiliario para laboratorios",
+			"url": "https://santre.com",
+			"logo": "https://santre.com/Santre Expanded.png",
+			"foundingDate": "1994",
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "MX"
+			},
+			"sameAs": [
+				"https://www.linkedin.com/company/santre-industrial"
+			]
+		}
+		</script>
 		
 		<title>{title}</title>
 	</head>
-	<body class="font-sans bg-white text-gray-900">
+	<body class="font-sans">
 		<slot />
 		<style>
 			html {
-				font-family: 'Inter', system-ui, sans-serif;
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 				scroll-behavior: smooth;
 			}
 		</style>

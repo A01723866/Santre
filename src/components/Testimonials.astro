@@ -1,0 +1,421 @@
+---
+// Testimonials component - now using external files for better organization
+---
+
+<!-- Testimonials Section -->
+<section id="testimonios" class="py-24 bg-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Lo que dicen nuestros clientes
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        La confianza de más de 150 laboratorios respalda nuestra experiencia y compromiso con la excelencia
+      </p>
+    </div>
+
+    <!-- Gallery Style Testimonials Container -->
+    <div class="testimonials-wrapper">
+      <div class="testimonials-container" id="testimonials-container">
+        
+        <!-- Navigation Controls -->
+        <button id="prev-testimonial" class="control-btn prev-btn" aria-label="Testimonial anterior">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button id="next-testimonial" class="control-btn next-btn" aria-label="Siguiente testimonial">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+        <!-- Testimonial Cards Gallery -->
+        <div class="testimonials-gallery">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card active" data-index="0">
+            <div class="testimonial-content">
+              <div class="testimonial-image">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face&q=80" alt="Dr. María González" loading="lazy">
+              </div>
+              <div class="testimonial-text">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Santre transformó completamente nuestro laboratorio. Su sistema de 7 zonas optimizó nuestro flujo de trabajo de manera extraordinaria."</p>
+                <div class="author">
+                  <h4>Dr. María González</h4>
+                  <p>Directora de Laboratorio</p>
+                  <p class="company">Hospital General de México</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card" data-index="1">
+            <div class="testimonial-content">
+              <div class="testimonial-image">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face&q=80" alt="Ing. Carlos Mendoza" loading="lazy">
+              </div>
+              <div class="testimonial-text">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"La calidad de fabricación y la atención al detalle de Santre es incomparable. Llevamos 5 años trabajando con ellos."</p>
+                <div class="author">
+                  <h4>Ing. Carlos Mendoza</h4>
+                  <p>Jefe de Operaciones</p>
+                  <p class="company">Laboratorios Farmacéuticos Unidos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card" data-index="2">
+            <div class="testimonial-content">
+              <div class="testimonial-image">
+                <img src="https://images.unsplash.com/photo-1594824388853-d0c9c7d8e7c9?w=300&h=300&fit=crop&crop=face&q=80" alt="Dra. Ana Patricia Ruiz" loading="lazy">
+              </div>
+              <div class="testimonial-text">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"El diseño modular nos permitió adaptar el laboratorio conforme crecía nuestro equipo. Excelente inversión a largo plazo."</p>
+                <div class="author">
+                  <h4>Dra. Ana Patricia Ruiz</h4>
+                  <p>Coordinadora de Investigación</p>
+                  <p class="company">Instituto de Biotecnología UNAM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card" data-index="3">
+            <div class="testimonial-content">
+              <div class="testimonial-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&q=80" alt="Dr. Roberto Hernández" loading="lazy">
+              </div>
+              <div class="testimonial-text">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Desde la instalación hasta el seguimiento post-venta, el servicio de Santre ha sido excepcional. Altamente recomendado."</p>
+                <div class="author">
+                  <h4>Dr. Roberto Hernández</h4>
+                  <p>Director Técnico</p>
+                  <p class="company">Laboratorio de Análisis Clínicos San José</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card" data-index="4">
+            <div class="testimonial-content">
+              <div class="testimonial-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face&q=80" alt="Lic. Patricia Morales" loading="lazy">
+              </div>
+              <div class="testimonial-text">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"La garantía de por vida y la calidad de los materiales nos dieron la confianza para elegir Santre. No nos hemos arrepentido."</p>
+                <div class="author">
+                  <h4>Lic. Patricia Morales</h4>
+                  <p>Gerente de Compras</p>
+                  <p class="company">Grupo Hospitalario del Bajío</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card" data-index="5">
+            <div class="testimonial-content">
+              <div class="testimonial-image">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face&q=80" alt="Dr. Miguel Ángel Torres" loading="lazy">
+              </div>
+              <div class="testimonial-text">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"El proceso de diseño colaborativo nos permitió crear exactamente lo que necesitábamos. Profesionalismo en cada etapa."</p>
+                <div class="author">
+                  <h4>Dr. Miguel Ángel Torres</h4>
+                  <p>Jefe de Laboratorio</p>
+                  <p class="company">Centro de Investigación Médica Avanzada</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Scroll Indicator (mobile) -->
+        <div class="scroll-indicator">
+          <span>Desliza para ver más</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dots Navigation -->
+      <div class="testimonials-dots" id="testimonials-dots">
+        <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
+        <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
+        <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
+        <button class="dot" data-index="3" aria-label="Testimonial 4"></button>
+        <button class="dot" data-index="4" aria-label="Testimonial 5"></button>
+        <button class="dot" data-index="5" aria-label="Testimonial 6"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Import external CSS -->
+<style>
+  @import '../styles/testimonials.css';
+</style>
+
+<!-- Testimonials functionality script -->
+<script>
+// Testimonials Gallery functionality
+class TestimonialsGallery {
+  constructor() {
+    this.currentIndex = 0;
+    this.isTransitioning = false;
+    this.autoplayInterval = undefined;
+    
+    // DOM elements
+    this.cards = document.querySelectorAll('.testimonial-card');
+    this.dots = document.querySelectorAll('.dot');
+    this.prevBtn = document.getElementById('prev-testimonial');
+    this.nextBtn = document.getElementById('next-testimonial');
+    this.container = document.getElementById('testimonials-container');
+    this.gallery = document.querySelector('.testimonials-gallery');
+    
+    // Gallery settings
+    this.cardWidth = 320;
+    this.gap = 32; // 2rem = 32px
+    this.itemWidth = this.cardWidth + this.gap;
+    
+    this.calculateDimensions();
+  }
+
+  calculateDimensions() {
+    if (!this.cards.length || !this.gallery) return;
+    
+    const firstCard = this.cards[0];
+    const style = window.getComputedStyle(firstCard);
+    this.cardWidth = parseInt(style.width);
+    
+    const galleryStyle = window.getComputedStyle(this.gallery);
+    this.gap = parseInt(galleryStyle.gap);
+    this.itemWidth = this.cardWidth + this.gap;
+  }
+
+  // Update active testimonial and center it
+  updateTestimonials(smooth = true) {
+    if (!this.gallery) return;
+    
+    if (smooth) {
+      this.isTransitioning = true;
+    }
+    
+    // Update cards
+    this.cards.forEach((card, index) => {
+      card.classList.toggle('active', index === this.currentIndex);
+    });
+    
+    // Update dots
+    this.dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === this.currentIndex);
+    });
+
+    // Calculate scroll position to center the active card
+    const containerWidth = this.container.clientWidth;
+    const activeCardOffset = this.currentIndex * this.itemWidth;
+    const centerOffset = (containerWidth - this.cardWidth) / 2;
+    const scrollPosition = Math.max(0, activeCardOffset - centerOffset);
+    
+    // Apply transform to gallery with faster transition
+    if (smooth) {
+      this.gallery.style.transition = 'transform 0.3s ease-out';
+    } else {
+      this.gallery.style.transition = 'none';
+    }
+    
+    this.gallery.style.transform = `translateX(-${scrollPosition}px)`;
+    
+    // Update navigation buttons
+    this.updateNavigationButtons();
+    
+    if (smooth) {
+      setTimeout(() => {
+        this.isTransitioning = false;
+      }, 300);
+    }
+  }
+
+  updateNavigationButtons() {
+    if (this.prevBtn && this.nextBtn) {
+      const isAtStart = this.currentIndex === 0;
+      const isAtEnd = this.currentIndex === this.cards.length - 1;
+      
+      this.prevBtn.disabled = isAtStart;
+      this.nextBtn.disabled = isAtEnd;
+      
+      this.prevBtn.style.opacity = isAtStart ? '0.4' : '1';
+      this.nextBtn.style.opacity = isAtEnd ? '0.4' : '1';
+    }
+  }
+
+  // Navigation functions
+  nextTestimonial() {
+    if (this.currentIndex < this.cards.length - 1 && !this.isTransitioning) {
+      this.currentIndex++;
+      this.updateTestimonials();
+    }
+  }
+  
+  prevTestimonial() {
+    if (this.currentIndex > 0 && !this.isTransitioning) {
+      this.currentIndex--;
+      this.updateTestimonials();
+    }
+  }
+
+  goToTestimonial(index) {
+    if (index !== this.currentIndex && !this.isTransitioning && index >= 0 && index < this.cards.length) {
+      this.currentIndex = index;
+      this.updateTestimonials();
+    }
+  }
+
+  // Auto-play functionality
+  startAutoplay() {
+    this.autoplayInterval = setInterval(() => {
+      if (this.currentIndex >= this.cards.length - 1) {
+        this.currentIndex = 0;
+      } else {
+        this.currentIndex++;
+      }
+      this.updateTestimonials();
+    }, 5000);
+  }
+
+  stopAutoplay() {
+    if (this.autoplayInterval) {
+      clearInterval(this.autoplayInterval);
+    }
+  }
+
+  restartAutoplay() {
+    this.stopAutoplay();
+    this.startAutoplay();
+  }
+
+
+
+
+
+  // Event handlers
+  setupEventListeners() {
+    // Navigation buttons
+    this.prevBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!this.isTransitioning) {
+        this.restartAutoplay();
+        this.prevTestimonial();
+      }
+    });
+    
+    this.nextBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!this.isTransitioning) {
+        this.restartAutoplay();
+        this.nextTestimonial();
+      }
+    });
+    
+    // Dot navigation
+    this.dots.forEach((dot, index) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!this.isTransitioning) {
+          this.restartAutoplay();
+          this.goToTestimonial(index);
+        }
+      });
+    });
+
+    // Card click navigation
+    this.cards.forEach((card, index) => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!this.isTransitioning) {
+          this.restartAutoplay();
+          this.goToTestimonial(index);
+        }
+      });
+    });
+    
+    // Intersection Observer for performance
+    this.setupIntersectionObserver();
+    
+    // Resize observer
+    this.setupResizeObserver();
+  }
+
+
+
+  setupIntersectionObserver() {
+    if (!this.container) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.startAutoplay();
+        } else {
+          this.stopAutoplay();
+        }
+      });
+    });
+    
+    observer.observe(this.container);
+  }
+
+  setupResizeObserver() {
+    const resizeObserver = new ResizeObserver(() => {
+      this.calculateDimensions();
+      this.updateTestimonials(false);
+    });
+    
+    if (this.container) {
+      resizeObserver.observe(this.container);
+    }
+  }
+
+  // Public initialization method
+  init() {
+    this.setupEventListeners();
+    this.updateTestimonials(false);
+  }
+
+  // Cleanup method
+  destroy() {
+    this.stopAutoplay();
+  }
+}
+
+// Initialize testimonials gallery when DOM is ready
+function initTestimonialsGallery() {
+  const gallery = new TestimonialsGallery();
+  gallery.init();
+}
+
+// Auto-initialize
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTestimonialsGallery);
+} else {
+  initTestimonialsGallery();
+}
+</script> 

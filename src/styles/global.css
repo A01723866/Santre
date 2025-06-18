@@ -1,1 +1,384 @@
 @import "tailwindcss";
+
+/* === SANTRE DESIGN SYSTEM === */
+
+/* Brand Colors & Design Tokens */
+:root {
+  /* Primary Brand Colors - Extracted from logos */
+  --color-primary-900: #1a3b69;    /* Deep Navy Blue */
+  --color-primary-800: #2c5282;    /* Dark Blue */
+  --color-primary-700: #2d69a6;    /* Medium Blue */
+  --color-primary-600: #3182ce;    /* Brand Blue */
+  --color-primary-500: #4299e1;    /* Light Blue */
+  --color-primary-400: #63b3ed;    /* Lighter Blue */
+  --color-primary-100: #ebf8ff;    /* Very Light Blue */
+  --color-primary-50: #f7fafc;     /* Almost White Blue */
+  
+  /* Secondary Colors - Orange Accents */
+  --color-secondary-600: #ea6100;  /* Primary Orange */
+  --color-secondary-500: #ff6b1a;  /* Light Orange */
+  --color-secondary-400: #ff8c42;  /* Lighter Orange */
+  --color-secondary-100: #fff5eb;  /* Very Light Orange */
+  
+  /* Neutral Colors - Professional Grays */
+  --color-neutral-900: #1a202c;    /* Darkest Gray */
+  --color-neutral-800: #2d3748;    /* Dark Gray */
+  --color-neutral-700: #4a5568;    /* Medium Dark Gray */
+  --color-neutral-600: #718096;    /* Medium Gray */
+  --color-neutral-500: #a0aec0;    /* Light Gray */
+  --color-neutral-400: #cbd5e0;    /* Lighter Gray */
+  --color-neutral-300: #e2e8f0;    /* Very Light Gray */
+  --color-neutral-200: #edf2f7;    /* Almost White Gray */
+  --color-neutral-100: #f7fafc;    /* Off White */
+  --color-neutral-50: #fdfdfd;     /* Pure Off White */
+  
+  /* Success & Status Colors */
+  --color-success-600: #38a169;
+  --color-success-100: #f0fff4;
+  --color-warning-600: #d69e2e;
+  --color-warning-100: #fffbeb;
+  
+  /* Spacing & Layout */
+  --spacing-section: 6rem;
+  --spacing-component: 3rem;
+  --border-radius-base: 0.75rem;
+  --border-radius-large: 1.5rem;
+  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Typography Scale */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+}
+
+/* Base Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Dropdown Styles */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-container::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 4px; /* Bridge gap between trigger and menu */
+  background: transparent;
+  z-index: 10;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 50;
+  min-width: 280px;
+}
+
+/* Professional Typography System */
+.text-display-1 {
+  font-size: var(--font-size-6xl);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.text-display-2 {
+  font-size: var(--font-size-5xl);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.text-headline {
+  font-size: var(--font-size-4xl);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.text-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.text-body-large {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+}
+
+.text-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Brand-specific Component Styles */
+.brand-card {
+  background: white;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-neutral-200);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+  border-color: var(--color-primary-300);
+}
+
+.brand-button-primary {
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-base);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.brand-button-primary:hover {
+  background: linear-gradient(135deg, var(--color-primary-700), var(--color-primary-800));
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+.brand-button-secondary {
+  background: white;
+  color: var(--color-primary-700);
+  border: 2px solid var(--color-primary-200);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-base);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.brand-button-secondary:hover {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-400);
+  transform: translateY(-1px);
+}
+
+.brand-button-accent {
+  background: linear-gradient(135deg, var(--color-secondary-600), var(--color-secondary-500));
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-base);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.brand-button-accent:hover {
+  background: linear-gradient(135deg, var(--color-secondary-500), var(--color-secondary-600));
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Professional Section Styling */
+.section-container {
+  padding: var(--spacing-section) 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-component);
+}
+
+.section-eyebrow {
+  color: var(--color-primary-600);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Laboratory-specific styling */
+.lab-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.lab-equipment-card {
+  background: white;
+  border-radius: var(--border-radius-large);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-neutral-200);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.lab-equipment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary-600), var(--color-secondary-600));
+}
+
+.lab-equipment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-large);
+  border-color: var(--color-primary-300);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.stat-number {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  color: var(--color-primary-600);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Professional Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --spacing-section: 4rem;
+    --spacing-component: 2rem;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .text-display-1 {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .text-display-2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .dropdown-menu {
+    min-width: 260px;
+  }
+}
+
+/* Professional Focus States */
+*:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+button:focus, a:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

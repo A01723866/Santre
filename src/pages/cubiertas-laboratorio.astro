@@ -1,0 +1,231 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Cubiertas para Laboratorio | Fenólica, Acero Inoxidable y Laminado Plástico | Santre Industrial"
+  description="Cubiertas para laboratorio de alta resistencia química. Fenólicas, acero inoxidable 304/316 y laminado plástico. Garantía 10 años. Resistentes a ácidos y solventes."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Cubiertas para Laboratorio de <span class="text-blue-600">Máxima Resistencia</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Amplia gama de cubiertas especializadas: fenólicas, acero inoxidable y laminado plástico. Resistencia química superior y durabilidad garantizada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clasificación por Tipo -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Tipos de Cubiertas Especializadas</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Cubierta Fenólica -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Cubierta Fenólica</h3>
+            <p class="text-gray-600 mb-4">Resina fenólica de 20mm con resistencia superior a químicos, calor y humedad. La opción más versátil.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Resistencia:</strong> Ácidos, bases, solventes orgánicos</p>
+              <p><strong>Temperatura:</strong> Hasta 180°C</p>
+              <p><strong>Colores:</strong> Negro, gris, beige</p>
+            </div>
+            <a href="#cotizar" class="text-blue-600 font-medium hover:text-blue-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Acero Inoxidable 304 -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Acero Inoxidable 304</h3>
+            <p class="text-gray-600 mb-4">Superficie higiénica y resistente a la corrosión, ideal para aplicaciones que requieren máxima limpieza.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Resistencia:</strong> Corrosión, oxidación, bacterias</p>
+              <p><strong>Temperatura:</strong> Hasta 400°C</p>
+              <p><strong>Acabado:</strong> Satinado, espejo</p>
+            </div>
+            <a href="#cotizar" class="text-green-600 font-medium hover:text-green-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Acero Inoxidable 316 -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Acero Inoxidable 316</h3>
+            <p class="text-gray-600 mb-4">Grado superior con molibdeno, resistencia excepcional a cloruros y ambientes marinos corrosivos.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Resistencia:</strong> Cloruros, ácidos fuertes, salinidad</p>
+              <p><strong>Temperatura:</strong> Hasta 450°C</p>
+              <p><strong>Aplicación:</strong> Laboratorios farmacéuticos</p>
+            </div>
+            <a href="#cotizar" class="text-purple-600 font-medium hover:text-purple-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Laminado Plástico -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Laminado Plástico</h3>
+            <p class="text-gray-600 mb-4">Superficie económica y versátil para aplicaciones de bajo riesgo químico y uso educativo.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Resistencia:</strong> Agua, detergentes suaves</p>
+              <p><strong>Temperatura:</strong> Hasta 80°C</p>
+              <p><strong>Colores:</strong> Amplia gama disponible</p>
+            </div>
+            <a href="#cotizar" class="text-orange-600 font-medium hover:text-orange-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Cubierta Cerámica -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Cubierta Cerámica</h3>
+            <p class="text-gray-600 mb-4">Resistencia extrema al calor y químicos agresivos, ideal para aplicaciones de alta temperatura.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Resistencia:</strong> Ácidos concentrados, álcalis</p>
+              <p><strong>Temperatura:</strong> Hasta 1200°C</p>
+              <p><strong>Aplicación:</strong> Análisis térmico, fundición</p>
+            </div>
+            <a href="#cotizar" class="text-red-600 font-medium hover:text-red-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Cubierta Epóxica -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Cubierta Epóxica</h3>
+            <p class="text-gray-600 mb-4">Resina epóxica con excelente resistencia química y facilidad de reparación en caso de daños.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Resistencia:</strong> Solventes, ácidos débiles</p>
+              <p><strong>Temperatura:</strong> Hasta 120°C</p>
+              <p><strong>Ventaja:</strong> Reparable y económica</p>
+            </div>
+            <a href="#cotizar" class="text-indigo-600 font-medium hover:text-indigo-800 transition-colors">Ver especificaciones →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Ventajas de Nuestras Cubiertas</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Garantía Extendida</h3>
+            <p class="text-gray-600">Hasta 10 años de garantía contra defectos de fabricación y decoloración.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Resistencia Superior</h3>
+            <p class="text-gray-600">Probadas contra más de 200 químicos comunes de laboratorio.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Diseño Personalizado</h3>
+            <p class="text-gray-600">Cortes especiales, perforaciones y acabados según especificaciones.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Fácil Mantenimiento</h3>
+            <p class="text-gray-600">Superficies no porosas que facilitan la limpieza y desinfección.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+  <Footer />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Cubiertas para Laboratorio",
+    "description": "Cubiertas especializadas para laboratorio: fenólicas, acero inoxidable 304/316, laminado plástico, cerámicas y epóxicas con resistencia química superior",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Santre Industrial",
+      "url": "https://santre.org"
+    },
+    "category": "Mobiliario de Laboratorio",
+    "hasVariant": [
+      {
+        "@type": "ProductVariant",
+        "name": "Cubierta Fenólica",
+        "description": "Resina fenólica de 20mm resistente a químicos y calor hasta 180°C"
+      },
+      {
+        "@type": "ProductVariant", 
+        "name": "Acero Inoxidable 304",
+        "description": "Superficie higiénica resistente a corrosión hasta 400°C"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Acero Inoxidable 316", 
+        "description": "Grado superior con resistencia a cloruros hasta 450°C"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "warranty": "P10Y"
+    },
+    "keywords": "cubiertas laboratorio, cubierta fenólica, acero inoxidable 304, acero inoxidable 316, resistencia química, mobiliario laboratorio"
+  }
+  </script>
+</Layout> 

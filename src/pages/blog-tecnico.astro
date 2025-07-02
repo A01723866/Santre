@@ -1,0 +1,268 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Blog Técnico | Guías y Artículos Especializados en Laboratorios | Santre Industrial"
+  description="Blog técnico especializado en equipamiento de laboratorios. Guías, consejos y artículos sobre diseño, mantenimiento y optimización de espacios de laboratorio."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Blog <span class="text-blue-600">Técnico</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Descubre las últimas tendencias, guías especializadas y mejores prácticas en equipamiento y diseño de laboratorios
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtros por Categorías -->
+    <section class="py-8 bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-4">
+          <button class="category-filter active px-6 py-2 rounded-full border-2 border-blue-600 bg-blue-600 text-white font-medium transition-colors" data-category="todos">
+            Todos los artículos
+          </button>
+          <button class="category-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-category="diseño">
+            Diseño de Laboratorios
+          </button>
+          <button class="category-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-category="mantenimiento">
+            Mantenimiento
+          </button>
+          <button class="category-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-category="seguridad">
+            Seguridad
+          </button>
+          <button class="category-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-category="innovacion">
+            Innovación
+          </button>
+          <button class="category-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 font-medium transition-colors" data-category="normatividad">
+            Normatividad
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artículos del Blog -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Artículo 1 -->
+          <article class="blog-post bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-category="diseño">
+            <div class="aspect-video bg-gradient-to-br from-blue-600 to-blue-800 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Diseño</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Optimización del Flujo de Trabajo en Laboratorios: Sistema de 7 Zonas</h3>
+              <p class="text-gray-600 mb-4">Descubre cómo el Sistema de las 7 Zonas de Santre optimiza la eficiencia operativa y mejora la seguridad en tu laboratorio.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">15 min de lectura</span>
+                <a href="/blog/optimizacion-flujo-trabajo-laboratorios" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                  Leer artículo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 2 -->
+          <article class="blog-post bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-category="mantenimiento">
+            <div class="aspect-video bg-gradient-to-br from-blue-600 to-blue-800 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Mantenimiento</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Guía Completa de Mantenimiento para Mesas de Laboratorio</h3>
+              <p class="text-gray-600 mb-4">Aprende las mejores prácticas para mantener tus mesas de laboratorio en óptimas condiciones y extender su vida útil.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">12 min de lectura</span>
+                <a href="/blog/guia-mantenimiento-mesas-laboratorio" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                  Leer artículo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 3 -->
+          <article class="blog-post bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-category="seguridad">
+            <div class="aspect-video bg-gradient-to-br from-blue-600 to-blue-800 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Seguridad</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Protocolos de Seguridad en Laboratorios: Campanas de Extracción</h3>
+              <p class="text-gray-600 mb-4">Todo lo que necesitas saber sobre la instalación, uso y mantenimiento de campanas de extracción para máxima seguridad.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">18 min de lectura</span>
+                <a href="/blog/protocolos-seguridad-campanas-extraccion" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                  Leer artículo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 4 -->
+          <article class="blog-post bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-category="innovacion">
+            <div class="aspect-video bg-gradient-to-br from-blue-600 to-blue-800 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Innovación</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Tendencias 2024: Laboratorios Inteligentes y Tecnología IoT</h3>
+              <p class="text-gray-600 mb-4">Explora las últimas innovaciones en tecnología de laboratorios y cómo están transformando la investigación científica.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">20 min de lectura</span>
+                <a href="/blog/tendencias-laboratorios-inteligentes-iot" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                  Leer artículo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 5 -->
+          <article class="blog-post bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-category="normatividad">
+            <div class="aspect-video bg-gradient-to-br from-blue-600 to-blue-800 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Normatividad</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Cumplimiento Normativo ISO 9001:2015 en Laboratorios Clínicos</h3>
+              <p class="text-gray-600 mb-4">Guía práctica para implementar y mantener los estándares de calidad ISO 9001:2015 en tu laboratorio.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">25 min de lectura</span>
+                <a href="/blog/cumplimiento-normativo-iso-9001-laboratorios" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                  Leer artículo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 6 -->
+          <article class="blog-post bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-category="diseño">
+            <div class="aspect-video bg-gradient-to-br from-blue-600 to-blue-800 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Diseño</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Selección de Materiales: Fenólica vs Acero Inoxidable</h3>
+              <p class="text-gray-600 mb-4">Comparativa detallada entre cubiertas fenólicas y de acero inoxidable para ayudarte a tomar la mejor decisión.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">14 min de lectura</span>
+                <a href="/blog/seleccion-materiales-fenolica-acero-inoxidable" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                  Leer artículo
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-blue-600">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">Mantente actualizado</h2>
+        <p class="text-xl text-blue-100 mb-8">
+          Suscríbete a nuestro newsletter y recibe las últimas tendencias y guías técnicas directamente en tu correo
+        </p>
+        <div class="flex flex-col sm:flex-row max-w-md mx-auto gap-4">
+          <input type="email" placeholder="Tu email profesional" class="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-blue-300 focus:outline-none">
+          <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Suscribirse
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  // Filtro por categorías
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.category-filter');
+    const blogPosts = document.querySelectorAll('.blog-post');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        
+        // Actualizar botones activos
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+          btn.classList.add('border-gray-300', 'text-gray-600');
+        });
+        
+        button.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+        button.classList.remove('border-gray-300', 'text-gray-600');
+        
+        // Filtrar artículos
+        blogPosts.forEach(post => {
+          const postCategory = post.getAttribute('data-category');
+          const postElement = post as HTMLElement;
+          
+          if (category === 'todos' || postCategory === category) {
+            postElement.style.display = 'block';
+            postElement.style.animation = 'fadeIn 0.5s ease-in-out';
+          } else {
+            postElement.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style> 

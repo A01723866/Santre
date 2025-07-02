@@ -1,0 +1,231 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Campanas de Extracción para Laboratorio | Seguridad y Ventilación Especializada | Santre Industrial"
+  description="Campanas de extracción para laboratorio con tecnología avanzada. Flujo laminar, química, microbiológica y radioisótopos. Certificadas y con garantía extendida."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Campanas de Extracción de <span class="text-blue-600">Máxima Seguridad</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Sistemas avanzados de ventilación y extracción para protección del personal y control de contaminantes. Tecnología certificada y diseño personalizado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clasificación por Tipo -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Tipos de Campanas Especializadas</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Campana Química -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana Química</h3>
+            <p class="text-gray-600 mb-4">Protección contra vapores químicos tóxicos con sistemas de extracción y filtración avanzados.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Velocidad:</strong> 0.5 m/s cara frontal</p>
+              <p><strong>Dimensiones:</strong> 120, 150, 180, 210cm</p>
+              <p><strong>Certificación:</strong> ASHRAE 110, EN 14175</p>
+            </div>
+            <a href="#cotizar" class="text-blue-600 font-medium hover:text-blue-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Campana de Flujo Laminar -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana de Flujo Laminar</h3>
+            <p class="text-gray-600 mb-4">Ambiente estéril con flujo de aire unidireccional para trabajo con muestras sensibles a contaminación.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Filtración:</strong> HEPA 99.99% eficiencia</p>
+              <p><strong>Flujo:</strong> Vertical u horizontal</p>
+              <p><strong>Aplicación:</strong> Microbiología, farmacia</p>
+            </div>
+            <a href="#cotizar" class="text-green-600 font-medium hover:text-green-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Cabina de Bioseguridad -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Cabina de Bioseguridad</h3>
+            <p class="text-gray-600 mb-4">Protección integral para trabajo con microorganismos patógenos y materiales biológicos peligrosos.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Clase:</strong> I, II A/B, III disponibles</p>
+              <p><strong>Protección:</strong> Personal, producto, ambiente</p>
+              <p><strong>Norma:</strong> NSF/ANSI 49, EN 12469</p>
+            </div>
+            <a href="#cotizar" class="text-purple-600 font-medium hover:text-purple-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Campana de Perclorato -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana de Perclorato</h3>
+            <p class="text-gray-600 mb-4">Diseño especializado para trabajo con ácido perclórico y sustancias altamente corrosivas.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Material:</strong> Acero inoxidable 316L</p>
+              <p><strong>Sistema:</strong> Lavado automático</p>
+              <p><strong>Seguridad:</strong> Detección de vapores</p>
+            </div>
+            <a href="#cotizar" class="text-orange-600 font-medium hover:text-orange-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Campana de Radioisótopos -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana de Radioisótopos</h3>
+            <p class="text-gray-600 mb-4">Protección contra radiación con blindaje y sistemas de contención para materiales radioactivos.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Blindaje:</strong> Plomo y acero inoxidable</p>
+              <p><strong>Monitoreo:</strong> Detectores de radiación</p>
+              <p><strong>Cumplimiento:</strong> CNSNS, IAEA</p>
+            </div>
+            <a href="#cotizar" class="text-red-600 font-medium hover:text-red-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Campana de Digestión -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana de Digestión</h3>
+            <p class="text-gray-600 mb-4">Resistencia extrema al calor y ácidos para procesos de digestión y análisis térmico.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Temperatura:</strong> Hasta 1200°C</p>
+              <p><strong>Material:</strong> Cerámica refractaria</p>
+              <p><strong>Aplicación:</strong> Digestión ácida, calcinación</p>
+            </div>
+            <a href="#cotizar" class="text-indigo-600 font-medium hover:text-indigo-800 transition-colors">Ver especificaciones →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Ventajas de Nuestras Campanas</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Certificación Internacional</h3>
+            <p class="text-gray-600">Cumplimiento con normas ASHRAE, NSF, EN y certificaciones de seguridad.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Tecnología Avanzada</h3>
+            <p class="text-gray-600">Sistemas de control inteligente con monitoreo en tiempo real y alarmas.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Diseño Personalizado</h3>
+            <p class="text-gray-600">Configuraciones a medida según aplicación específica y espacio disponible.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Servicio Integral</h3>
+            <p class="text-gray-600">Instalación, puesta en marcha, certificación y mantenimiento especializado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+  <Footer />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Campanas de Extracción para Laboratorio",
+    "description": "Campanas de extracción especializadas: química, flujo laminar, bioseguridad, perclorato y radioisótopos con certificación internacional",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Santre Industrial",
+      "url": "https://santre.org"
+    },
+    "category": "Equipos de Seguridad para Laboratorio",
+    "hasVariant": [
+      {
+        "@type": "ProductVariant",
+        "name": "Campana Química",
+        "description": "Protección contra vapores químicos con velocidad 0.5 m/s y certificación ASHRAE 110"
+      },
+      {
+        "@type": "ProductVariant", 
+        "name": "Campana de Flujo Laminar",
+        "description": "Ambiente estéril con filtración HEPA 99.99% para trabajo microbiológico"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Cabina de Bioseguridad", 
+        "description": "Protección integral para microorganismos patógenos según NSF/ANSI 49"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    },
+    "keywords": "campanas extracción laboratorio, campana química, flujo laminar, bioseguridad, ventilación laboratorio, seguridad laboratorio"
+  }
+  </script>
+</Layout> 

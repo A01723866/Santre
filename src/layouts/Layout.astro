@@ -5,6 +5,10 @@ export interface Props {
 }
 
 const { title, description = "Santre Industrial - Especialistas en mobiliario y equipamiento para laboratorios con casi 30 años de experiencia en México." } = Astro.props;
+
+// Detectar si estamos en la página de inicio
+const currentPath = Astro.url.pathname;
+const isHomePage = currentPath === "/" || currentPath === "/index.html";
 ---
 
 <!DOCTYPE html>
@@ -74,7 +78,7 @@ const { title, description = "Santre Industrial - Especialistas en mobiliario y 
 		
 		<title>{title}</title>
 	</head>
-	<body class="font-sans">
+	<body class={`font-sans ${isHomePage ? 'is-home' : ''}`}>
 		<slot />
 		<style>
 			html {

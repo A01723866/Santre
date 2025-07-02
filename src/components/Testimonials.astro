@@ -175,18 +175,33 @@
 <script>
 // Testimonials Gallery functionality
 class TestimonialsGallery {
+  currentIndex: number;
+  isTransitioning: boolean;
+  autoplayInterval: any;
+  
+  cards: NodeListOf<HTMLElement>;
+  dots: NodeListOf<HTMLElement>;
+  prevBtn: HTMLButtonElement | null;
+  nextBtn: HTMLButtonElement | null;
+  container: HTMLElement | null;
+  gallery: HTMLElement | null;
+  
+  cardWidth: number;
+  gap: number;
+  itemWidth: number;
+
   constructor() {
     this.currentIndex = 0;
     this.isTransitioning = false;
     this.autoplayInterval = undefined;
     
     // DOM elements
-    this.cards = document.querySelectorAll('.testimonial-card');
-    this.dots = document.querySelectorAll('.dot');
-    this.prevBtn = document.getElementById('prev-testimonial');
-    this.nextBtn = document.getElementById('next-testimonial');
-    this.container = document.getElementById('testimonials-container');
-    this.gallery = document.querySelector('.testimonials-gallery');
+    this.cards = document.querySelectorAll<HTMLElement>('.testimonial-card');
+    this.dots = document.querySelectorAll<HTMLElement>('.dot');
+    this.prevBtn = document.getElementById('prev-testimonial') as HTMLButtonElement;
+    this.nextBtn = document.getElementById('next-testimonial') as HTMLButtonElement;
+    this.container = document.getElementById('testimonials-container') as HTMLElement;
+    this.gallery = document.querySelector<HTMLElement>('.testimonials-gallery');
     
     // Gallery settings
     this.cardWidth = 320;
@@ -210,19 +225,19 @@ class TestimonialsGallery {
 
   // Update active testimonial and center it
   updateTestimonials(smooth = true) {
-    if (!this.gallery) return;
+    if (!this.gallery || !this.container) return;
     
     if (smooth) {
       this.isTransitioning = true;
     }
     
     // Update cards
-    this.cards.forEach((card, index) => {
+    this.cards.forEach((card: HTMLElement, index: number) => {
       card.classList.toggle('active', index === this.currentIndex);
     });
     
     // Update dots
-    this.dots.forEach((dot, index) => {
+    this.dots.forEach((dot: HTMLElement, index: number) => {
       dot.classList.toggle('active', index === this.currentIndex);
     });
 
@@ -253,33 +268,38 @@ class TestimonialsGallery {
 
   updateNavigationButtons() {
     if (this.prevBtn && this.nextBtn) {
-      const isAtStart = this.currentIndex === 0;
-      const isAtEnd = this.currentIndex === this.cards.length - 1;
+      this.prevBtn.disabled = false;
+      this.nextBtn.disabled = false;
       
-      this.prevBtn.disabled = isAtStart;
-      this.nextBtn.disabled = isAtEnd;
-      
-      this.prevBtn.style.opacity = isAtStart ? '0.4' : '1';
-      this.nextBtn.style.opacity = isAtEnd ? '0.4' : '1';
+      this.prevBtn.style.opacity = '1';
+      this.nextBtn.style.opacity = '1';
     }
   }
 
   // Navigation functions
   nextTestimonial() {
-    if (this.currentIndex < this.cards.length - 1 && !this.isTransitioning) {
-      this.currentIndex++;
+    if (!this.isTransitioning) {
+      if (this.currentIndex >= this.cards.length - 1) {
+        this.currentIndex = 0; // Loop back to the first card
+      } else {
+        this.currentIndex++;
+      }
       this.updateTestimonials();
     }
   }
   
   prevTestimonial() {
-    if (this.currentIndex > 0 && !this.isTransitioning) {
-      this.currentIndex--;
+    if (!this.isTransitioning) {
+      if (this.currentIndex <= 0) {
+        this.currentIndex = this.cards.length - 1; // Loop to the last card
+      } else {
+        this.currentIndex--;
+      }
       this.updateTestimonials();
     }
   }
 
-  goToTestimonial(index) {
+  goToTestimonial(index: number) {
     if (index !== this.currentIndex && !this.isTransitioning && index >= 0 && index < this.cards.length) {
       this.currentIndex = index;
       this.updateTestimonials();
@@ -290,7 +310,7 @@ class TestimonialsGallery {
   startAutoplay() {
     this.autoplayInterval = setInterval(() => {
       if (this.currentIndex >= this.cards.length - 1) {
-        this.currentIndex = 0;
+        this.currentIndex = 0; // Loop back to the first card
       } else {
         this.currentIndex++;
       }
@@ -309,14 +329,10 @@ class TestimonialsGallery {
     this.startAutoplay();
   }
 
-
-
-
-
   // Event handlers
   setupEventListeners() {
     // Navigation buttons
-    this.prevBtn?.addEventListener('click', (e) => {
+    this.prevBtn?.addEventListener('click', (e: Event) => {
       e.preventDefault();
       e.stopPropagation();
       if (!this.isTransitioning) {
@@ -325,7 +341,7 @@ class TestimonialsGallery {
       }
     });
     
-    this.nextBtn?.addEventListener('click', (e) => {
+    this.nextBtn?.addEventListener('click', (e: Event) => {
       e.preventDefault();
       e.stopPropagation();
       if (!this.isTransitioning) {
@@ -335,8 +351,8 @@ class TestimonialsGallery {
     });
     
     // Dot navigation
-    this.dots.forEach((dot, index) => {
-      dot.addEventListener('click', (e) => {
+    this.dots.forEach((dot: HTMLElement, index: number) => {
+      dot.addEventListener('click', (e: Event) => {
         e.preventDefault();
         e.stopPropagation();
         if (!this.isTransitioning) {
@@ -347,8 +363,8 @@ class TestimonialsGallery {
     });
 
     // Card click navigation
-    this.cards.forEach((card, index) => {
-      card.addEventListener('click', (e) => {
+    this.cards.forEach((card: HTMLElement, index: number) => {
+      card.addEventListener('click', (e: Event) => {
         e.preventDefault();
         e.stopPropagation();
         if (!this.isTransitioning) {
@@ -364,8 +380,6 @@ class TestimonialsGallery {
     // Resize observer
     this.setupResizeObserver();
   }
-
-
 
   setupIntersectionObserver() {
     if (!this.container) return;

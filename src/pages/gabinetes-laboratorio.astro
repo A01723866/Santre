@@ -1,0 +1,231 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Gabinetes para Laboratorio | Almacenamiento y Organización Especializada | Santre Industrial"
+  description="Gabinetes para laboratorio especializados: almacenamiento de reactivos, material de vidrio, equipos y documentos. Diseño modular y resistente. Garantía extendida."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Gabinetes para Laboratorio de <span class="text-blue-600">Máxima Organización</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Soluciones completas de almacenamiento especializado para reactivos, material de vidrio, equipos y documentación. Diseño modular y funcional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clasificación por Tipo -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Tipos de Gabinetes Especializados</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Gabinete Base -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Gabinete Base</h3>
+            <p class="text-gray-600 mb-4">Almacenamiento inferior con puertas y entrepaños ajustables, ideal para material voluminoso y equipos.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Capacidad:</strong> Hasta 50kg por entrepaño</p>
+              <p><strong>Dimensiones:</strong> 40, 60, 80, 100cm ancho</p>
+              <p><strong>Material:</strong> Melamina o acero</p>
+            </div>
+            <a href="#cotizar" class="text-blue-600 font-medium hover:text-blue-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Gabinete Alto -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Gabinete Alto</h3>
+            <p class="text-gray-600 mb-4">Almacenamiento vertical de piso a techo, maximiza el espacio disponible con múltiples compartimentos.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Altura:</strong> 190-220cm</p>
+              <p><strong>Entrepaños:</strong> 4-6 niveles ajustables</p>
+              <p><strong>Uso:</strong> Material de vidrio, reactivos</p>
+            </div>
+            <a href="#cotizar" class="text-green-600 font-medium hover:text-green-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Gabinete Suspendido -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Gabinete Suspendido</h3>
+            <p class="text-gray-600 mb-4">Montado en pared para optimizar espacio de trabajo, ideal para reactivos de uso frecuente.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Montaje:</strong> Pared con soportes reforzados</p>
+              <p><strong>Profundidad:</strong> 30-40cm</p>
+              <p><strong>Ventajas:</strong> Libera espacio inferior</p>
+            </div>
+            <a href="#cotizar" class="text-purple-600 font-medium hover:text-purple-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Gabinete para Reactivos -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Gabinete para Reactivos</h3>
+            <p class="text-gray-600 mb-4">Diseño especializado con ventilación y materiales resistentes a químicos para almacenamiento seguro.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Seguridad:</strong> Cerradura y ventilación</p>
+              <p><strong>Material:</strong> Acero con recubrimiento</p>
+              <p><strong>Normas:</strong> OSHA y NOM-018-STPS</p>
+            </div>
+            <a href="#cotizar" class="text-orange-600 font-medium hover:text-orange-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Gabinete para Material de Vidrio -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Gabinete para Material de Vidrio</h3>
+            <p class="text-gray-600 mb-4">Entrepaños especiales con divisiones y protección para cristalería y material frágil.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Protección:</strong> Entrepaños acolchados</p>
+              <p><strong>Organización:</strong> Divisiones ajustables</p>
+              <p><strong>Visibilidad:</strong> Puertas de vidrio opcional</p>
+            </div>
+            <a href="#cotizar" class="text-red-600 font-medium hover:text-red-800 transition-colors">Ver especificaciones →</a>
+          </div>
+
+          <!-- Gabinete de Seguridad -->
+          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Gabinete de Seguridad</h3>
+            <p class="text-gray-600 mb-4">Almacenamiento controlado para sustancias peligrosas con sistemas de ventilación y seguridad.</p>
+            <div class="text-sm text-gray-500 mb-4">
+              <p><strong>Seguridad:</strong> Doble cerradura</p>
+              <p><strong>Ventilación:</strong> Sistema de extracción</p>
+              <p><strong>Certificación:</strong> UL y FM Approved</p>
+            </div>
+            <a href="#cotizar" class="text-indigo-600 font-medium hover:text-indigo-800 transition-colors">Ver especificaciones →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Ventajas de Nuestros Gabinetes</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Sistema Modular</h3>
+            <p class="text-gray-600">Configuraciones personalizadas que se adaptan a cualquier espacio y necesidad.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Alta Durabilidad</h3>
+            <p class="text-gray-600">Materiales resistentes con herrajes de calidad industrial y garantía extendida.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Máxima Visibilidad</h3>
+            <p class="text-gray-600">Organización eficiente con etiquetado y opciones de puertas transparentes.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Seguridad Integral</h3>
+            <p class="text-gray-600">Sistemas de cierre, ventilación y cumplimiento de normas de seguridad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+  <Footer />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Gabinetes para Laboratorio",
+    "description": "Gabinetes especializados para laboratorio: almacenamiento de reactivos, material de vidrio, equipos y documentos con diseño modular y sistemas de seguridad",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Santre Industrial",
+      "url": "https://santre.org"
+    },
+    "category": "Mobiliario de Laboratorio",
+    "hasVariant": [
+      {
+        "@type": "ProductVariant",
+        "name": "Gabinete Base",
+        "description": "Almacenamiento inferior con puertas y entrepaños ajustables hasta 50kg"
+      },
+      {
+        "@type": "ProductVariant", 
+        "name": "Gabinete Alto",
+        "description": "Almacenamiento vertical de 190-220cm con múltiples compartimentos"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Gabinete para Reactivos", 
+        "description": "Diseño especializado con ventilación y seguridad para químicos"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    },
+    "keywords": "gabinetes laboratorio, almacenamiento laboratorio, gabinete reactivos, mobiliario laboratorio, organización laboratorio"
+  }
+  </script>
+</Layout> 

@@ -1,0 +1,8 @@
+---
+// Redirect from sistema-7-zonas.astro to diseno-de-laboratorio.astro
+export const prerender = false;
+ 
+export async function GET({ redirect }) {
+  return redirect('/diseno-de-laboratorio');
+}
+--- 

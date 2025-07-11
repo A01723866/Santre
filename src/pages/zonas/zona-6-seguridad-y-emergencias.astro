@@ -217,7 +217,7 @@ import '../../styles/global.css';
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Mantenimiento y Verificación</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Equipamiento Sugerido</h2>
             <p class="text-gray-600 mb-6">
               Un equipo de emergencia sin mantenimiento es un riesgo adicional. Establecemos protocolos claros 
               para garantizar el funcionamiento cuando más se necesita.
@@ -253,12 +253,12 @@ import '../../styles/global.css';
                 <span class="text-sm text-indigo-800">Área libre de obstáculos (1.5m)</span>
               </div>
               <div class="flex items-center">
-                <input type="checkbox" class="mr-3 text-indigo-600">
-                <span class="text-sm text-indigo-800">Activación inmediata (< 1 segundo)</span>
+                <input type="checkbox" class="mr-3 text-indigo-600" id="activacion-inmediata-checkbox">
+                <label for="activacion-inmediata-checkbox" class="text-sm text-indigo-800">Activación inmediata (&lt; 1 segundo)</label>
               </div>
               <div class="flex items-center">
-                <input type="checkbox" class="mr-3 text-indigo-600">
-                <span class="text-sm text-indigo-800">Presión y flujo correctos</span>
+                <input type="checkbox" class="mr-3 text-indigo-600" id="presion-flujo-correctos-checkbox">
+                <label for="presion-flujo-correctos-checkbox" class="text-sm text-indigo-800">Presión y flujo correctos</label>
               </div>
               <div class="flex items-center">
                 <input type="checkbox" class="mr-3 text-indigo-600">
@@ -275,28 +275,48 @@ import '../../styles/global.css';
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-indigo-600">
+    <section class="py-16 bg-blue-800">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-white mb-6">La seguridad de tu equipo es nuestra responsabilidad</h2>
-        <p class="text-xl text-indigo-100 mb-8">
+        <p class="text-xl text-blue-100 mb-8">
           Instala sistemas de emergencia que realmente funcionen cuando los necesites. Cada segundo cuenta.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/#productos" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <a href="/#productos" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
             Ver estaciones de emergencia
           </a>
-          <a href="/#contacto" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-            Descarga guía de instalación
+          <a href="/#contacto" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+            Solicita tu propuesta
+          </a>
+          <a href="/centro-descargas/catalogo-completo" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            Descargar catálogo
           </a>
         </div>
         
-        <div class="mt-12 pt-8 border-t border-indigo-500">
+        <div class="mt-12 pt-8  border-white">
           <h3 class="text-lg font-semibold text-white mb-4">Explora otras zonas del sistema</h3>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="/zonas/zona-5-manipulacion-segura" class="text-indigo-100 hover:text-white transition-colors">Zona 5: Manipulación Segura</a>
-            <a href="/zonas/zona-7-lavado" class="text-indigo-100 hover:text-white transition-colors">Zona 7: Lavado</a>
-            <a href="/zonas/zona-1-trabajo-general" class="text-indigo-100 hover:text-white transition-colors">Zona 1: Trabajo General</a>
-            <a href="/diseno-de-laboratorio" class="text-indigo-100 hover:text-white transition-colors font-semibold">← Ver todas las zonas</a>
+          <div class="zonas-gallery-horizontal overflow-x-auto flex gap-6 py-2 px-1 sm:px-0" style="scrollbar-width: thin;">
+            <a href="/zonas/zona-1-trabajo-general" class="zonas-gallery-item flex-shrink-0 min-w-[220px] bg-blue-700 rounded-lg p-5 text-white text-center font-semibold hover:bg-blue-600 transition-colors">
+              Zona 1: Trabajo General
+            </a>
+            <a href="/zonas/zona-2-almacenaje-elevado" class="zonas-gallery-item flex-shrink-0 min-w-[220px] bg-blue-700 rounded-lg p-5 text-white text-center font-semibold hover:bg-blue-600 transition-colors">
+              Zona 2: Almacenaje Elevado
+            </a>
+            <a href="/zonas/zona-3-reactivos" class="zonas-gallery-item flex-shrink-0 min-w-[220px] bg-blue-700 rounded-lg p-5 text-white text-center font-semibold hover:bg-blue-600 transition-colors">
+              Zona 3: Reactivos
+            </a>
+            <a href="/zonas/zona-4-pesaje" class="zonas-gallery-item flex-shrink-0 min-w-[220px] bg-blue-700 rounded-lg p-5 text-white text-center font-semibold hover:bg-blue-600 transition-colors">
+              Zona 4: Pesaje
+            </a>
+            <a href="/zonas/zona-5-manipulacion-segura" class="zonas-gallery-item flex-shrink-0 min-w-[220px] bg-blue-700 rounded-lg p-5 text-white text-center font-semibold hover:bg-blue-600 transition-colors">
+              Zona 5: Manipulación Segura
+            </a>
+            <a href="/zonas/zona-7-lavado" class="zonas-gallery-item flex-shrink-0 min-w-[220px] bg-blue-700 rounded-lg p-5 text-white text-center font-semibold hover:bg-blue-600 transition-colors">
+              Zona 7: Lavado
+            </a>
+            <a href="/diseno-de-laboratorio" class="zonas-gallery-item flex-shrink-0 min-w-[220px] bg-blue-900 rounded-lg p-5 text-white text-center font-bold hover:bg-blue-800 transition-colors">
+              ← Ver todas las zonas
+            </a>
           </div>
         </div>
       </div>

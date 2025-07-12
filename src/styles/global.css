@@ -413,3 +413,109 @@ button:focus, a:focus {
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
+
+/* === TARJETAS EXPANSIBLES - PASOS CLAVE === */
+
+/* Contenedor de fila */
+.paso-clave-row {
+  display: contents; /* Para mantener el grid original pero permitir selección por fila */
+}
+
+/* Tarjeta base */
+.paso-clave-tarjeta {
+  border: 1px solid var(--color-neutral-200);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%; /* Para que todas las tarjetas tengan la misma altura en el grid */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Efecto hover en tarjeta individual */
+.paso-clave-tarjeta:hover {
+  border-color: var(--color-primary-300);
+  box-shadow: var(--shadow-medium);
+  z-index: 10; /* Asegura que la tarjeta expandida esté por encima de otras */
+}
+
+/* Efecto hover en toda la fila */
+.paso-clave-row:hover .paso-clave-tarjeta {
+  border-color: var(--color-primary-300);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Header siempre visible */
+.paso-clave-header {
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0; /* Evita que el header se comprima */
+}
+
+/* Contenido oculto por defecto */
+.paso-clave-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+}
+
+/* Mostrar contenido en hover - tarjeta individual */
+.paso-clave-tarjeta:hover .paso-clave-content {
+  max-height: 250px; /* Altura máxima ajustada para layout de 2 columnas */
+  opacity: 1;
+  padding-top: 0;
+  padding-bottom: 1.5rem; /* 24px */
+}
+
+/* Mostrar contenido en hover - toda la fila */
+.paso-clave-row:hover .paso-clave-content {
+  max-height: 250px;
+  opacity: 1;
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+/* Rotar flecha en hover - tarjeta individual */
+.paso-clave-tarjeta:hover .paso-clave-header svg {
+  transform: rotate(180deg);
+}
+
+/* Rotar flecha en hover - toda la fila */
+.paso-clave-row:hover .paso-clave-header svg {
+  transform: rotate(180deg);
+}
+
+/* Efecto hover en header */
+.paso-clave-header:hover {
+  background-color: var(--color-neutral-50);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .paso-clave-content {
+    max-height: 0;
+  }
+  
+  .paso-clave-tarjeta:hover .paso-clave-content {
+    max-height: 300px; /* Más altura en móvil porque es una columna */
+  }
+  
+  .paso-clave-row:hover .paso-clave-content {
+    max-height: 300px; /* Más altura en móvil porque es una columna */
+  }
+  
+  /* Asegura que las tarjetas tengan espacio suficiente en móvil */
+  .paso-clave-tarjeta {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* En móvil, ajustamos el comportamiento para que sea más fácil interactuar */
+  .paso-clave-row {
+    display: block; /* En móvil, cada fila es un bloque */
+    margin-bottom: 1rem;
+  }
+}

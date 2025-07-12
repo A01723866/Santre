@@ -218,6 +218,7 @@ import '../../styles/global.css';
         </div>
       </div>
     </section>
+   
 
     <!-- Equipamiento Sugerido -->
     <section class="py-16 bg-gray-50">
@@ -225,15 +226,68 @@ import '../../styles/global.css';
         <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Equipamiento Sugerido</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Mesas para balanza con peso muerto y antivibración -->
           <div class="bg-white p-6 rounded-xl shadow-md">
-            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mb-4">
-              <img src="/equipos/balanza-analitica.png" alt="Balanza Analítica" class="w-8 h-8" />
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+              </svg>
             </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Balanza analítica</h3>
-            <p class="text-gray-600 text-sm">Equipo de alta precisión para pesaje en laboratorio, esencial para mediciones exactas de masa.</p>
-            <a href="/productos/balanza-analitica" class="text-blue-600 text-sm font-medium mt-2 inline-block hover:text-blue-800">Ver productos →</a>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Mesas para balanza</h3>
+            <p class="text-gray-600 text-sm">Mesas con peso muerto y estructura antivibración, ideales para estaciones de pesaje de precisión.</p>
+            <a href="/productos/mesas-para-balanza" class="text-blue-600 text-sm font-medium mt-2 inline-block hover:text-blue-800">Ver mesas para balanza →</a>
           </div>
-        </div>
+
+          <!-- Gabinete porta basurero integrado -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6 2a1 1 0 00-1 1v1H3.5A1.5 1.5 0 002 5.5v1A.5.5 0 002.5 7H17.5a.5.5 0 00.5-.5v-1A1.5 1.5 0 0016.5 4H15V3a1 1 0 00-1-1H6zm2 4v10a2 2 0 002 2h2a2 2 0 002-2V6H8z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Gabinete porta basurero</h3>
+            <p class="text-gray-600 text-sm">Gabinete integrado para residuos, diseñado para estaciones de pesaje.</p>
+            <a href="/productos/gabinetes-para-basurero" class="text-blue-600 text-sm font-medium mt-2 inline-block hover:text-blue-800">Ver gabinetes porta basurero →</a>
+          </div>
+
+          <!-- Superficies lisas: fenólica, acero, laminado -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <rect x="3" y="5" width="14" height="10" rx="2" />
+                <rect x="6" y="8" width="8" height="4" rx="1" fill="currentColor" class="text-white"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Superficies lisas</h3>
+            <p class="text-gray-600 text-sm">Cubiertas de laboratorio en fenólica, acero inoxidable o laminado plástico, fáciles de limpiar y resistentes.</p>
+            <a href="/productos/cubiertas-laboratorio" class="text-blue-600 text-sm font-medium mt-2 inline-block hover:text-blue-800">Ver superficies →</a>
+          </div>
+
+          <!-- Torretas o válvulas para gases o vacío -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="8" />
+                <rect x="9" y="4" width="2" height="8" rx="1" fill="currentColor" class="text-white"/>
+                <rect x="7" y="12" width="6" height="2" rx="1" fill="currentColor" class="text-white"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Torretas y válvulas</h3>
+            <p class="text-gray-600 text-sm">Torretas o válvulas para gases o vacío, integradas en la estación de pesaje cuando aplica.</p>
+            <a href="/productos/torretas-valvulas-laboratorio" class="text-blue-600 text-sm font-medium mt-2 inline-block hover:text-blue-800">Ver torretas y válvulas →</a>
+          </div>
+
+          <!-- Bancos o sillas ergonómicas de precisión -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Bancos y sillas ergonómicas</h3>
+            <p class="text-gray-600 text-sm">Bancos o sillas de precisión, ergonómicos y ajustables para trabajos de pesaje.</p>
+            <a href="/productos/bancos-sillas-laboratorio" class="text-blue-600 text-sm font-medium mt-2 inline-block hover:text-blue-800">Ver bancos y sillas →</a>
+          </div>
         </div>
       </div>
     </section>

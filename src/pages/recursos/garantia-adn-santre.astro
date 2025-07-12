@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
 ---
 
 <Layout 
@@ -19,70 +19,166 @@ import '../styles/global.css';
             Garantía <span class="text-green-600">ADN Santre</span>
           </h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            30 años de experiencia respaldados por certificaciones internacionales y garantías extendidas que protegen tu inversión
+            30 años de experiencia respaldados por certificacion iso 9001:20125 y garantías extendidas que protegen tu inversión
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Certificaciones -->
+    <!-- Asesoría Consultiva -->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Certificaciones y Estándares</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div class="bg-green-50 p-8 rounded-xl text-center border border-green-200">
-            <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
+        <div class="bg-green-50 p-8 rounded-xl border border-green-200 mb-12">
+          <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="md:w-1/4 text-center">
+              <div class="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-900">Asesoría Consultiva</h3>
             </div>
-            <h3 class="text-xl font-bold text-green-900 mb-4">ISO 9001:2015</h3>
-            <p class="text-green-700 mb-4">Sistema de Gestión de Calidad certificado internacionalmente</p>
-            <div class="text-sm text-green-600">
-              <p><strong>Certificado:</strong> SGS-COC-003456</p>
-              <p><strong>Vigencia:</strong> 2024-2027</p>
+            <div class="md:w-3/4">
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">🧠 "¿Tienes un reto de diseño? Trabajémoslo juntos."</h2>
+              <p class="text-lg text-gray-700 mb-4">
+                En Santre no nos limitamos a vender muebles.
+                Escuchamos, analizamos y proponemos soluciones reales, que sí puedes implementar.
+                A veces se trata de encontrar el producto ideal. Otras, de diseñarlo desde cero. Siempre cuidando que sea funcional, seguro, confortable… y rentable para ti.
+              </p>
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h4 class="font-bold text-gray-900 mb-3">✅ Lo que prometemos:</h4>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                  <li>Te diremos la verdad, incluso si no te conviene personalizar.</li>
+                  <li>No aceptamos proyectos inviables.</li>
+                  <li>Te asesoramos sin compromiso.</li>
+                  <li>Y si tomas la decisión, te garantizamos que va a funcionar.</li>
+                </ul>
+              </div>
+              <div class="mt-6 bg-green-100 p-4 rounded-lg">
+                <p class="font-medium text-green-800">📞 <strong>Cuéntanos tu reto. Te proponemos la mejor solución para resolverlo.</strong></p>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="bg-blue-50 p-8 rounded-xl text-center border border-blue-200">
-            <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-              </svg>
+    <!-- ADN Santre -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">🧬 ¿Qué es el ADN Santre?</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            El ADN Santre es nuestra forma única de diseñar laboratorios que realmente funcionan.
+            No es solo un método; es una filosofía práctica, nacida de más de 1,500 laboratorios instalados y casi 30 años de experiencia.
+            Es la combinación de conocimiento técnico, diseño centrado en las personas, y compromiso con el funcionamiento real del espacio.
+            Cada proyecto que realizamos sigue estos principios fundamentales:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-xl font-bold text-white">1</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">🧩 Funcionalidad Real, No Supuesta</h3>
             </div>
-            <h3 class="text-xl font-bold text-blue-900 mb-4">NOM-087-ECOL-SSA1</h3>
-            <p class="text-blue-700 mb-4">Cumplimiento normativo para residuos peligrosos biológico-infecciosos</p>
-            <div class="text-sm text-blue-600">
-              <p><strong>Registro:</strong> SEMARNAT-08-001</p>
-              <p><strong>Alcance:</strong> Nacional</p>
-            </div>
+            <p class="text-gray-700">
+              Diseñamos para que el laboratorio fluya. Optimizamos recorridos, accesos, posiciones de equipos y secuencia de actividades para reducir errores, tiempos muertos y riesgos.
+            </p>
           </div>
 
-          <div class="bg-purple-50 p-8 rounded-xl text-center border border-purple-200">
-            <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-              </svg>
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-xl font-bold text-white">2</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">💧 Limpieza Fácil y Prevención de Contaminación</h3>
             </div>
-            <h3 class="text-xl font-bold text-purple-900 mb-4">ASHRAE 110</h3>
-            <p class="text-purple-700 mb-4">Estándar para pruebas de rendimiento de campanas de laboratorio</p>
-            <div class="text-sm text-purple-600">
-              <p><strong>Acreditación:</strong> ANSI/ASHRAE</p>
-              <p><strong>Especialidad:</strong> Ventilación</p>
+            <p class="text-gray-700">
+              Cada superficie, unión, mueble y acabado está pensado para facilitar la limpieza y evitar acumulaciones. Diseñamos para cumplir con estándares como HACCP, ISO 17025 o GMP, y prevenir la contaminación cruzada.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-xl font-bold text-white">3</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">🧪 Seguridad como Prioridad</h3>
             </div>
+            <p class="text-gray-700">
+              Desde los materiales hasta la ventilación, todo lo que fabricamos ayuda a proteger al laboratorista: mesas estables, mobiliario resistente a químicos, sistemas de extracción y diseño de zonas peligrosas con criterios normativos.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-xl font-bold text-white">4</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">🔧 Muebles Durables, Modulares y Reparables</h3>
+            </div>
+            <p class="text-gray-700">
+              Nuestros productos son resistentes a químicos, humedad y uso rudo. Son modulares para facilitar el crecimiento o reconfiguración del espacio. Y son reparables, para alargar su vida útil y reducir el costo total de propiedad.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-xl font-bold text-white">5</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">👨‍🔬 Diseño Centrado en el Ser Humano</h3>
+            </div>
+            <p class="text-gray-700">
+              No solo pensamos en equipos: pensamos en quienes los usan. Ergonomía, confort térmico, visual y acústico, organización y accesibilidad están presentes desde la primera propuesta.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-xl font-bold text-white">6</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">📏 Cumplimiento Normativo Integrado</h3>
+            </div>
+            <p class="text-gray-700">
+              Cada proyecto se diseña considerando las normas aplicables del sector: ISO 17025, NOMs, OSHA, FDA, GMP, HACCP, Cofepris, entre otras. Esto evita rediseños costosos o sanciones futuras.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-xl font-bold text-white">7</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">🤝 Asesoría Consultiva y Cercanía</h3>
+            </div>
+            <p class="text-gray-700">
+              Nos involucramos como co-creadores. No solo entregamos mobiliario, sino que preguntamos, proponemos y acompañamos. Nos hacemos responsables del resultado final.
+            </p>
+          </div>
+
+          <div class="bg-green-100 p-8 rounded-xl shadow-md col-span-1 md:col-span-2">
+            <h3 class="text-2xl font-bold text-green-800 mb-4">✅ Garantía de Funcionamiento Santre</h3>
+            <p class="text-lg text-green-700">
+              Si tu laboratorio se diseña siguiendo el ADN Santre, te garantizamos que funcionará como esperas.
+              Y si no, nos comprometemos a corregirlo sin costo adicional.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Garantías por Producto -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Garantías por Producto</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white p-8 rounded-xl shadow-md">
+          <div class="bg-gray-50 p-8 rounded-xl shadow-md">
             <h3 class="text-2xl font-bold text-gray-900 mb-6">Mobiliario y Estructuras</h3>
             <div class="space-y-4">
               <div class="flex justify-between items-center py-3 border-b border-gray-200">
@@ -91,29 +187,29 @@ import '../styles/global.css';
               </div>
               <div class="flex justify-between items-center py-3 border-b border-gray-200">
                 <span class="font-medium text-gray-900">Estructura Metálica</span>
-                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">15 años</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">10 años</span>
               </div>
               <div class="flex justify-between items-center py-3 border-b border-gray-200">
-                <span class="font-medium text-gray-900">Herrajes y Accesorios</span>
-                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">5 años</span>
+                <span class="font-medium text-gray-900">Herrajes y Accesorios Bisagras y Correderas</span>
+                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">De por vida</span>
               </div>
               <div class="flex justify-between items-center py-3 border-b border-gray-200">
                 <span class="font-medium text-gray-900">Pintura y Acabados</span>
-                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">7 años</span>
+                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">15 años (En uso adecuado)</span>
               </div>
             </div>
           </div>
 
-          <div class="bg-white p-8 rounded-xl shadow-md">
+          <div class="bg-gray-50 p-8 rounded-xl shadow-md">
             <h3 class="text-2xl font-bold text-gray-900 mb-6">Equipos y Sistemas</h3>
             <div class="space-y-4">
               <div class="flex justify-between items-center py-3 border-b border-gray-200">
                 <span class="font-medium text-gray-900">Campanas de Extracción</span>
-                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">12 años</span>
+                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">5 años</span>
               </div>
               <div class="flex justify-between items-center py-3 border-b border-gray-200">
                 <span class="font-medium text-gray-900">Sistemas Eléctricos</span>
-                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">3 años</span>
+                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">1 año</span>
               </div>
               <div class="flex justify-between items-center py-3 border-b border-gray-200">
                 <span class="font-medium text-gray-900">Sistemas de Plomería</span>
@@ -130,12 +226,12 @@ import '../styles/global.css';
     </section>
 
     <!-- Diferenciadores ADN Santre -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Diferenciadores ADN Santre</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center">
+          <div class="text-center bg-white p-6 rounded-xl shadow-sm">
             <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -146,7 +242,7 @@ import '../styles/global.css';
             <p class="text-gray-600">Recorridos virtuales 360° y renders hiperrealistas antes de la construcción</p>
           </div>
 
-          <div class="text-center">
+          <div class="text-center bg-white p-6 rounded-xl shadow-sm">
             <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
@@ -156,7 +252,7 @@ import '../styles/global.css';
             <p class="text-gray-600">Materiales de grado farmacéutico con resistencia química superior</p>
           </div>
 
-          <div class="text-center">
+          <div class="text-center bg-white p-6 rounded-xl shadow-sm">
             <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
@@ -167,7 +263,7 @@ import '../styles/global.css';
             <p class="text-gray-600">Metodología exclusiva de las 7 Zonas desarrollada en 30 años de experiencia</p>
           </div>
 
-          <div class="text-center">
+          <div class="text-center bg-white p-6 rounded-xl shadow-sm">
             <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
@@ -175,47 +271,6 @@ import '../styles/global.css';
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-3">Soporte Especializado</h3>
             <p class="text-gray-600">Equipo técnico especializado con seguimiento personalizado post-instalación</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proceso de Garantía -->
-    <section class="py-16 bg-blue-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Proceso de Garantía</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl font-bold text-white">1</span>
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Reporte de Incidencia</h3>
-            <p class="text-gray-600 text-sm">Contacto telefónico o digital para reportar cualquier problema</p>
-          </div>
-
-          <div class="text-center">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl font-bold text-white">2</span>
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Evaluación Técnica</h3>
-            <p class="text-gray-600 text-sm">Diagnóstico especializado en sitio en máximo 48 horas</p>
-          </div>
-
-          <div class="text-center">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl font-bold text-white">3</span>
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Solución Implementada</h3>
-            <p class="text-gray-600 text-sm">Reparación o reemplazo según términos de garantía</p>
-          </div>
-
-          <div class="text-center">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl font-bold text-white">4</span>
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Seguimiento</h3>
-            <p class="text-gray-600 text-sm">Verificación de funcionamiento y satisfacción del cliente</p>
           </div>
         </div>
       </div>

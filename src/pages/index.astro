@@ -4,8 +4,6 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import BeneficiosClave from '../components/BeneficiosClave.astro';
 import ProcesoCoCreacionSantre from '../components/ProcesoCoCreacionSantre.astro';
-import Sectores from '../components/Sectores.astro';
-import Products from '../components/Products.astro';
 import SistemaZonas from '../components/Services.astro';
 import Gallery from '../components/Gallery.astro';
 import Testimonials from '../components/Testimonials.astro';
@@ -22,15 +20,50 @@ import '../styles/global.css';
   <Header />
   <main>
     <Hero />
-    <!-- <Sectores /> -->
-    <!-- <Products /> -->
     <BeneficiosClave />
+    <section id="reto-diseno" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">“¿Tienes un reto de diseño? Trabajémoslo juntos.”</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">En Santre no nos limitamos a vender muebles. Escuchamos, analizamos y proponemos soluciones reales, que sí puedes implementar. A veces se trata de encontrar el producto ideal. Otras, de diseñarlo desde cero. Siempre cuidando que sea funcional, seguro, confortable… y rentable para ti.</p>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Lo que prometemos:</h3>
+          <ul class="list-disc list-inside text-gray-600 space-y-2">
+            <li class="flex items-start mb-2">
+              <svg class="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Te diremos la verdad, incluso si no te conviene personalizar.</span>
+            </li>
+            <li class="flex items-start mb-2">
+              <svg class="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>No aceptamos proyectos inviables.</span>
+            </li>
+            <li class="flex items-start mb-2">
+              <svg class="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Te asesoramos sin compromiso.</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Y si tomas la decisión, te garantizamos que va a funcionar.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <ProcesoCoCreacionSantre />
     <SistemaZonas />
     <Gallery />
-    <Testimonials />
+    <!-- <Testimonials /> -->
     <Contact />
-    <Blog />
+    <!-- <Blog /> -->
   </main>
   <Footer />
 </Layout>

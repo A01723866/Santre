@@ -1,0 +1,323 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import '../../../../styles/global.css';
+
+// Obtener el parámetro de la URL para determinar qué catálogo mostrar
+const { catalog } = Astro.params;
+
+// Mapeo de catálogos a sus archivos y títulos
+const catalogMap = {
+  'productos': {
+    title: 'Catálogo General de Productos',
+    file: '/downloads/1-Catalago de PRODUCTOS v04.pdf',
+    description: 'Catálogo completo con toda nuestra línea de productos y servicios para laboratorios.'
+  },
+  'sistema-7-zonas': {
+    title: 'Sistema de Diseño 7 Zonas ADN Santre',
+    file: '/downloads/2-Sistema diseno 7 zonas ADN Santre v02.pdf',
+    description: 'Metodología exclusiva Santre para el diseño optimizado de laboratorios.'
+  }
+};
+
+// Determinar qué catálogo mostrar o redirigir si no existe
+const catalogInfo = catalog && catalog in catalogMap ? catalogMap[catalog as keyof typeof catalogMap] : catalogMap['productos'];
+
+// Exportar rutas estáticas para generación previa
+export function getStaticPaths() {
+  return [
+    { params: { catalog: 'productos' } },
+    { params: { catalog: 'sistema-7-zonas' } }
+  ];
+}
+---
+
+<Layout 
+  title={`Ver ${catalogInfo.title} | Santre Industrial | Mobiliario para Laboratorios`}
+  description={`Visualiza nuestro catálogo ${catalogInfo.title}. Mesas, campanas, gabinetes y mobiliario especializado para laboratorios.`}
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-8 bg-gradient-to-br from-yellow-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {catalogInfo.title}
+          </h1>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            {catalogInfo.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PDF Viewer Section -->
+    <section class="py-8 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-100 p-4 rounded-lg mb-6 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-700 mb-4 md:mb-0">
+            <span class="font-semibold">Estás viendo:</span> {catalogInfo.title}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <button id="open-modal" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+              Descargar PDF
+            </button>
+          </div>
+        </div>
+        
+        <!-- PDF Viewer -->
+        <div class="w-full rounded-lg overflow-hidden shadow-lg border border-gray-200 protected-pdf" style="height: 800px;">
+          <iframe 
+            src={catalogInfo.file} 
+            class="w-full h-full"
+            style="border: none;"
+            title={`Visor de ${catalogInfo.title}`}
+            oncontextmenu="return false;"
+          ></iframe>
+          <div class="pdf-overlay" id="pdf-overlay">
+            <div class="pdf-message">
+              Haz clic para descargar el catálogo completo
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Otros Catálogos Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-gray-900 text-center mb-8">Otros Catálogos Disponibles</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Catálogo Productos -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <div class="w-8 h-8" >
+                <img src="/public/icons/mesa.png" alt="Icono de Mesa" class="w-full h-full object-cover" width="10" height="10" style="filter: brightness(100);">
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Catálogo General</h3>
+            <p class="text-gray-600 mb-4">Toda nuestra línea de productos y servicios para laboratorios.</p>
+            <a href="/recursos/centro-descargas/ver-catalogo/productos" class="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center">
+              Ver Catálogo
+            </a>
+          </div>
+          
+          <!-- Catálogo Sistema 7 Zonas -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+              <div class="w-8 h-8" >
+                <img src="/public/icons/pie.png" alt="Sistema de Diseño 7 Zonas" class="w-full h-full object-cover" width="10" height="10" style="filter: brightness(100);">
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sistema 7 Zonas</h3>
+            <p class="text-gray-600 mb-4">Metodología exclusiva para diseño optimizado de laboratorios.</p>
+            <a href="/recursos/centro-descargas/ver-catalogo/sistema-7-zonas" class="block w-full bg-orange-600 text-white! px-4 py-2 rounded-lg font-medium hover:bg-teal-700 transition-colors text-center">
+              Ver Catálogo
+            </a>
+          </div>
+          
+          <!-- Checklist de Diseño -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-black-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Checklist de Diseño</h3>
+            <p class="text-gray-600 mb-4">Herramienta esencial para planificar todos los elementos de tu laboratorio.</p>
+            <a href="/recursos/centro-descargas/checklist-laboratorio" class="block w-full bg-yellow-500 text-white! px-4 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors text-center">
+              Obtener Checklist
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-12 bg-blue-600">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl font-bold text-white mb-4">¿Necesitas información personalizada?</h2>
+        <p class="text-lg text-blue-100 mb-6">
+          Nuestro equipo técnico puede ayudarte a seleccionar la configuración perfecta para tu laboratorio
+        </p>
+        <a href="/#contacto" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+          Solicitar Asesoría
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<!-- Modal para solicitud de descarga -->
+<div id="download-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-gray-900">Registrate para descargar el catálogo</h3>
+      <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <form action="https://formsubmit.co/contacto@santre.org" method="POST" class="max-w-md mx-auto space-y-4" >
+      <input type="text" name="nombre" placeholder="Nombre*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <input type="email" name="email" placeholder="Correo electrónico*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <input type="tel" name="whatsapp" placeholder="WhatsApp*" required class=" w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <input type="text" name="empresa" placeholder="Empresa*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <select name="sector" class="w-full px-4 py-2 rounded-lg border text-gray-900">
+        <option value="">Sector de interés</option>
+        <option value="alimentaria">Industria Alimentaria</option>
+        <option value="farmaceutica">Farmacéutica</option>
+        <option value="salud">Salud y Hospitalario</option>
+        <option value="mineria">Minería</option>
+        <option value="educacion">Educación</option>
+        <option value="gobierno">Gobierno</option>
+        <option value="biotecnologia">Biotecnología</option>
+        <option value="investigacion">Investigación y Desarrollo</option>
+        <option value="control-calidad">Control de Calidad</option>
+      </select>
+      <input type="hidden" name="_subject" value="Nueva solicitud de catálogo">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" id="catalog-next-url" value="">
+      
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+        Enviar
+        </button>
+      <div id="modal-mensaje" class="text-center text-sm font-medium"></div>
+    </form>
+  </div>
+</div>
+
+
+<script is:inline>
+// @ts-nocheck
+// This script runs in the browser, TypeScript errors can be ignored
+  // Obtener el tipo de catálogo de la URL
+  const urlPath = window.location.pathname;
+  const catalogType = urlPath.split('/').pop() || 'productos';
+  console.log("Tipo de catálogo:", catalogType);
+  
+  // Configurar el modal
+  const modal = document.getElementById("download-modal");
+  const openModalButtons = document.querySelectorAll("#open-modal, #open-modal-bottom");
+  const closeModalButton = document.getElementById("close-modal");
+  
+  // Configurar la URL de redirección según el catálogo
+  const catalogNextUrlInput = document.getElementById('catalog-next-url');
+  if (catalogNextUrlInput) {
+    let downloadUrl = '';
+    if (catalogType === 'sistema-7-zonas') {
+      downloadUrl = '/downloads/2-Sistema diseno 7 zonas ADN Santre v02.pdf';
+    } else {
+      // Por defecto, mostrar el catálogo de productos
+      downloadUrl = '/downloads/1-Catalago de PRODUCTOS v04.pdf';
+    }
+    
+    // Configurar la URL completa para la redirección después del envío
+    // Esto es crucial para que FormSubmit funcione correctamente
+    // Añadimos el parámetro success=true para mostrar un mensaje de éxito
+    catalogNextUrlInput.value = window.location.origin + downloadUrl + '?success=true';
+    console.log("URL de descarga configurada:", catalogNextUrlInput.value);
+  }
+  
+  // Abrir modal desde el botón o al hacer clic en el overlay del PDF
+  openModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      console.log("abriendo modal");
+      modal.classList.remove("hidden");
+    });
+  });
+  
+  // También abrir el modal al hacer clic en el overlay del PDF
+  const pdfOverlay = document.querySelector(".pdf-overlay");
+  if (pdfOverlay) {
+    pdfOverlay.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+    // Hacer que el overlay sea clickeable
+    pdfOverlay.style.pointerEvents = "auto";
+  }
+  
+  // Cerrar modal
+  closeModalButton.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+  
+  // Cerrar modal al hacer clic fuera
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+ 
+  // Verificar si el usuario viene de haber enviado el formulario
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    
+    if (success === 'true') {
+      // Mostrar mensaje de éxito
+      const mensajeContainer = document.createElement('div');
+      mensajeContainer.className = 'fixed top-0 inset-x-0 bg-green-100 border-b-2 border-green-500 text-green-800 p-4 z-50 text-center';
+      mensajeContainer.innerHTML = `
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-xl font-bold mb-2">¡Gracias por tu solicitud!</h3>
+          <p>Tu catálogo se descargará automáticamente en unos segundos.</p>
+        </div>
+      `;
+      document.body.prepend(mensajeContainer);
+      
+      // Descargar automáticamente el PDF después de 1 segundo
+      setTimeout(() => {
+        let downloadUrl = '';
+        if (catalogType === 'sistema-7-zonas') {
+          downloadUrl = '/downloads/2-Sistema diseno 7 zonas ADN Santre v02.pdf';
+        } else {
+          downloadUrl = '/downloads/1-Catalago de PRODUCTOS v04.pdf';
+        }
+        
+        // Crear un enlace invisible y hacer clic en él para descargar
+        const downloadLink = document.createElement('a');
+        downloadLink.href = downloadUrl;
+        downloadLink.download = downloadUrl.split('/').pop();
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        
+        // Eliminar el mensaje después de 5 segundos
+        setTimeout(() => {
+          mensajeContainer.remove();
+        }, 5000);
+      }, 1000);
+    }
+    
+    // Deshabilitar el menú contextual solo en el iframe
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IFRAME' || e.target.closest('.protected-pdf')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    // Hacer que el overlay sea clickeable pero no bloquee la vista
+    const pdfOverlay = document.getElementById('pdf-overlay');
+    if (pdfOverlay) {
+      pdfOverlay.style.pointerEvents = 'auto';
+      pdfOverlay.style.cursor = 'pointer';
+    }
+  });
+  
+  // Podemos agregar un mensaje de carga mientras se procesa el formulario
+  const modalForm = document.querySelector("#download-modal form");
+  modalForm.addEventListener("submit", function () {
+    const mensajeElemento = document.getElementById("modal-mensaje");
+    mensajeElemento.innerHTML = "Enviando formulario...";
+    mensajeElemento.classList.remove("text-red-600", "text-green-600");
+    mensajeElemento.classList.add("text-blue-600");
+  });
+</script>

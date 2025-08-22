@@ -1,0 +1,294 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import '../../../styles/global.css';
+
+---
+
+<Layout 
+  title="Checklist de Diseño de Laboratorio | 7 Zonas Santre | Descarga Gratuita"
+  description="Descarga nuestra checklist gratuita para el diseño de laboratorios basada en el Sistema 7 Zonas de Santre. Optimiza tu espacio y mejora la eficiencia."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-20 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-5">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Checklist de <span class="text-blue-600">Diseño de Laboratorio</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Herramienta esencial para planificar y verificar todos los elementos necesarios en tu laboratorio
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist Principal -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-blue-200 rounded-2xl p-8 md:p-12 text-black text-center border-2 border-blue-800">
+          <h2 class="text-3xl font-bold mb-4">Checklist de Diseño de Laboratorio 7 Zonas</h2>
+          
+          <!-- Mensaje de éxito -->
+          <div id="success-message" class="hidden bg-green-100 border-2 border-green-500 text-green-800 p-4 mb-6 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2">¡Gracias por tu solicitud!</h3>
+            <p class="mb-4">Te hemos enviado un correo con el enlace para descargar la checklist.</p>
+            <p>Si prefieres, puedes <a href="/public/downloads/4-Checklist de Diseño de Laboratorio Santre 7 Zonas v02.pdf" download class="text-blue-600 underline font-bold">descargar la checklist directamente aquí</a>.</p>
+          </div>
+          
+          <p class="text-xl text-black mb-6">Te mandaremos la guía completa directo a tu correo</p>
+          <p class="text-black mb-8">Basada en nuestra metodología exclusiva de 7 Zonas para diseño óptimo de espacios</p>
+          
+          <!-- Formulario de descarga -->
+          <form action="https://formsubmit.co/contacto@santre.org" method="POST" class="max-w-md mx-auto space-y-4" >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="text" name="nombre" placeholder="Nombre*" required class="bg-white w-full px-4 py-3 rounded-lg text-blue-800" />
+              <input type="text" name="apellido" placeholder="Apellido*" required class="bg-white w-full px-4 py-3 rounded-lg text-blue-800" />
+            </div>
+            <input type="email" name="email" placeholder="Correo electrónico*" required class="bg-white w-full px-4 py-3 rounded-lg text-blue-800" />
+            <input type="tel" name="whatsapp" placeholder="WhatsApp*" required class="bg-white w-full px-4 py-3 rounded-lg text-blue-800" />
+            <input type="text" name="empresa" placeholder="Empresa" class="bg-white w-full px-4 py-3 rounded-lg text-blue-800" />
+            <select name="sector" class="bg-white w-full px-4 py-3 rounded-lg text-blue-800">
+              <option value="">Sector de interés</option>
+              <option value="alimentaria">Industria Alimentaria</option>
+              <option value="farmaceutica">Farmacéutica</option>
+              <option value="salud">Salud y Hospitalario</option>
+              <option value="mineria">Minería</option>
+              <option value="educacion">Educación</option>
+              <option value="gobierno">Gobierno</option>
+              <option value="biotecnologia">Biotecnología</option>
+              <option value="investigacion">Investigación y Desarrollo</option>
+              <option value="control-calidad">Control de Calidad</option>
+            </select>
+            <!-- Campos ocultos -->
+            <input type="hidden" name="_subject" value="Nueva solicitud de checklist de laboratorio">
+            <input type="hidden" name="_autoresponse" value="Gracias por contactarte con Santre. Puedes descargar la checklist en este enlace: http://santre.org/public/downloads/4-Checklist de Diseño de Laboratorio Santre 7 Zonas v02.pdf">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="http://santre.org/public/downloads/4-Checklist de Diseño de Laboratorio Santre 7 Zonas v02.pdf">
+                <button type="submit" class="w-full bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Descargar Checklist PDF (1.5 MB)
+                </button>
+            
+            <div id="mensaje" class="text-black font-medium mt-2"></div>
+
+            
+          </form>
+          
+          <p class="text-sm text-black mt-4">
+            Al descargar aceptas recibir información de productos y servicios de Santre Industrial
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios de la Checklist -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">¿Por qué usar nuestra Checklist?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Beneficio 1 -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Planificación Completa</h3>
+            <p class="text-gray-600 mb-4">Asegura que no olvides ningún elemento crucial en el diseño de tu laboratorio, desde equipamiento básico hasta sistemas especializados.</p>
+            <div class="text-sm text-gray-500">
+              <p>• Verificación sistemática</p>
+              <p>• Organización por zonas</p>
+              <p>• Evita omisiones costosas</p>
+            </div>
+          </div>
+
+          <!-- Beneficio 2 -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Optimización de Espacios</h3>
+            <p class="text-gray-600 mb-4">Basada en nuestra metodología de 7 Zonas, ayuda a distribuir eficientemente cada área de trabajo según su función.</p>
+            <div class="text-sm text-gray-500">
+              <p>• Flujo de trabajo mejorado</p>
+              <p>• Distribución ergonómica</p>
+              <p>• Aprovechamiento del espacio</p>
+            </div>
+          </div>
+
+          <!-- Beneficio 3 -->
+          <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Colaboración Efectiva</h3>
+            <p class="text-gray-600 mb-4">Facilita la comunicación entre todos los involucrados en el proyecto: arquitectos, ingenieros, científicos y personal administrativo.</p>
+            <div class="text-sm text-gray-500">
+              <p>• Lenguaje común</p>
+              <p>• Referencia compartida</p>
+              <p>• Seguimiento de avances</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vista previa de la Checklist -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Vista Previa</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Nuestra checklist incluye todos los elementos esenciales para un laboratorio funcional y seguro
+          </p>
+        </div>
+        
+        <div class="bg-gray-100 rounded-xl p-8 border border-gray-200">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-bold text-purple-700 mb-4">Contenido de la Checklist:</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span><strong>Zona 1:</strong> Trabajo General - Mesas, sillas, espacios de trabajo</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span><strong>Zona 2:</strong> Almacenaje Elevado - Gabinetes superiores, estanterías</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span><strong>Zona 3:</strong> Reactivos - Almacenamiento seguro de químicos</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span><strong>Zona 4:</strong> Pesaje - Áreas para balanzas y mediciones precisas</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span><strong>Zona 5:</strong> Manipulación Segura - Campanas, sistemas de extracción</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span><strong>Zona 6:</strong> Seguridad y Emergencias - Duchas, lavaojos</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span><strong>Zona 7:</strong> Lavado - Tarjas, grifos, sistemas de agua</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-purple-700 mb-4">Incluye verificación de:</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Dimensiones y espacios requeridos</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Instalaciones eléctricas necesarias</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Requerimientos de plomería</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Sistemas de ventilación y extracción</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Normativas y regulaciones aplicables</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Materiales recomendados según uso</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Equipamiento especializado por sector</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-teal-600">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">¿Necesitas ayuda con tu proyecto?</h2>
+        <p class="text-xl text-teal-100 mb-8">
+          Nuestro equipo de especialistas puede asesorarte en el diseño y equipamiento de tu laboratorio
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contacto" class="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Solicitar Asesoría
+          </a>
+          <a href="/diseno-de-laboratorio" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors">
+            Diseño Personalizado
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if URL has success parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    
+    if (success === 'true') {
+      // Show success message and hide form
+      const successMessage = document.getElementById('success-message');
+      const form = document.querySelector('form');
+      
+      if (successMessage && form) {
+        successMessage.classList.remove('hidden');
+        form.classList.add('hidden');
+      }
+    }
+  });
+</script>

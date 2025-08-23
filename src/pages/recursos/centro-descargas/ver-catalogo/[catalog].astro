@@ -13,12 +13,15 @@ const catalogMap = {
     title: 'Catálogo General de Productos',
     file: '/downloads/1-Catalago de PRODUCTOS v04.pdf',
     description: 'Catálogo completo con toda nuestra línea de productos y servicios para laboratorios.'
-  },
+  }
+  /*
+  ,
   'sistema-7-zonas': {
     title: 'Sistema de Diseño 7 Zonas ADN Santre',
     file: '/downloads/2-Sistema diseno 7 zonas ADN Santre v02.pdf',
     description: 'Metodología exclusiva Santre para el diseño optimizado de laboratorios.'
   }
+  */
 };
 
 // Determinar qué catálogo mostrar o redirigir si no existe
@@ -68,6 +71,7 @@ export function getStaticPaths() {
         </div>
         
         <!-- PDF Viewer -->
+         <!---
         <div class="w-full rounded-lg overflow-hidden shadow-lg border border-gray-200 protected-pdf" style="height: 800px;">
           <iframe 
             src={catalogInfo.file} 
@@ -82,6 +86,7 @@ export function getStaticPaths() {
             </div>
           </div>
         </div>
+        -->
         
       </div>
     </section>

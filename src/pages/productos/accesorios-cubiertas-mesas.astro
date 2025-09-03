@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
+import '../../styles/global.css';
+---
+
+<Layout 
+  title="Accesorios para Mesas y Cubiertas | Santre Industrial"
+  description="Accesorios para mesas y cubiertas: válvulas, mangueras, conectores, etc. Cumplimiento con normativas de seguridad industrial."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <span class="text-blue-600">Accesorios</span> para Mesas y Cubiertas Especializadas
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Accesorios para mesas y cubiertas: Válvulas, Sillas, Tapetes, etc. Cumplimiento con normativas de seguridad industrial.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="py-16 bg-white">
+      <ProductCatalog 
+        sections={[
+          {
+            id: 'sillas-bancos',
+            title: 'Sillas y Bancos',
+            columns: 2,
+            products: [
+              {
+                name: 'Silla de Laboratorio',
+                image: '/ProductImages/Silla para Laboratorio.png',
+                alt: 'Silla de Laboratorio',
+                height: 48
+              },
+              {
+                name: 'Banco de Laboratorio',
+                image: '/ProductImages/Banco para Laboratorio.png',
+                alt: 'Banco de Laboratorio',
+                height: 48
+              }
+            ]
+          },
+          {
+            id: 'tapetes',
+            title: 'Tapetes',
+            columns: 2,
+            products: [
+              {
+                name: 'Tapete Antiestàtico',
+                image: '/ProductImages/Tapete Antiestatico.png',
+                alt: 'Tapete de Laboratorio',
+                height: 48
+              },
+              {
+                name: 'Tapete Neopreno',
+                image: '/ProductImages/Tapete neopreno.png',
+                alt: 'Tapete Neopreno',
+                height: 48
+              }
+            ]
+          },
+          {
+            id: 'torretas',
+            title: 'Torretas',
+            columns: 2,
+            products: [
+              {
+                name: 'Torreta Electrica',
+                image: '/ProductImages/Torreta Electrica.png',
+                alt: 'Torreta Electrica',
+                height: 48
+              },
+              {
+                name: 'Torreta de Voz y Datos',
+                image: '/ProductImages/Torreta Voz y Datos.png',
+                alt: 'Torreta de Voz y Datos',
+                height: 48
+              }
+            ]
+          },
+          {
+            id: 'valvulas',
+            title: 'Válvulas',
+            columns: 2,
+            products: [
+              {
+                name: 'Válvula sobre cubierta AIRE 1',
+                image: '/ProductImages/Valvula sobre cubierta L4200-134WSA AIR_1.1.png',
+                alt: 'Válvula sobre cubierta AIRE 1',
+                height: 48
+              },
+              {
+                name: 'Válvula sobre cubierta AIRE 2',
+                image: '/ProductImages/Valvula sobre cubierta L4200-134WSA AIR_2.1.png',
+                alt: 'Válvula sobre cubierta AIRE 2',
+                height: 48
+              },
+              {
+                name: 'Válvula sobre cubierta AIRE 2.2',
+                image: '/ProductImages/Valvula sobre cubierta L4200-134WSA AIR_2.2.png',
+                alt: 'Válvula sobre cubierta AIRE 2.2',
+                height: 48
+              },
+              {
+                name: 'Válvula sobre cubierta AIRE 4',
+                image: '/ProductImages/Valvula sobre cubierta L4200-134WSA AIR_4.1.png',
+                alt: 'Válvula sobre cubierta AIRE 4',
+                height: 48
+              }
+            ]
+          }
+        ]}
+      />
+    </section>
+
+    <!-- Normativas y Certificaciones -->
+    <section class="py-16 bg-blue-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Normativas y Certificaciones</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">ANSI Z358.1</h3>
+            <p class="text-gray-600">Estándar americano para duchas y lavaojos de emergencia.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">ISO 9001</h3>
+            <p class="text-gray-600">Certificación de calidad en gestión y fabricación.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">NOM-018-STPS</h3>
+            <p class="text-gray-600">Norma mexicana de seguridad en el trabajo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+  <Footer />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Estación de Emergencia para Laboratorio",
+    "description": "Estaciones de emergencia para laboratorios con duchas de seguridad y lavaojos que cumplen con normativas de seguridad industrial",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Santre Industrial",
+      "url": "https://santre.org"
+    },
+    "category": "Equipos de Seguridad Industrial",
+    "hasVariant": [
+      {
+        "@type": "ProductVariant",
+        "name": "Ducha de Emergencia",
+        "description": "Ducha de emergencia para laboratorios con activación manual"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Lavaojos de Emergencia",
+        "description": "Lavaojos de emergencia para laboratorios con activación manual"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    },
+    "keywords": "estacion emergencia, ducha emergencia, lavaojos emergencia, seguridad laboratorio, equipos seguridad industrial"
+  }
+  </script>
+</Layout>

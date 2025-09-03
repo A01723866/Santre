@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
+import '../../styles/global.css';
+---
+
+<Layout 
+  title="Estación de Emergencia para Laboratorio | Duchas y Lavaojos | Santre Industrial"
+  description="Estaciones de emergencia para laboratorios: duchas de seguridad, lavaojos y equipos de protección. Cumplimiento con normativas de seguridad industrial."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Estación de <span class="text-blue-600">Emergencia</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Equipos de seguridad esenciales para laboratorios: duchas de emergencia, lavaojos y sistemas de protección que cumplen con las normativas de seguridad industrial.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="py-16 bg-white">
+      <ProductCatalog 
+        sections={[
+          {
+            id: 'productos-emergencia',
+            title: 'Productos de Emergencia',
+            columns: 2,
+            products: [
+              {
+                name: 'Regadera de Emergencia',
+                image: '/ProductImages/Estacion de Emergencia.png',
+                alt: 'Regadera de Emergencia para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Lavaojos Microfono',
+                image: '/ProductImages/Lavaojos Microfono.png',
+                alt: 'Lavaojos Microfono para Laboratorio',
+                height: 68
+              }
+            ]
+          }
+        ]}
+      />
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">¿Por qué elegir nuestras Estaciones de Emergencia?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Cumplimiento Normativo</h3>
+            <p class="text-gray-600">Cumple con todas las normativas de seguridad industrial y laboral vigentes.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Respuesta Inmediata</h3>
+            <p class="text-gray-600">Activación instantánea para emergencias químicas y accidentes laborales.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Diseño Robusto</h3>
+            <p class="text-gray-600">Construcción resistente con materiales de alta calidad para uso industrial.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Fácil Mantenimiento</h3>
+            <p class="text-gray-600">Diseño simple para facilitar la limpieza y mantenimiento regular.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Especificaciones Técnicas -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Especificaciones Técnicas</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Ducha de Emergencia</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li><strong>Flujo de agua:</strong> Mínimo 75.7 L/min (20 GPM)</li>
+              <li><strong>Presión:</strong> 2.1 - 4.1 bar (30 - 60 PSI)</li>
+              <li><strong>Material:</strong> Acero inoxidable 304</li>
+              <li><strong>Activación:</strong> Palanca de tracción manual</li>
+              <li><strong>Instalación:</strong> Techo o pared</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Lavaojos de Emergencia</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li><strong>Flujo de agua:</strong> Mínimo 1.5 L/min (0.4 GPM)</li>
+              <li><strong>Presión:</strong> 2.1 - 4.1 bar (30 - 60 PSI)</li>
+              <li><strong>Material:</strong> Acero inoxidable 304</li>
+              <li><strong>Activación:</strong> Palanca de empuje</li>
+              <li><strong>Instalación:</strong> Mesa o pared</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Normativas y Certificaciones -->
+    <section class="py-16 bg-blue-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Normativas y Certificaciones</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">ANSI Z358.1</h3>
+            <p class="text-gray-600">Estándar americano para duchas y lavaojos de emergencia.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">ISO 9001</h3>
+            <p class="text-gray-600">Certificación de calidad en gestión y fabricación.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">NOM-018-STPS</h3>
+            <p class="text-gray-600">Norma mexicana de seguridad en el trabajo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+  <Footer />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Estación de Emergencia para Laboratorio",
+    "description": "Estaciones de emergencia para laboratorios con duchas de seguridad y lavaojos que cumplen con normativas de seguridad industrial",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Santre Industrial",
+      "url": "https://santre.org"
+    },
+    "category": "Equipos de Seguridad Industrial",
+    "hasVariant": [
+      {
+        "@type": "ProductVariant",
+        "name": "Ducha de Emergencia",
+        "description": "Ducha de emergencia para laboratorios con activación manual"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Lavaojos de Emergencia",
+        "description": "Lavaojos de emergencia para laboratorios con activación manual"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    },
+    "keywords": "estacion emergencia, ducha emergencia, lavaojos emergencia, seguridad laboratorio, equipos seguridad industrial"
+  }
+  </script>
+</Layout>

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Contact from '../../components/Contact.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
 import '../../styles/global.css';
 ---
 
@@ -26,112 +27,92 @@ import '../../styles/global.css';
       </div>
     </section>
 
-    <!-- Clasificación por Tipo -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Catálogo de Campanas</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Campanas de humo (uso general) -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0H5m7-7v14" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana de humo</h3>
-            <p class="text-gray-600 mb-4">Uso general para evacuación de vapores químicos; diseño estándar con ventana tipo guillotina.</p>
-          </div>
-
-          <!-- Campana especial para ácido perclórico -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 4h.01M4 16h16" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana para ácido perclórico</h3>
-            <p class="text-gray-600 mb-4">Interior en acero inoxidable 316L con sistema de lavado automático contra cristales.</p>
-          </div>
-
-          <!-- Campana para agentes corrosivos agresivos -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m4-4H8" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana para agentes corrosivos</h3>
-            <p class="text-gray-600 mb-4">Construcción en polipropileno o recubrimientos anticorrosivos para ácidos fuertes.</p>
-          </div>
-
-          <!-- Campana con interior de acero inoxidable -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana interior acero inoxidable</h3>
-            <p class="text-gray-600 mb-4">Ideal para limpieza frecuente y resistencia a solventes; acabado sanitario.</p>
-          </div>
-
-          <!-- Campana para solventes -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana para solventes</h3>
-            <p class="text-gray-600 mb-4">Diseño con extracción de alto caudal y materiales anti-chispa para vapores inflamables.</p>
-          </div>
-
-          <!-- Campana antichispa -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana antichispa</h3>
-            <p class="text-gray-600 mb-4">Componentes eléctricos a prueba de explosión; adecuada para atmósferas con vapores combustibles.</p>
-          </div>
-
-          <!-- Campana de flujo laminar horizontal/vertical -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18m-6 6H9m6-12H9" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana de flujo laminar</h3>
-            <p class="text-gray-600 mb-4">Flujo laminar horizontal o vertical con filtración HEPA para ambiente estéril.</p>
-          </div>
-
-          <!-- Campana de bioseguridad -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Campana de bioseguridad</h3>
-            <p class="text-gray-600 mb-4">Cabinas clase I, II o III para protección de personal, muestra y ambiente.</p>
-          </div>
-
-          <!-- Brazo extractor articulado -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Brazo extractor articulado</h3>
-            <p class="text-gray-600 mb-4">Extracción localizada flexible para puestos de trabajo específicos.</p>
-          </div>
-        </div>
-      </div>
+     <!-- Catálogo de Productos -->
+     <section class="py-16 bg-white">
+      <ProductCatalog 
+        sections={[
+          {
+            id: 'campanas',
+            title: 'Campanas',
+            columns: 2,
+            products: [
+              {
+                name: 'Campana de Bioseguridad',
+                image: '/ProductImages/Campana de Bioseguridad.jpg',
+                alt: 'Campana de Bioseguridad para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Campana de Flujo Laminar vertical',
+                image: '/ProductImages/Campana de Flujo Laminar vertical.png',
+                alt: 'Campana de Flujo Laminar vertical para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Campana de Humos',
+                image: '/ProductImages/Campana de Humos.png',
+                alt: 'Campana de Humos para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Campana Flujo Laminar Horizontal',
+                image: '/ProductImages/Campana Flujo Laminar Horizontal.png',
+                alt: 'Campana Flujo Laminar Horizontal para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Campana PPL para Camara Salina',
+                image: '/ProductImages/Campana PPL para Camara Salina.png',
+                alt: 'Campana PPL para Camara Salino para Laboratorio',
+                height: 68
+              }
+            ]
+          },
+          {
+            id: 'extractores',
+            title: 'Extractores',
+            columns: 3,
+            products: [
+              {
+                name: 'Extractor de lamina',
+                image: '/ProductImages/Extractor de lamina.jpg',
+                alt: 'Extractor de lamina para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Extractor para corrosivos',
+                image: '/ProductImages/Extractor para corrosivos.jpg',
+                alt: 'Extractor para corrosivos para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Brazo Extractor articulado',
+                image: '/ProductImages/Brazo Extractor.jpg',
+                alt: 'Brazo Extractor articulado para Laboratorio',
+                height: 68
+              }
+            ]
+          },{
+            id: 'valvulas-campanas',
+            title: 'Válvulas para Campanas',
+            columns: 2,
+            products: [
+              {
+                name: 'Valvula para Campana A',
+                image: '/ProductImages/Valvula para campana A.jpg',
+                alt: 'Válvula para Campana A',
+                height: 48
+              },
+              {
+                name: 'Válvula para Campana B',
+                image: '/ProductImages/Valvula para campana B.jpg',
+                alt: 'Válvula para Campana B',
+                height: 48
+              }
+            ]
+          }
+        ]}
+      />
     </section>
 
     <!-- Beneficios -->
@@ -219,4 +200,53 @@ import '../../styles/global.css';
     "keywords": "campanas extracción laboratorio, campana química, flujo laminar, bioseguridad, ventilación laboratorio, seguridad laboratorio"
   }
   </script>
+
+<script is:inline>
+  // Make function globally available
+  window.toggleSection = function(sectionName) {
+    const content = document.getElementById(sectionName + '-content');
+    const icon = document.getElementById(sectionName + '-icon');
+
+    console.log('Toggle section:', sectionName);
+    console.log('Content element:', content);
+    console.log('Icon element:', icon);
+
+    if (content && icon) {
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+      console.log('Section toggled successfully');
+    } else {
+      console.log('Error: Content or icon not found');
+    }
+  };
+
+  // Initialize all sections as OPEN by default
+  function initializeSections() {
+    console.log('Initializing sections...');
+    const sections = ['vitrinas', 'repisas', 'accesorios'];
+    sections.forEach(section => {
+      const content = document.getElementById(section + '-content');
+      const icon = document.getElementById(section + '-icon');
+      if (content && icon) {
+        // Remove hidden class to make sections open by default
+        content.classList.remove('hidden');
+        // Rotate icon to show it's open
+        icon.classList.add('rotate-180');
+        console.log('Section initialized as OPEN:', section);
+      } else {
+        console.log('Error initializing section:', section, 'content:', content, 'icon:', icon);
+      }
+    });
+  }
+
+  // Try multiple ways to ensure initialization
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeSections);
+  } else {
+    initializeSections();
+  }
+
+  // Also try after a short delay as backup
+  setTimeout(initializeSections, 100);
+</script>
 </Layout> 

@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
+import '../../styles/global.css';
+---
+
+<Layout 
+  title="Gabinetes de Seguridad para Laboratorio | Santre Industrial"
+  description="Gabinetes de seguridad para laboratorio: con puerta, cajones, combinados, rinconeros, suspendidos y móviles. Máxima organización y funcionalidad. Diseño modular."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <span class="text-blue-600">Gabinetes</span> de Seguridad para Laboratorio
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Gabinetes de seguridad para laboratorio: con puerta, cajones, combinados, rinconeros, suspendidos y móviles. Máxima organización y funcionalidad. Diseño modular.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="py-16 bg-white">
+      <ProductCatalog 
+        sections={[
+          {
+            id: 'gabinetes-seguridad',
+            title: 'Gabinetes',
+            columns: 2,
+            products: [
+              {
+                name: 'Gabinete Corrosivo',
+                image: '/ProductImages/Gabinete Corrosivos.png',
+                alt: 'Gabinete Corrosivo',
+                height: 68
+              },
+              {
+                name: 'Gabinete Flamable',
+                image: '/ProductImages/Gabinete Flamables.png',
+                alt: 'Gabinete Flamable',
+                height: 68
+              }
+            ]
+          },
+          {
+            id: 'armarios-seguridad',
+            title: 'Armarios',
+            columns: 2,
+            products: [
+              {
+                name: 'Armario PV',
+                image: '/ProductImages/Armario PV.png',
+                alt: 'Armario PV',
+                height: 68
+              },
+              {
+                name: 'Armario PM',
+                image: '/ProductImages/Armario PM.png',
+                alt: 'Armario PM',
+                height: 68
+              }
+            ]
+          },
+          {
+            id: 'estantes-seguridad',
+            title: 'Estantes',
+            columns: 2,
+            products: [
+              {
+                name: 'Carro Inoxidable',
+                image: '/ProductImages/Carro de inoxidable.png',
+                alt: 'Carro de inoxidable',
+                height: 68
+              },
+              {
+                name: 'Estante Abierto',
+                image: '/ProductImages/Estante Abiertos.png',
+                alt: 'Estante abierto',
+                height: 68
+              }
+            ]
+          }
+        ]}
+      />
+    </section>
+
+
+    <Contact />
+  </main>
+  <Footer />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Estación de Emergencia para Laboratorio",
+    "description": "Estaciones de emergencia para laboratorios con duchas de seguridad y lavaojos que cumplen con normativas de seguridad industrial",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Santre Industrial",
+      "url": "https://santre.org"
+    },
+    "category": "Equipos de Seguridad Industrial",
+    "hasVariant": [
+      {
+        "@type": "ProductVariant",
+        "name": "Ducha de Emergencia",
+        "description": "Ducha de emergencia para laboratorios con activación manual"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Lavaojos de Emergencia",
+        "description": "Lavaojos de emergencia para laboratorios con activación manual"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    },
+    "keywords": "estacion emergencia, ducha emergencia, lavaojos emergencia, seguridad laboratorio, equipos seguridad industrial"
+  }
+  </script>
+</Layout>

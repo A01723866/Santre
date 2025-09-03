@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Contact from '../../components/Contact.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
 import '../../styles/global.css';
 ---
 
@@ -26,58 +27,120 @@ import '../../styles/global.css';
       </div>
     </section>
 
-    <!-- Clasificación por Tipo -->
+    <!-- Catálogo de Productos -->
     <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Tipos de Grifos y Accesorios</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Grifo Mezcladora -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M8 6v12m8-12v12" /></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Grifo mezcladora</h3>
-            <p class="text-gray-600 mb-4">Grifo con dos mandos independientes para mezclar agua fría y caliente; pico giratorio.</p>
-          </div>
+      <ProductCatalog 
+        sections={[
+          {
+            id: 'cubiertas-tarjas',
+            title: 'Cubiertas Para Tarjas',
+            columns: 2,
+            products: [
+              {
+                name: 'Cubierta Inoxidable para isla',
+                image: '/ProductImages/Tarja Inox isla.png',
+                alt: 'Cubierta Inoxidable para isla',
+                height: 48
+              },
+              {
+                name: 'Cubierta Inoxidable para Muro',
+                image: '/ProductImages/Tarja Inox muro.png',
+                alt: 'Cubierta Inoxidable para Muro',
+                height: 48
+              },
+              {
+                name: 'Cubierta Negra para Isla',
+                image: '/ProductImages/Tarja Fenolica isla Negra.png',
+                alt: 'Cubierta color negro para isla',
+                height: 48
+              },
+              {
+                name: 'Cubierta Negra para Muro',
+                image: '/ProductImages/Tarja Fenolica muro Negra.png',
+                alt: 'Cubierta color negro para muro',
+                height: 48
+              }
+            ]
+          },
+          {
+            id: 'llaves',
+            title: 'Llaves',
+            columns: 2,
+            products: [
+              {
+                name: 'Llave de Sencilla',
+                image: '/ProductImages/Llave Sencilla.png',
+                alt: 'Llave inoxidable sencilla',
+                height: 68
+              },
+              {
+                name: 'Mezcladora',
+                image: '/ProductImages/Mezcladora.png',
+                alt: 'Llave mezcladora inoxidable',
+                height: 68
+              },
+            ]
+          },
+          {
+            id: 'escuridores',
+            title: 'Escuridores',
+            columns: 2,
+            products: [
+              {
+                name: 'Escuridero Fenolico',
+                image: '/ProductImages/Escurridor Fenolico.png',
+                alt: 'Escuridero de productos fenolico color negro con tubos',
+                height: 68
+              },
+              {
+                name: 'Escuridero Inoxidable',
+                image: '/ProductImages/Escurridor inoxidable.png',
+                alt: 'Escuridero de productos fenolico inoxidable con tubos',
+                height: 68
+              }
+            ]
+          },
+          {
+            id: 'acrilicos',
+            title: 'Acrílicos Antisalpicaduras',
+            columns: 2,
+            products: [
+              {
+                name: 'Acrílico Antisalpicaduras Lateral',
+                image: '/ProductImages/Acrilico Lateral.png',
+                alt: 'Acrílico antisalpicaduras lateral transparente',
+                height: 68
+              },
+              {
+                name: 'Acrílico Antisalpicaduras para Isla',
+                image: '/ProductImages/Acrilico para Isla.png',
+                alt: 'Acrílico antisalpicaduras para isla transparente',
+                height: 68
+              }
 
-          <!-- Grifo llave sencilla -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m6-8H6" /></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Grifo llave sencilla</h3>
-            <p class="text-gray-600 mb-4">Llave individual para agua o gases, ideal para control dedicado en estaciones de trabajo.</p>
-          </div>
-
-          <!-- Tarjas murales o en isla -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" /></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Tarjas murales o en isla</h3>
-            <p class="text-gray-600 mb-4">Tarjas de acero inoxidable para montaje contra muro o en mesas isla, con opciones de una o dos pozas.</p>
-          </div>
-
-          <!-- Acrílico antisalpicaduras -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" /></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Acrílico antisalpicaduras</h3>
-            <p class="text-gray-600 mb-4">Paneles de protección para evitar salpicaduras y mantener el área de trabajo limpia.</p>
-          </div>
-
-          <!-- Válvulas integradas sobre cubierta -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z" /></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Válvulas sobre cubierta</h3>
-            <p class="text-gray-600 mb-4">Válvulas de agua, gas y vacío instaladas sobre cubierta para acceso directo (ver sección 2).</p>
-          </div>
-        </div>
-      </div>
+            ]
+          },
+          {
+            id: 'gabinetes-tarjas',
+            title: 'Gabinetes con Tarjas',
+            columns: 2,
+            products: [
+              {
+                name: 'Gabinete con Tarja',
+                image: '/ProductImages/Gabinete Tarja 1P.png',
+                alt: 'Gabinete con tarja inoxidable de una puerta',
+                height: 68
+              },
+              {
+                name: 'Gabinete con Tarja 2 Puertas',
+                image: '/ProductImages/Gabinete Tarja 2P.png',
+                alt: 'Gabinete con tarja inoxidable de dos puertas',
+                height: 68
+              }
+            ]
+          }
+        ]}
+      />
     </section>
 
     <!-- Beneficios -->

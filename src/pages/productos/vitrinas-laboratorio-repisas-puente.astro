@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Contact from '../../components/Contact.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
 import '../../styles/global.css';
 ---
 
@@ -26,61 +27,87 @@ import '../../styles/global.css';
       </div>
     </section>
 
-    <!-- Clasificación por Tipo -->
+    <!-- Catálogo de Productos -->
     <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Configuraciones Disponibles</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Repisa puente alta con vitrinas (mesa central) -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Repisa puente alta con vitrinas</h3>
-            <p class="text-gray-600 mb-4">Sistema elevado con puertas de vidrio para mesa central; protege reactivos y equipos manteniendo visibilidad.</p>
-            <div class="text-sm text-gray-500 mb-4">
-              <p><strong>Altura:</strong> 70–90 cm sobre cubierta</p>
-              <p><strong>Puertas:</strong> Cristal templado 6 mm</p>
-              <p><strong>Aplicación:</strong> Mesa central (isla)</p>
-            </div>
-          </div>
-
-          <!-- Repisa puente baja sin vitrinas (mesa central) -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Repisa puente baja sin vitrinas</h3>
-            <p class="text-gray-600 mb-4">Entrepaños abiertos de baja altura para mesa central: acceso rápido a material de uso frecuente.</p>
-            <div class="text-sm text-gray-500 mb-4">
-              <p><strong>Altura:</strong> 40–60 cm sobre cubierta</p>
-              <p><strong>Profundidad:</strong> 20–30 cm</p>
-              <p><strong>Aplicación:</strong> Mesa central (isla)</p>
-            </div>
-          </div>
-
-          <!-- Repisa puente alta con vitrinas a muro -->
-          <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8h18M3 12h18M3 16h18" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Repisa puente alta con vitrinas a muro</h3>
-            <p class="text-gray-600 mb-4">Sistema fijado a muros tipo tablaroca para aprovechar espacio vertical; puertas de vidrio para protección.</p>
-            <div class="text-sm text-gray-500 mb-4">
-              <p><strong>Altura:</strong> 70–90 cm sobre cubierta</p>
-              <p><strong>Fijación:</strong> Anclajes especiales para tablaroca</p>
-              <p><strong>Aplicación:</strong> Instalación a muro</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProductCatalog 
+        sections={[
+          {
+            id: 'vitrinas',
+            title: 'Vitrinas',
+            columns: 2,
+            products: [
+              {
+                name: 'Vitrina para Repisa',
+                image: '/ProductImages/Vitrina para repisa.png',
+                alt: 'Vitrina para Repisa para Laboratorio',
+                height: 48
+              },
+              {
+                name: 'Vitrina Puertas Metálicas',
+                image: '/ProductImages/Vitrina puertas metalicas.png',
+                alt: 'Vitrina Puertas Metálicas para Laboratorio',
+                height: 48
+              },
+              {
+                name: 'Vitrina Sin Puertas',
+                image: '/ProductImages/Vitrina sin puertas.png',
+                alt: 'Vitrina Sin Puertas para Laboratorio',
+                height: 48
+              },
+              {
+                name: 'Vitrina Puertas de Vidrio',
+                image: '/ProductImages/Vitrinas puertas de vidrio.png',
+                alt: 'Vitrina Puertas de Vidrio para Laboratorio',
+                height: 48
+              }
+            ]
+          },
+          {
+            id: 'repisas',
+            title: 'Repisas',
+            columns: 3,
+            products: [
+              {
+                name: 'Repisa Puente Baja',
+                image: '/ProductImages/Repisa puente baja sin vitrinas.png',
+                alt: 'Repisa Puente Baja para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Repisa Puente Alta a Muro',
+                image: '/ProductImages/Repisa alta puente a muro.png',
+                alt: 'Repisa Puente Alta a Muro para Laboratorio',
+                height: 68
+              },
+              {
+                name: 'Repisa Puente Alta con Vitrina',
+                image: '/ProductImages/Repisa puente con vitrinas.png',
+                alt: 'Repisa Puente Alta con Vitrina para Laboratorio',
+                height: 68
+              }
+            ]
+          },
+          {
+            id: 'accesorios',
+            title: 'Accesorios',
+            columns: 2,
+            products: [
+              {
+                name: 'Valvula para repisa',
+                image: '/ProductImages/Valvula para repisa.jpg',
+                alt: 'Valvula para repisa para Laboratorio',
+                height: 48
+              },
+              {
+                name: 'Toma corriente con tapa',
+                image: '/ProductImages/Toma corriente con tapa.jpg',
+                alt: 'Toma corriente con tapa para Laboratorio',
+                height: 48
+              }
+            ]
+          }
+        ]}
+      />
     </section>
 
     <!-- Beneficios -->
@@ -173,5 +200,54 @@ import '../../styles/global.css';
     },
     "keywords": "vitrinas laboratorio, repisas puente, almacenamiento elevado, vitrina exhibición, mobiliario laboratorio"
   }
+  </script>
+
+  <script is:inline>
+    // Make function globally available
+    window.toggleSection = function(sectionName) {
+      const content = document.getElementById(sectionName + '-content');
+      const icon = document.getElementById(sectionName + '-icon');
+
+      console.log('Toggle section:', sectionName);
+      console.log('Content element:', content);
+      console.log('Icon element:', icon);
+
+      if (content && icon) {
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+        console.log('Section toggled successfully');
+      } else {
+        console.log('Error: Content or icon not found');
+      }
+    };
+
+    // Initialize all sections as OPEN by default
+    function initializeSections() {
+      console.log('Initializing sections...');
+      const sections = ['vitrinas', 'repisas', 'accesorios'];
+      sections.forEach(section => {
+        const content = document.getElementById(section + '-content');
+        const icon = document.getElementById(section + '-icon');
+        if (content && icon) {
+          // Remove hidden class to make sections open by default
+          content.classList.remove('hidden');
+          // Rotate icon to show it's open
+          icon.classList.add('rotate-180');
+          console.log('Section initialized as OPEN:', section);
+        } else {
+          console.log('Error initializing section:', section, 'content:', content, 'icon:', icon);
+        }
+      });
+    }
+
+    // Try multiple ways to ensure initialization
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeSections);
+    } else {
+      initializeSections();
+    }
+
+    // Also try after a short delay as backup
+    setTimeout(initializeSections, 100);
   </script>
 </Layout> 

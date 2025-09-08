@@ -1,0 +1,173 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
+import '../../styles/global.css';
+---
+
+<Layout 
+  title="Mesas para Laboratorio | Sistemas Modulares, Estructurales y Especializadas | Santre Industrial"
+  description="Mesas para laboratorio especializadas: sistemas modulares fijos, estructurales móviles, para balanza, con tarja, reportes y equipos especiales. Máxima durabilidad y flexibilidad."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Mesas para Laboratorio <span class="text-blue-600">Especializadas</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Sistemas modulares, estructurales y especializados para cada necesidad de laboratorio. Máxima durabilidad, flexibilidad y adaptabilidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="py-16 bg-white">
+      <ProductCatalog 
+        sections={[
+          {
+            id: 'mesas-especiales',
+            title: 'Mesas Especiales',
+            columns: 2,
+            products: [
+              {
+                name: 'Mesa MEMU',
+                image: '/ProductImages/Mesa MEMU 1.png',
+                alt: 'Mesa MEMU',
+                height: 48
+              },
+              {
+                name: 'Mesa para microscopio',
+                image: '/ProductImages/Mesa Memu Estructural.png',
+                alt: 'Mesa para microscopio',
+                height: 48
+              },
+              {
+                name: 'Mesa para Balanza',
+                image: '/ProductImages/Mesa para Equipos a Piso.png',
+                alt: 'Mesa para Balanza',
+                height: 48
+              },
+              {
+                name: 'Mesa para Microscopio',
+                image: '/ProductImages/Mesa para Microscopio.png',
+                alt: 'Mesa para Microscopio',
+                height: 48
+              }
+            ]
+          },
+          {
+            id: 'mesa-de-reportes',
+            title: 'Mesa de Reportes',
+            columns: 2,
+            products: [
+              {
+                name: 'Mesa Baja para Documentos',
+                image: '/ProductImages/Mesa para Reportes doble.png',
+                alt: 'Tapete de Laboratorio',
+                height: 56
+              },
+              {
+                name: 'Mesa para Documentacion',
+                image: '/ProductImages/Mesa baja para documentacion sencilla.png',
+                alt: 'Mesa para Documentacion',
+                height: 56
+              }
+            ]
+          },
+          {
+            id: 'mesas con tarjas',
+            title: 'Mesas con Tarjas',
+            columns: 2,
+            products: [
+              {
+                name: 'Mesa con Tarja',
+                image: '/ProductImages/Mesa con Tarja.png',
+                alt: 'Mesa con Tarja',
+                height: 56
+              },
+              {
+                name: 'Mesa con Gabinete y tarja doble Inoxidable',
+                image: '/ProductImages/Gabinete con tarja doble Inoxidable.png',
+                alt: 'Mesa con dos gabinetes y tarja doble de acero inoxidable',
+                height: 56
+              }
+            ]
+          },
+          {
+            id: 'mesa-para-balanza',
+            title: 'Mesas para Balanza',
+            columns: 1,
+            products: [
+              {
+                name: 'Mesa para Balanza',
+                image: '/ProductImages/Mesa para Balanza.png',
+                alt: 'Mesa para Balanza',
+                height: 56
+              }
+            ]
+          }
+        ]}
+      />
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Beneficios de Nuestras Mesas</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Máxima Durabilidad</h3>
+            <p class="text-gray-600">Estructura robusta y materiales de primera calidad para uso intensivo.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Flexibilidad Total</h3>
+            <p class="text-gray-600">Sistemas modulares y móviles que se adaptan a tus necesidades cambiantes.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Resistencia Química</h3>
+            <p class="text-gray-600">Materiales resistentes a ácidos, bases y solventes de laboratorio.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Personalización</h3>
+            <p class="text-gray-600">Configuraciones personalizadas según las necesidades específicas de tu laboratorio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+  <Footer />
+</Layout> 

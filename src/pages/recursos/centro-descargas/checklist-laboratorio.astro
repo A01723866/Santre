@@ -13,9 +13,9 @@ import '../../../styles/global.css';
   <Header />
   <main>
     <!-- Hero Section -->
-    <section class="pt-20 bg-gradient-to-br from-blue-50 to-white">
+    <section class="pt-20 pb-7 bg-gradient-to-br from-blue-50 to-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-5">
+        <div class="text-center mb-12">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Checklist de <span class="text-blue-600">Diseño de Laboratorio</span>
           </h1>
@@ -31,19 +31,11 @@ import '../../../styles/global.css';
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-blue-200 rounded-2xl p-8 md:p-12 text-black text-center border-2 border-blue-800">
           <h2 class="text-3xl font-bold mb-4">Checklist de Diseño de Laboratorio 7 Zonas</h2>
-          
-          <!-- Mensaje de éxito -->
-          <div id="success-message" class="hidden bg-green-100 border-2 border-green-500 text-green-800 p-4 mb-6 rounded-lg">
-            <h3 class="text-2xl font-bold mb-2">¡Gracias por tu solicitud!</h3>
-            <p class="mb-4">Te hemos enviado un correo con el enlace para descargar la checklist.</p>
-            <p>Si prefieres, puedes <a href="/public/downloads/4-Checklist de Diseño de Laboratorio Santre 7 Zonas v02.pdf" download class="text-blue-600 underline font-bold">descargar la checklist directamente aquí</a>.</p>
-          </div>
-          
           <p class="text-xl text-black mb-6">Te mandaremos la guía completa directo a tu correo</p>
           <p class="text-black mb-8">Basada en nuestra metodología exclusiva de 7 Zonas para diseño óptimo de espacios</p>
           
           <!-- Formulario de descarga -->
-          <form action="https://formsubmit.co/contacto@santre.org" method="POST" class="max-w-md mx-auto space-y-4" >
+          <form action="https://formsubmit.co/josemsantisteban05@gmail.com" method="POST" class="max-w-md mx-auto space-y-4" >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input type="text" name="nombre" placeholder="Nombre*" required class="bg-white w-full px-4 py-3 rounded-lg text-blue-800" />
               <input type="text" name="apellido" placeholder="Apellido*" required class="bg-white w-full px-4 py-3 rounded-lg text-blue-800" />
@@ -273,22 +265,3 @@ import '../../../styles/global.css';
   </main>
   <Footer />
 </Layout>
-
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Check if URL has success parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const success = urlParams.get('success');
-    
-    if (success === 'true') {
-      // Show success message and hide form
-      const successMessage = document.getElementById('success-message');
-      const form = document.querySelector('form');
-      
-      if (successMessage && form) {
-        successMessage.classList.remove('hidden');
-        form.classList.add('hidden');
-      }
-    }
-  });
-</script>

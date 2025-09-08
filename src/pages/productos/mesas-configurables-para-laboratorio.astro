@@ -1,0 +1,651 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/Contact.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
+import '../../styles/global.css';
+---
+
+<Layout 
+  title="Mesas Configurables para Laboratorio | Diseña tu Mesa Personalizada | Santre Industrial"
+  description="Diseña tu mesa de laboratorio personalizada en 3 pasos simples: elige el estilo, cubierta y accesorios. Sistemas modulares, estructurales y móviles."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Mesas <span class="text-blue-600">Configurables</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Diseña tu mesa de laboratorio personalizada en 3 pasos simples. Elige el estilo, cubierta y accesorios según tus necesidades específicas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descripción del Proceso -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">¿Cómo Crear tu Mesa Personalizada?</h2>
+          <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+            Nuestro proceso de configuración te permite crear la mesa perfecta para tu laboratorio. 
+            En solo 3 pasos tendrás una solución personalizada que se adapta exactamente a tus necesidades.
+          </p>
+        </div>
+
+        <!-- Proceso de 3 Pasos -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div class="text-center">
+            <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-white text-2xl font-bold">1</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Elige el Estilo</h3>
+            <p class="text-gray-600">Selecciona entre mesa modular, estructural fija o móvil según tus necesidades de espacio y movilidad.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-white text-2xl font-bold">2</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Selecciona Cubierta</h3>
+            <p class="text-gray-600">Elige el material y acabado de la cubierta que mejor se adapte a tu trabajo y presupuesto.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-white text-2xl font-bold">3</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Agrega Accesorios</h3>
+            <p class="text-gray-600">Personaliza con válvulas, torretas, sillas y otros accesorios para optimizar tu espacio de trabajo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paso 1: Elección de Estilo -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Paso 1: Elige el Tipo de Mesa</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Selecciona el estilo que mejor se adapte a tu espacio y necesidades de trabajo
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Opción 1: Mesa Modular Fija -->
+          <div class="bg-white rounded-xl p-10 shadow-lg border-2 border-transparent hover:border-blue-500 transition-all cursor-pointer" 
+               onclick="selectTableStyle('modular')" id="style-modular">
+            <div class="text-center mb-6">
+                <img src="/ProductImages/Mesa gabinetes a piso.png" 
+                     alt="Mesa Modular Fija con Gabinetes a Piso" 
+                     class="w-full h-full object-contain"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                  <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                  </svg>
+                </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Modular Fija</h3>
+              <p class="text-sm text-gray-600">Con gabinetes a piso</p>
+            </div>
+            
+            <div class="space-y-3 text-sm text-gray-700">
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gran capacidad de almacenaje</span>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Máxima estabilidad</span>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gabinetes fijos a piso</span>
+              </div>
+            </div>
+
+            <div class="mt-6 p-3 bg-blue-50 rounded-lg">
+              <p class="text-xs text-blue-800 font-medium">GABINETES DISPONIBLES:</p>
+              <p class="text-xs text-blue-700">Solo gabinetes fijos</p>
+            </div>
+          </div>
+
+          <!-- Opción 2: Mesa Estructural Fija -->
+          <div class="bg-white rounded-xl p-10 shadow-lg border-2 border-transparent hover:border-orange-500 transition-all cursor-pointer" 
+               onclick="selectTableStyle('estructural-fija')" id="style-estructural-fija">
+               <div class="text-center mb-6">
+                <img src="/ProductImages/Mesa estructural fija con gabinete movil.png" 
+                     alt="Mesa Modular Fija con Gabinetes a Piso" 
+                     class="w-full h-full object-contain"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                  <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                  </svg>
+                </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Estructural Fija</h3>
+              <p class="text-sm text-gray-600">Con estructura PTR y asnillas</p>
+            </div>
+            
+            <div class="space-y-3 text-sm text-gray-700">
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Resistencia superior</span>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Flexibilidad para reconfigurar</span>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gabinetes suspendidos</span>
+              </div>
+            </div>
+
+            <div class="mt-6 p-3 bg-orange-50 rounded-lg">
+              <p class="text-xs text-orange-800 font-medium">GABINETES DISPONIBLES:</p>
+              <p class="text-xs text-orange-700">Gabinetes montados o móviles</p>
+            </div>
+          </div>
+
+          <!-- Opción 3: Mesa Estructural Móvil -->
+          <div class="bg-white rounded-xl p-10 shadow-lg border-2 border-transparent hover:border-yellow-500 transition-all cursor-pointer" 
+               onclick="selectTableStyle('estructural-movil')" id="style-estructural-movil">
+               <div class="text-center mb-6">
+                <img src="/ProductImages/Mesa estructural movil con gabinete suspendido.png" 
+                     alt="Mesa Modular Fija con Gabinetes a Piso" 
+                     class="w-full h-full object-contain"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                  <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                  </svg>
+                </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Estructural Móvil</h3>
+              <p class="text-sm text-gray-600">Con ruedas para máxima flexibilidad</p>
+            </div>
+            
+            <div class="space-y-3 text-sm text-gray-700">
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-yellow-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Máxima adaptabilidad</span>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-yellow-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Fácil reconfiguración</span>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-yellow-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gabinetes montados o móviles</span>
+              </div>
+            </div>
+
+            <div class="mt-6 p-3 bg-yellow-50 rounded-lg">
+              <p class="text-xs text-yellow-800 font-medium">GABINETES DISPONIBLES:</p>
+              <p class="text-xs text-yellow-700">Gabinetes montados o móviles</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Información del Estilo Seleccionado -->
+        <div id="style-info" class="hidden mt-8 p-6 bg-blue-50 rounded-xl border-l-4 border-blue-500">
+          <h3 class="text-xl font-bold text-blue-900 mb-3">Estilo Seleccionado: <span id="selected-style-name"></span></h3>
+          <p id="style-description" class="text-blue-800 mb-6"></p>
+          
+          <!-- Catálogo de Gabinetes según el Estilo Seleccionado -->
+          <div id="gabinetes-catalogo" class="mt-6">
+            <!-- El contenido se cargará dinámicamente con JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paso 2: Cubiertas -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Paso 2: Elige tu Cubierta</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Selecciona el material y acabado que mejor se adapte a tu trabajo
+          </p>
+        </div>
+
+        <ProductCatalog 
+          sections={[
+            {
+              id: 'cubiertas',
+              title: 'Cubiertas para Laboratorio',
+              columns: 2,
+              products: [
+                {
+                  name: 'Cubierta Laminado Plastico para Muro',
+                  image: '/ProductImages/Cubierta Laminado Plastico Muro.png',
+                  alt: 'Cubierta de Plastico Laminado para Muro',
+                  height: 48
+                },
+                {
+                  name: 'Cubierta Laminado Plastico para Isla',
+                  image: '/ProductImages/Cubierta Laminado Plastico Isla.png',
+                  alt: 'Cubierta de Plastico Laminado para Isla',
+                  height: 48
+                },
+                {
+                  name: 'Cubierta Fenolica para Muro',
+                  image: '/ProductImages/Cubierta Fenolica Muro.png',
+                  alt: 'Cubierta de Fenolica para Muro',
+                  height: 48
+                },
+                {
+                  name: 'Cubierta Fenolica para Isla',
+                  image: '/ProductImages/Cubierta Fenolica Isla.png',
+                  alt: 'Cubierta de Fenolica para Isla',
+                  height: 48
+                },
+                {
+                  name: 'Cubierta Ceramica para Muro',
+                  image: '/ProductImages/Cubierta Ceramica Muro.png',
+                  alt: 'Cubierta de Ceramica para Muro',
+                  height: 48
+                },
+                {
+                  name: 'Cubierta Ceramica para Isla',
+                  image: '/ProductImages/Cubierta Ceramica Isla.png',
+                  alt: 'Cubierta de Ceramica para Isla',
+                  height: 48
+                },
+                {
+                  name: 'Cubierta Acero Inoxidable para Muro',
+                  image: '/ProductImages/Cubierta Acero Inoxidable Muro.png',
+                  alt: 'Cubierta de Acero Inoxidable para Muro',
+                  height: 48
+                },
+                {
+                  name: 'Cubierta Acero Inoxidable para Isla',
+                  image: '/ProductImages/Cubierta Acero Inoxidable Isla.png',
+                  alt: 'Cubierta de Acero Inoxidable para Isla',
+                  height: 48
+                }
+
+                
+              ]
+            }
+          ]}
+        />
+      </div>
+    </section>
+
+    <!-- Paso 3: Accesorios -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Paso 3: Elige tus Accesorios</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Personaliza tu mesa con accesorios que optimicen tu espacio de trabajo
+          </p>
+        </div>
+
+        <ProductCatalog 
+          sections={[
+            {
+              id: 'sillas-bancos',
+              title: 'Sillas y Bancos',
+              columns: 2,
+              products: [
+                {
+                  name: 'Silla de Laboratorio',
+                  image: '/ProductImages/Silla para Laboratorio.png',
+                  alt: 'Silla de Laboratorio',
+                  height: 48
+                },
+                {
+                  name: 'Banco de Laboratorio',
+                  image: '/ProductImages/Banco para Laboratorio.png',
+                  alt: 'Banco de Laboratorio',
+                  height: 48
+                }
+              ]
+            },
+            {
+              id: 'valvulas',
+              title: 'Válvulas',
+              columns: 2,
+              products: [
+                {
+                  name: 'Válvula sobre cubierta AIRE 1',
+                  image: '/ProductImages/Valvula sobre cubierta L4200-134WSA AIR_1.1.png',
+                  alt: 'Válvula sobre cubierta AIRE 1',
+                  height: 48
+                },
+                {
+                  name: 'Válvula sobre cubierta AIRE 2',
+                  image: '/ProductImages/Valvula sobre cubierta L4200-134WSA AIR_2.1.png',
+                  alt: 'Válvula sobre cubierta AIRE 2',
+                  height: 48
+                }
+              ]
+            },
+            {
+              id: 'torretas',
+              title: 'Torretas',
+              columns: 2,
+              products: [
+                {
+                  name: 'Torreta Eléctrica',
+                  image: '/ProductImages/Torreta Electrica.png',
+                  alt: 'Torreta Eléctrica',
+                  height: 48
+                },
+                {
+                  name: 'Torreta de Voz y Datos',
+                  image: '/ProductImages/Torreta Voz y Datos.png',
+                  alt: 'Torreta de Voz y Datos',
+                  height: 48
+                }
+              ]
+            }
+          ]}
+        />
+      </div>
+    </section>
+
+    <!-- Ejemplos de Clientes -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Ejemplos de Mesas Configuradas por Clientes</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Descubre cómo otros laboratorios han personalizado sus mesas según sus necesidades específicas
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Ejemplo 1 -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Laboratorio Educativo</h3>
+            <p class="text-sm text-gray-600 mb-3">Universidad Nacional Autónoma de México</p>
+            <div class="space-y-1 text-xs text-gray-700">
+              <div><strong>Estilo:</strong> Modular Fija</div>
+              <div><strong>Cubierta:</strong> Resina Fenólica</div>
+              <div><strong>Accesorios:</strong> Válvulas AIRE, Sillas ergonómicas</div>
+            </div>
+          </div>
+
+          <!-- Ejemplo 2 -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Centro de Investigación</h3>
+            <p class="text-sm text-gray-600 mb-3">Instituto Politécnico Nacional</p>
+            <div class="space-y-1 text-xs text-gray-700">
+              <div><strong>Estilo:</strong> Estructural Móvil</div>
+              <div><strong>Cubierta:</strong> Acero Inoxidable</div>
+              <div><strong>Accesorios:</strong> Torretas eléctricas, Gabinetes móviles</div>
+            </div>
+          </div>
+
+          <!-- Ejemplo 3 -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Laboratorio Farmacéutico</h3>
+            <p class="text-sm text-gray-600 mb-3">Grupo Bimbo</p>
+            <div class="space-y-1 text-xs text-gray-700">
+              <div><strong>Estilo:</strong> Estructural Fija</div>
+              <div><strong>Cubierta:</strong> Granito</div>
+              <div><strong>Accesorios:</strong> Válvulas AIRE 4, Tapetes antiestáticos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+  <Footer />
+
+  <!-- JavaScript para la selección de estilos -->
+  <script is:inline>
+    let selectedStyle = null;
+
+    function selectTableStyle(style) {
+      // Remover selección previa
+      document.querySelectorAll('[id^="style-"]').forEach(el => {
+        el.classList.remove('ring-2', 'ring-blue-500', 'ring-green-500', 'ring-purple-500');
+        el.classList.remove('scale-105');
+      });
+
+      // Seleccionar nuevo estilo
+      const selectedElement = document.getElementById(`style-${style}`);
+      selectedElement.classList.add('ring-2', 'scale-105');
+
+      // Aplicar color de anillo según el estilo
+      if (style === 'modular') {
+        selectedElement.classList.add('ring-blue-500');
+      } else if (style === 'estructural-fija') {
+        selectedElement.classList.add('ring-orange-500');
+      } else if (style === 'estructural-movil') {
+        selectedElement.classList.add('ring-yellow-500');
+      }
+
+      // Mostrar información del estilo seleccionado
+      selectedStyle = style;
+      showStyleInfo(style);
+      showGabinetesCatalogo(style);
+    }
+
+    function showStyleInfo(style) {
+      const styleInfo = document.getElementById('style-info');
+      const styleName = document.getElementById('selected-style-name');
+      const styleDescription = document.getElementById('style-description');
+
+      const styles = {
+        'modular': {
+          name: 'Modular Fija',
+          description: 'Ideal para laboratorios educativos y espacios multifuncionales. Ofrece máxima estabilidad y gran capacidad de almacenaje con gabinetes fijos a piso. Compatible con cubiertas de hasta 295 cm (acero inoxidable) o 305 cm (resina fenólica).'
+        },
+        'estructural-fija': {
+          name: 'Estructural Fija',
+          description: 'Perfecta para laboratorios que requieren resistencia superior y flexibilidad para reconfiguraciones futuras. Estructura de PTR con asnillas y travesaños, admite gabinetes colgantes o rodantes. Resiste mayor carga que una mesa fija convencional.'
+        },
+        'estructural-movil': {
+          name: 'Estructural Móvil',
+          description: 'La opción más flexible para laboratorios que requieren adaptación constante. Sistema similar al estructural fijo pero con ruedas en las patas para movilidad total incluso con equipos encima. Ideal para espacios que cambian frecuentemente.'
+        }
+      };
+
+      styleName.textContent = styles[style].name;
+      styleDescription.textContent = styles[style].description;
+      styleInfo.classList.remove('hidden');
+    }
+
+    function showGabinetesCatalogo(style) {
+      const gabinetesCatalogo = document.getElementById('gabinetes-catalogo');
+      
+      const gabinetesData = {
+        'modular': {
+          title: 'Gabinetes Fijos a Piso',
+          color: 'bg-blue-600 hover:bg-blue-700',
+          products: [
+            {
+              name: 'Gabinete con 2 puertas',
+              image: '/ProductImages/Gabinete con 2 puertas.png',
+              alt: 'Gabinete con 2 puertas para Mesa Modular',
+              height: 48
+            },
+            {
+              name: 'Gabinete 4 cajones',
+              image: '/ProductImages/Gabinete 4 cajones.png',
+              alt: 'Gabinete 4 cajones para Mesa Modular',
+              height: 48
+            },
+            {
+              name: 'Gabinete Rinconero',
+              image: '/ProductImages/Gabinete Rinconero.png',
+              alt: 'Gabinete Rinconero para Mesa Modular',
+              height: 48
+            },
+            {
+              name: 'Gabinete 2 puertas y cajon',
+              image: '/ProductImages/Gabinete 2 puertas y cajon.png',
+              alt: 'Gabinete 2 puertas y cajon para Mesa Modular',
+              height: 48
+            }
+          ]
+        },
+        'estructural-fija': {
+          title: 'Gabinetes Suspendidos y Móviles',
+          color: 'bg-orange-600 hover:bg-orange-700',
+          products: [
+            {
+              name: 'Gabinete Montado con 2 Cajones',
+              image: '/ProductImages/Gabinete montado 2 cajones.png',
+              alt: 'Gabinete Montado con 2 Cajones para Mesa Estructural',
+              height: 48
+            },
+            {
+              name: 'Gabinete Montado con cajon y 2 puertas',
+              image: '/ProductImages/Gabinete montado con cajon y 2 puertas.png',
+              alt: 'Gabinete Montado con cajon y 2 puertas para Mesa Estructural',
+              height: 48
+            },
+            {
+              name: 'Gabinete Movil con Puerta',
+              image: '/ProductImages/Gabinete movil con puerta.png',
+              alt: 'Gabinete Movil con Puerta para Mesa Estructural',
+              height: 48
+            },
+            {
+              name: 'Gabinete Movil con 3 Cajones',
+              image: '/ProductImages/Gabinete movil con 3 cajones.png',
+              alt: 'Gabinete Movil con 3 Cajones para Mesa Estructural',
+              height: 48
+            }
+          ]
+        },
+        'estructural-movil': {
+          title: 'Gabinetes Suspendidos y Móviles',
+          color: 'bg-yellow-600 hover:bg-yellow-700',
+          products: [
+          {
+              name: 'Gabinete Montado con 2 Cajones',
+              image: '/ProductImages/Gabinete montado 2 cajones.png',
+              alt: 'Gabinete Montado con 2 Cajones para Mesa Estructural',
+              height: 48
+            },
+            {
+              name: 'Gabinete Montado con cajon y 2 puertas',
+              image: '/ProductImages/Gabinete montado con cajon y 2 puertas.png',
+              alt: 'Gabinete Montado con cajon y 2 puertas para Mesa Estructural',
+              height: 48
+            },
+            {
+              name: 'Gabinete Movil con Puerta',
+              image: '/ProductImages/Gabinete movil con puerta.png',
+              alt: 'Gabinete Movil con Puerta para Mesa Estructural',
+              height: 48
+            },
+            {
+              name: 'Gabinete Movil con 3 Cajones',
+              image: '/ProductImages/Gabinete movil con 3 cajones.png',
+              alt: 'Gabinete Movil con 3 Cajones para Mesa Estructural',
+              height: 48
+            }
+          ]
+        }
+      };
+
+      const data = gabinetesData[style];
+      
+      // Crear el HTML del catálogo de gabinetes
+      gabinetesCatalogo.innerHTML = `
+        <div class="max-w-7xl mx-auto">
+          <h4 class="text-2xl font-bold text-gray-900 text-center mb-8">${data.title}</h4>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            ${data.products.map(product => `
+              <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                <div class="h-48 bg-white flex items-center justify-center p-4">
+                  <img 
+                    src="${product.image}" 
+                    alt="${product.alt}" 
+                    class="max-w-full max-h-full object-contain"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  >
+                  <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                    <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="p-3 text-center">
+                  <h5 class="text-base font-medium text-gray-900">${product.name}</h5>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    // Inicializar con el primer estilo seleccionado por defecto
+    document.addEventListener('DOMContentLoaded', function() {
+      selectTableStyle('modular');
+    });
+  </script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mesas Configurables para Laboratorio",
+    "description": "Sistema de configuración personalizada de mesas para laboratorio en 3 pasos: elección de estilo, cubierta y accesorios",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Santre Industrial",
+      "url": "https://santre.org"
+    },
+    "category": "Mobiliario de Laboratorio",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    },
+    "keywords": "mesas configurables, mesas laboratorio, mobiliario laboratorio, mesas modulares, mesas estructurales"
+  }
+  </script>
+</Layout> 

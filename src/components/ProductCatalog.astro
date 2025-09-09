@@ -28,7 +28,7 @@ const { sections } = Astro.props;
         <div class={`mt-6 grid grid-cols-${section.columns} md:grid-cols-${section.columns} gap-4`}>
                 {section.products.map((product) => (
                 <article class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-                    <div class={`h-${product.height} bg-white flex items-center justify-center p-4`}>
+                    <div class="bg-white flex items-center justify-center p-4" style={`height: ${product.height * 0.25}rem;`}>
                     <img 
                         src={product.image} 
                         alt={product.alt} 

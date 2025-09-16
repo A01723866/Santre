@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Panel de Administración | Santre Industrial"
+  description="Panel de administración interno de Santre Industrial"
+  robots="noindex, nofollow"
+  showBreadcrumbs={false}
+>
+  <Header />
+  <main>
+    <section class="pt-28 pb-16 bg-red-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-red-900 mb-4">Panel de Administración</h1>
+          <p class="text-xl text-red-700">Esta página no debe ser indexada por los motores de búsqueda</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

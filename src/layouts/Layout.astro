@@ -2,13 +2,19 @@
 export interface Props {
 	title: string;
 	description?: string;
+	robots?: string;
+	showBreadcrumbs?: boolean;
 }
 
-const { title, description = "Santre Industrial - Especialistas en mobiliario y equipamiento para laboratorios con casi 30 años de experiencia en México." } = Astro.props;
+const { title, description = "Santre Industrial - Especialistas en mobiliario y equipamiento para laboratorios con casi 30 años de experiencia en México.", robots = "index, follow", showBreadcrumbs = true } = Astro.props;
 
 // Detectar si estamos en la página de inicio
 const currentPath = Astro.url.pathname;
 const isHomePage = currentPath === "/" || currentPath === "/index.html";
+
+// Import breadcrumbs utility
+import { generateBreadcrumbs } from '../utils/breadcrumbs';
+const breadcrumbItems = showBreadcrumbs && !isHomePage ? generateBreadcrumbs(currentPath) : [];
 ---
 
 <!DOCTYPE html>
@@ -16,7 +22,7 @@ const isHomePage = currentPath === "/" || currentPath === "/index.html";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
 		
 		<!-- Favicon - Using Santre Logo -->
 		<link rel="icon" type="image/x-icon" href="favicon.jpeg" />
@@ -27,34 +33,66 @@ const isHomePage = currentPath === "/" || currentPath === "/index.html";
 		<!-- Enhanced SEO Meta Tags -->
 		<meta name="keywords" content="laboratorios, mobiliario laboratorio, mesas laboratorio, campanas humo, equipamiento laboratorio, Santre Industrial, México, Sistema 7 Zonas, acero inoxidable, ISO 9001" />
 		<meta name="author" content="Santre Industrial" />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content={robots} />
 		<meta name="language" content="Spanish" />
 		<meta name="geo.region" content="MX" />
 		<meta name="geo.country" content="México" />
+		<meta name="copyright" content="© 2024 Santre Industrial. Todos los derechos reservados." />
+		<meta name="distribution" content="global" />
+		<meta name="rating" content="general" />
+		<meta name="revisit-after" content="7 days" />
+		<meta name="theme-color" content="#2563eb" />
+		<meta name="msapplication-TileColor" content="#2563eb" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="format-detection" content="telephone=no" />
+		
+		<!-- Additional SEO Meta Tags -->
+		<meta name="google-site-verification" content="your-google-verification-code" />
+		<meta name="msvalidate.01" content="your-bing-verification-code" />
+		<meta name="yandex-verification" content="your-yandex-verification-code" />
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://santre.com/" />
+		<meta property="og:url" content={Astro.url.href} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/Santre Expanded.png" />
-		<meta property="og:site_name" content="Santre" />
+		<meta property="og:image" content="/Logo Santre.jpeg" />
+		<meta property="og:site_name" content="Santre Industrial" />
 		<meta property="og:locale" content="es_MX" />
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://santre.com/" />
+		<meta property="twitter:url" content={Astro.url.href} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content="/Santre Expanded.png" />
+		<meta property="twitter:image" content="/Logo Santre.jpeg" />
 		
 		<!-- Canonical URL -->
-		<link rel="canonical" href="https://santre.com/" />
+		<link rel="canonical" href={Astro.url.href} />
 		
 		<!-- Fonts - Inter for professional look -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		
+		<!-- Preload critical resources -->
+		<link rel="preload" href="/Logo Santre.jpeg" as="image" type="image/jpeg">
+		<link rel="preload" href="/Images/Welcome1.jpeg" as="image" type="image/jpeg">
+		<link rel="preload" href="/styles/global.css" as="style">
+		
+		<!-- DNS Prefetch for external resources -->
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		<link rel="dns-prefetch" href="//fonts.gstatic.com">
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-594478150"></script>
+		<script>
+			(window as any).dataLayer = (window as any).dataLayer || [];
+			function gtag(...args: any[]){(window as any).dataLayer.push(args);}
+			gtag('js', new Date());
+			gtag('config', 'AW-594478150');
+		</script>
 		
 		<!-- Schema.org structured data -->
 		<script type="application/ld+json">
@@ -62,23 +100,96 @@ const isHomePage = currentPath === "/" || currentPath === "/index.html";
 			"@context": "https://schema.org",
 			"@type": "Organization",
 			"name": "Santre Industrial",
-			"description": "Especialistas en diseño, fabricación e instalación de mobiliario para laboratorios",
-			"url": "https://santre.com",
-			"logo": "https://santre.com/Santre Expanded.png",
+			"description": "Especialistas en diseño, fabricación e instalación de mobiliario para laboratorios con 30 años de experiencia en México",
+			"url": "https://www.santreindustrial.com",
+			"logo": "https://www.santreindustrial.com/Logo Santre.jpeg",
 			"foundingDate": "1994",
 			"address": {
 				"@type": "PostalAddress",
+				"streetAddress": "20 de Noviembre #100, Int. 18-A",
+				"addressLocality": "Santa Catarina",
+				"addressRegion": "Nuevo León",
+				"postalCode": "66149",
 				"addressCountry": "MX"
 			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+52-81-1284-8611",
+				"contactType": "customer service",
+				"availableLanguage": "Spanish"
+			},
+			"areaServed": "México",
+			"knowsAbout": [
+				"Mobiliario para laboratorios",
+				"Diseño de laboratorios",
+				"Sistema de 7 Zonas",
+				"Acero inoxidable",
+				"ISO 9001:2015"
+			],
 			"sameAs": [
 				"https://www.linkedin.com/company/santre-industrial"
 			]
 		}
 		</script>
 		
+		{/* Breadcrumb Schema.org */}
+		{breadcrumbItems.length > 0 && (
+			<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{breadcrumbItems.map((item, index) => ({
+						"@type": "ListItem",
+						"position": index + 1,
+						"name": item.name,
+						"item": `https://santreindustrial.com${item.href}`
+					}))}
+				]
+			}
+			</script>
+		)}
+		
 		<title>{title}</title>
 	</head>
 	<body class={`font-sans ${isHomePage ? 'is-home' : ''}`}>
+		{/* Breadcrumbs */}
+		{breadcrumbItems.length > 0 && (
+			<nav class="bg-gray-50 border-b border-gray-200" aria-label="Breadcrumb">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="flex items-center space-x-2 py-3">
+						<!-- Home Icon -->
+						<a href="/" class="text-gray-400 hover:text-gray-500 transition-colors" aria-label="Inicio">
+							<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+							</svg>
+						</a>
+						
+						{breadcrumbItems.slice(1).map((item, index) => (
+							<div class="flex items-center space-x-2">
+								<!-- Separator -->
+								<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								
+								{index === breadcrumbItems.length - 2 ? (
+									<!-- Current page (last item) -->
+									<span class="text-sm font-medium text-gray-900" aria-current="page">
+										{item.name}
+									</span>
+								) : (
+									<!-- Link to other pages -->
+									<a href={item.href} class="text-sm text-gray-500 hover:text-gray-700 transition-colors">
+										{item.name}
+									</a>
+								)}
+							</div>
+						))}
+					</div>
+				</div>
+			</nav>
+		)}
+		
 		<slot />
 		<style>
 			html {

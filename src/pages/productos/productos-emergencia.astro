@@ -39,13 +39,13 @@ import '../../styles/global.css';
               {
                 name: 'Regadera de Emergencia',
                 image: '/ProductImages/Estacion de Emergencia.png',
-                alt: 'Regadera de Emergencia para Laboratorio',
+                alt: 'Estación de emergencia de seguridad con regadera y lavaojos para respuesta inmediata en laboratorios e industria.',
                 height: 56
               },
               {
                 name: 'Lavaojos Microfono',
                 image: '/ProductImages/Lavaojos Microfono.png',
-                alt: 'Lavaojos Microfono para Laboratorio',
+                alt: 'Lavaojos de emergencia marca Water Saver, tipo micrófono con manguera flexible para montar sobre cubierta de laboratorio.',
                 height: 56
               }
             ]
@@ -61,7 +61,7 @@ import '../../styles/global.css';
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="text-center">
-            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
@@ -81,7 +81,7 @@ import '../../styles/global.css';
           </div>
 
           <div class="text-center">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
               </svg>
@@ -91,7 +91,7 @@ import '../../styles/global.css';
           </div>
 
           <div class="text-center">
-            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
               </svg>
@@ -182,31 +182,89 @@ import '../../styles/global.css';
   {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Estación de Emergencia para Laboratorio",
+    "name": "Productos de Emergencia para Laboratorio",
     "description": "Estaciones de emergencia para laboratorios con duchas de seguridad y lavaojos que cumplen con normativas de seguridad industrial",
+    "url": "https://www.santreindustrial.comproductos/productos-emergencia",
+    "image": "https://www.santreindustrial.comProductImages/Estacion de Emergencia.png",
+    "brand": {
+      "@type": "Brand",
+      "name": "Santre Industrial"
+    },
     "manufacturer": {
       "@type": "Organization",
       "name": "Santre Industrial",
-      "url": "https://santre.org"
+      "url": "https://www.santreindustrial.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "20 de Noviembre #100, Int. 18-A",
+        "addressLocality": "Santa Catarina",
+        "addressRegion": "Nuevo León",
+        "postalCode": "66149",
+        "addressCountry": "MX"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-81-1284-8611",
+        "contactType": "customer service",
+        "availableLanguage": "Spanish"
+      }
     },
     "category": "Equipos de Seguridad Industrial",
     "hasVariant": [
       {
         "@type": "ProductVariant",
-        "name": "Ducha de Emergencia",
-        "description": "Ducha de emergencia para laboratorios con activación manual"
+        "name": "Estación de Emergencia",
+        "description": "Estación de emergencia para laboratorio con ducha de seguridad y lavaojos integrados, cumpliendo normativas NOM-018-STPS"
       },
       {
         "@type": "ProductVariant",
         "name": "Lavaojos de Emergencia",
-        "description": "Lavaojos de emergencia para laboratorios con activación manual"
+        "description": "Lavaojos de emergencia para laboratorios con activación manual y flujo de agua continuo"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Ducha de Emergencia",
+        "description": "Ducha de emergencia para laboratorios con activación manual y flujo de agua de alta presión"
       }
     ],
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "MXN",
+      "seller": {
+        "@type": "Organization",
+        "name": "Santre Industrial"
+      }
     },
-    "keywords": "estacion emergencia, ducha emergencia, lavaojos emergencia, seguridad laboratorio, equipos seguridad industrial"
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1500",
+      "bestRating": "5"
+    },
+    "keywords": "estacion emergencia, ducha emergencia, lavaojos emergencia, seguridad laboratorio, equipos seguridad industrial, NOM-018-STPS, emergencias laboratorio",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Certificaciones",
+        "value": "NOM-018-STPS, ANSI Z358.1"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Materiales",
+        "value": "Acero inoxidable T-304, válvulas de latón cromado"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Garantía",
+        "value": "10 años"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Instalación",
+        "value": "Incluye instalación y puesta en marcha"
+      }
+    ]
   }
   </script>
 </Layout>

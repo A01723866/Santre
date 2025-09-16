@@ -7,7 +7,7 @@ const serverIslandMap = new Map();;
 const _page0 = () => import('./pages/_image.astro.mjs');
 const _page1 = () => import('./pages/blog-tecnico.astro.mjs');
 const _page2 = () => import('./pages/campanas-extraccion.astro.mjs');
-const _page3 = () => import('./pages/centro-descargas/catalogo-completo.astro.mjs');
+const _page3 = () => import('./pages/recursos/centro-descargas/catalogo-completo.astro.mjs');
 const _page4 = () => import('./pages/cubiertas-laboratorio.astro.mjs');
 const _page5 = () => import('./pages/diseno-de-laboratorio.astro.mjs');
 const _page6 = () => import('./pages/gabinetes-laboratorio.astro.mjs');
@@ -44,7 +44,7 @@ const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/blog-tecnico.astro", _page1],
     ["src/pages/campanas-extraccion.astro", _page2],
-    ["src/pages/centro-descargas/catalogo-completo.astro", _page3],
+    ["src/pages/recursos/centro-descargas/catalogo-completo.astro", _page3],
     ["src/pages/cubiertas-laboratorio.astro", _page4],
     ["src/pages/diseno-de-laboratorio.astro", _page5],
     ["src/pages/gabinetes-laboratorio.astro", _page6],

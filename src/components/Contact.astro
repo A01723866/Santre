@@ -13,7 +13,7 @@
     <div class="grid lg:grid-cols-2 gap-12">
       <!-- Contact Form -->
       <div class="bg-blue-50 rounded-2xl p-8">
-        <form id="contact-form" class="space-y-6">
+        <form id="contact-form" class="space-y-6" action="mailto:contacto@https://www.santreindustrial.com" method="post" enctype="text/plain">
           <div>
             <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">
               Nombre *
@@ -176,9 +176,9 @@
              </div>
              <div class="flex-1">
                <h4 class="text-lg font-semibold text-gray-900">Email</h4>
-               <p class="text-xl font-bold text-blue-600">contacto@santre.org</p>
+               <p class="text-xl font-bold text-blue-600">contacto@https://www.santreindustrial.com</p>
              </div>
-             <a href="mailto:contacto@santre.org" class="bg-blue-500 !text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+             <a href="mailto:contacto@https://www.santreindustrial.com" class="bg-blue-500 !text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
                Enviar Email
              </a>
            </div>
@@ -245,20 +245,175 @@
     </div>
   </div>
 </section> 
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('contact-form');
     form.addEventListener('submit', function(event) {
       event.preventDefault();
-      emailjs.sendForm('service_t78fhxq', 'template_0giz0yj', this, 'hGKHUL5ZcchCSbGv9')
-        .then(function() {
-          alert('Tu propuesta ha sido enviada exitosamente.');
-          form.reset();
-        }, function(error) {
-          console.error('FAILED...', error);
-          alert('Error al enviar la propuesta. Por favor inténtalo de nuevo.');
-        });
+      
+      // Obtener los datos del formulario
+      const formData = new FormData(form);
+      const nombre = formData.get('user_name');
+      const email = formData.get('user_email');
+      const telefono = formData.get('user_phone');
+      const empresa = formData.get('user_company');
+      const ciudadEstado = formData.get('user_location');
+      const areaLista = formData.get('area_ready') ? 'Sí' : 'No';
+      const tiempoInicio = formData.get('start_time');
+      
+      // Crear el asunto del email
+      const subject = `Nueva propuesta de laboratorio - ${empresa}`;
+      
+      // Crear el cuerpo del email
+      const body = `Hola equipo de Santre,
+
+He enviado una solicitud de propuesta a través del sitio web. Aquí están mis datos:
+
+📋 INFORMACIÓN PERSONAL:
+• Nombre: ${nombre}
+• Email: ${email}
+• Teléfono: ${telefono}
+
+🏢 INFORMACIÓN DE LA EMPRESA:
+• Empresa: ${empresa}
+• Ubicación: ${ciudadEstado}
+• Área lista: ${areaLista}
+• Tiempo de inicio del proyecto: ${tiempoInicio}
+
+Por favor, contactenme para agendar una cita y discutir los detalles de mi proyecto de laboratorio.
+
+Saludos cordiales,
+${nombre}`;
+
+      // Crear el enlace mailto
+      const mailtoLink = `mailto:contacto@https://www.santreindustrial.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Abrir el cliente de correo
+      window.location.href = mailtoLink;
+      
+      // Mostrar mensaje de confirmación
+      alert('Se abrirá tu cliente de correo para enviar la propuesta. Si no se abre automáticamente, por favor envía un correo a contacto@https://www.santreindustrial.com con la información del formulario.');
+      
+      // Limpiar el formulario
+      form.reset();
     });
   });
+</script>
+
+<!-- Schema.org JSON-LD for Contact Information -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Santre Industrial",
+  "description": "Especialistas en equipamiento para laboratorios con casi 30 años de experiencia. Diseñamos, fabricamos e instalamos mobiliario especializado para laboratorios.",
+  "url": "https://www.santreindustrial.com",
+  "logo": "https://www.santreindustrial.comLogo Santre.jpeg",
+  "image": "https://www.santreindustrial.comImages/Welcome1.jpeg",
+  "telephone": "+52-81-1284-8611",
+  "email": "contacto@https://www.santreindustrial.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "20 de Noviembre #100, Int. 18-A",
+    "addressLocality": "Santa Catarina",
+    "addressRegion": "Nuevo León",
+    "postalCode": "66149",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "25.6866",
+    "longitude": "-100.3161"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+52-81-1284-8611",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish",
+      "areaServed": "MX",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+52-81-1284-8611",
+      "contactType": "sales",
+      "availableLanguage": "Spanish",
+      "areaServed": "MX"
+    }
+  ],
+  "sameAs": [
+    "https://www.santreindustrial.com"
+  ],
+  "foundingDate": "1994",
+  "numberOfEmployees": "50-100",
+  "slogan": "Equipamiento de laboratorios de clase mundial",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Mexico"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.6866",
+      "longitude": "-100.3161"
+    },
+    "geoRadius": "1000"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Productos para Laboratorio",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Mesas para Laboratorio"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Campanas de Extracción"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Gabinetes de Seguridad"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Tarjas y Grifo"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "1500",
+    "bestRating": "5"
+  },
+  "keywords": "laboratorio, mobiliario laboratorio, equipamiento laboratorio, mesas laboratorio, campanas extraccion, gabinetes seguridad, Santre Industrial"
+}
 </script>  

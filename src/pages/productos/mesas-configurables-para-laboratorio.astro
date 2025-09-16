@@ -10,6 +10,7 @@ import '../../styles/global.css';
 <Layout 
   title="Mesas Configurables para Laboratorio | Diseña tu Mesa Personalizada | Santre Industrial"
   description="Diseña tu mesa de laboratorio personalizada en 3 pasos simples: elige el estilo, cubierta y accesorios. Sistemas modulares, estructurales y móviles."
+  robots="index, follow"
 >
   <Header />
   <main>
@@ -49,7 +50,7 @@ import '../../styles/global.css';
           </div>
 
           <div class="text-center">
-            <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <span class="text-white text-2xl font-bold">2</span>
             </div>
             <h3 class="text-xl font-semibold text-gray-900 mb-2">Selecciona Cubierta</h3>
@@ -57,7 +58,7 @@ import '../../styles/global.css';
           </div>
 
           <div class="text-center">
-            <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <span class="text-white text-2xl font-bold">3</span>
             </div>
             <h3 class="text-xl font-semibold text-gray-900 mb-2">Agrega Accesorios</h3>
@@ -83,7 +84,7 @@ import '../../styles/global.css';
                onclick="selectTableStyle('modular')" id="style-modular">
             <div class="text-center mb-6">
                 <img src="/ProductImages/Mesa gabinetes a piso.png" 
-                     alt="Mesa Modular Fija con Gabinetes a Piso" 
+                     alt="Larga mesa de laboratorio a muro con cubierta de resina fenólica de alta resistencia y múltiples gabinetes para almacenamiento." 
                      class="w-full h-full object-contain"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="w-full h-full flex items-center justify-center" style="display: none;">
@@ -91,7 +92,7 @@ import '../../styles/global.css';
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                   </svg>
                 </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Modular Fija</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Mesa modular fija</h3>
               <p class="text-sm text-gray-600">Con gabinetes a piso</p>
             </div>
             
@@ -127,7 +128,7 @@ import '../../styles/global.css';
                onclick="selectTableStyle('estructural-fija')" id="style-estructural-fija">
                <div class="text-center mb-6">
                 <img src="/ProductImages/Mesa estructural fija con gabinete movil.png" 
-                     alt="Mesa Modular Fija con Gabinetes a Piso" 
+                     alt="Mesa de laboratorio modular con cubierta de resina fenólica resistente a químicos y un gabinete móvil con cajones." 
                      class="w-full h-full object-contain"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="w-full h-full flex items-center justify-center" style="display: none;">
@@ -135,7 +136,7 @@ import '../../styles/global.css';
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                   </svg>
                 </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Estructural Fija</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Mesa estructural fija</h3>
               <p class="text-sm text-gray-600">Con estructura PTR y asnillas</p>
             </div>
             
@@ -171,7 +172,7 @@ import '../../styles/global.css';
                onclick="selectTableStyle('estructural-movil')" id="style-estructural-movil">
                <div class="text-center mb-6">
                 <img src="/ProductImages/Mesa estructural movil con gabinete suspendido.png" 
-                     alt="Mesa Modular Fija con Gabinetes a Piso" 
+                     alt="Mesa de laboratorio móvil y versátil con ruedas de seguridad, cubierta de resina fenólica y gabinete suspendido para optimización del espacio de trabajo." 
                      class="w-full h-full object-contain"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="w-full h-full flex items-center justify-center" style="display: none;">
@@ -179,7 +180,7 @@ import '../../styles/global.css';
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                   </svg>
                 </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Estructural Móvil</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Mesa estructural movil</h3>
               <p class="text-sm text-gray-600">Con ruedas para máxima flexibilidad</p>
             </div>
             
@@ -244,49 +245,49 @@ import '../../styles/global.css';
                 {
                   name: 'Cubierta Laminado Plastico para Muro',
                   image: '/ProductImages/Cubierta Laminado Plastico Muro.png',
-                  alt: 'Cubierta de Plastico Laminado para Muro',
+                  alt: 'Cubierta de laboratorio con respaldo, fabricada en plástico laminado Formica nacional sobre bastidor de MDF, ideal para zonas de trabajo',
                   height: 48
                 },
                 {
                   name: 'Cubierta Laminado Plastico para Isla',
                   image: '/ProductImages/Cubierta Laminado Plastico Isla.png',
-                  alt: 'Cubierta de Plastico Laminado para Isla',
+                  alt: 'Cubierta de laboratorio sin respaldo, fabricada en plástico laminado Formica nacional sobre bastidor de MDF, ideal para zonas de trabajo',
                   height: 48
                 },
                 {
                   name: 'Cubierta Fenolica para Muro',
                   image: '/ProductImages/Cubierta Fenolica Muro.png',
-                  alt: 'Cubierta de Fenolica para Muro',
+                  alt: 'Cubierta de laboratorio monolítica de resina fenólica negra, de alta resistencia química, con respaldo y 1 pulgada de espesor, ideal para mesas de muro',
                   height: 48
                 },
                 {
                   name: 'Cubierta Fenolica para Isla',
                   image: '/ProductImages/Cubierta Fenolica Isla.png',
-                  alt: 'Cubierta de Fenolica para Isla',
+                  alt: 'Cubierta de laboratorio monolítica de resina fenólica negra, de alta resistencia química, sin respaldo y 1 pulgada de espesor, ideal para mesas isla',
                   height: 48
                 },
                 {
                   name: 'Cubierta Ceramica para Muro',
                   image: '/ProductImages/Cubierta Ceramica Muro.png',
-                  alt: 'Cubierta de Ceramica para Muro',
+                  alt: 'Cubierta de laboratorio de cerámica para mesa de muro, de muy alta resistencia a químicos, altas temperaturas y rayaduras',
                   height: 48
                 },
                 {
                   name: 'Cubierta Ceramica para Isla',
                   image: '/ProductImages/Cubierta Ceramica Isla.png',
-                  alt: 'Cubierta de Ceramica para Isla',
+                  alt: 'Cubierta de laboratorio de cerámica para mesa de isla, de muy alta resistencia a químicos, altas temperaturas y rayaduras',
                   height: 48
                 },
                 {
                   name: 'Cubierta Acero Inoxidable para Muro',
                   image: '/ProductImages/Cubierta Acero Inoxidable Muro.png',
-                  alt: 'Cubierta de Acero Inoxidable para Muro',
+                  alt: 'Cubierta de laboratorio de acero inoxidable T-304 con respaldo, acabado pulido, de 75 cm de ancho, ideal para mesa de muro',
                   height: 48
                 },
                 {
                   name: 'Cubierta Acero Inoxidable para Isla',
                   image: '/ProductImages/Cubierta Acero Inoxidable Isla.png',
-                  alt: 'Cubierta de Acero Inoxidable para Isla',
+                  alt: 'Cubierta de laboratorio de acero inoxidable T-304 sin respaldo, acabado pulido, de 75 cm de ancho, ideal para mesa isla',
                   height: 48
                 }
 
@@ -318,13 +319,13 @@ import '../../styles/global.css';
                 {
                   name: 'Silla de Laboratorio',
                   image: '/ProductImages/Silla para Laboratorio.png',
-                  alt: 'Silla de Laboratorio',
+                  alt: 'Silla alta de laboratorio giratoria con asiento y respaldo de poliuretano, ajuste neumático de altura y aro descansa pies cromado',
                   height: 48
                 },
                 {
                   name: 'Banco de Laboratorio',
                   image: '/ProductImages/Banco para Laboratorio.png',
-                  alt: 'Banco de Laboratorio',
+                  alt: 'Banco alto de laboratorio giratorio con asiento redondo de poliuretano, ajuste neumático de altura y aro descansa pies cromado',
                   height: 48
                 }
               ]
@@ -337,13 +338,13 @@ import '../../styles/global.css';
                 {
                   name: 'Válvula sobre cubierta AIRE 1',
                   image: '/ProductImages/Valvula sobre cubierta L4200-134WSA AIR_1.1.png',
-                  alt: 'Válvula sobre cubierta AIRE 1',
+                  alt: 'Torreta sencilla de servicio para aire con válvula on/off cromada, ideal para instalación en laboratorios, marca Water Saver',
                   height: 48
                 },
                 {
-                  name: 'Válvula sobre cubierta AIRE 2',
+                  name: 'Válvula doble sobre cubierta AIRE 1',
                   image: '/ProductImages/Valvula sobre cubierta L4200-134WSA AIR_2.1.png',
-                  alt: 'Válvula sobre cubierta AIRE 2',
+                  alt: 'Torreta doble de servicio para aire con válvula on/off cromada, ideal para instalación en laboratorios, marca Water Saver',
                   height: 48
                 }
               ]
@@ -356,13 +357,13 @@ import '../../styles/global.css';
                 {
                   name: 'Torreta Eléctrica',
                   image: '/ProductImages/Torreta Electrica.png',
-                  alt: 'Torreta Eléctrica',
+                  alt: 'Torreta eléctrica para laboratorio de 110V con contacto dúplex polarizado y tapa de protección, acabado epóxico negro',
                   height: 48
                 },
                 {
                   name: 'Torreta de Voz y Datos',
                   image: '/ProductImages/Torreta Voz y Datos.png',
-                  alt: 'Torreta de Voz y Datos',
+                  alt: 'Torreta de voz y datos para laboratorio, acabado epóxico negro',
                   height: 48
                 }
               ]
@@ -387,30 +388,24 @@ import '../../styles/global.css';
             {
               id: 'ejemplos',
               title: '',
-              columns: 2,
+              columns: 3,
               products: [
                 {
                   name: 'Mesa isla combinada_Inoxidable',
                   image: '/ProductImages/Mesa isla combinada_Inoxidable.png',
-                  alt: 'Mesa isla combinada_Inoxidable',
+                  alt: 'Mesa isla de laboratorio con cubierta de acero inoxidable, ideal para áreas académicas con múltiples espacios de trabajo y tarja para lavado de material',
                   height: 48
                 },
                 {
-                  name: 'Sistema Modular Fijo',
+                  name: 'Mesa central de alta gama con gabinetes',
                   image: '/ProductImages/Sistema Modular Fijo.png',
-                  alt: 'Sistema Modular Fijo',
-                  height: 48
-                },
-                {
-                  name: 'Mesa a muro para laboratorio',
-                  image: '/ProductImages/Mesa gabinetes a piso.png',
-                  alt: 'Mesa a muro para laboratorio movil',
+                  alt: 'Mesa isla de laboratorio de alto desempeño con cubierta de acero inoxidable, repisa puente, vitrinas de doble acción y puntos de servicio, ideal para investigación',
                   height: 48
                 },
                 {
                   name: 'Mesa Estructural Fija',
                   image: '/ProductImages/Mesa Estructural Fija.png',
-                  alt: 'Mesa Estructural Fijaa',
+                  alt: 'Mesa de laboratorio económica con cubierta de acero inoxidable resistente, estructura metálica y diseño modular para futura expansión',
                   height: 48
                 }
               ]
@@ -488,91 +483,91 @@ import '../../styles/global.css';
           color: 'bg-blue-600 hover:bg-blue-700',
           products: [
             {
-              name: 'Gabinete con 2 puertas',
+              name: 'Gabinete con puertas',
               image: '/ProductImages/Gabinete con 2 puertas.png',
-              alt: 'Gabinete con 2 puertas para Mesa Modular',
+              alt: 'Gabinete de piso para laboratorio modelo G-90-E, con dos puertas y entrepaño interior, fabricado en lámina galvanizada resistente a la corrosión.',
               height: 48
             },
             {
-              name: 'Gabinete 4 cajones',
+              name: 'Gabinete cajonero',
               image: '/ProductImages/Gabinete 4 cajones.png',
-              alt: 'Gabinete 4 cajones para Mesa Modular',
+              alt: 'Gabinete de piso para laboratorio G4C-60-E-T, con cuatro cajones de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
               height: 48
             },
             {
               name: 'Gabinete Rinconero',
               image: '/ProductImages/Gabinete Rinconero.png',
-              alt: 'Gabinete Rinconero para Mesa Modular',
+              alt: 'Gabinete rinconero de piso para laboratorio GR-60D-E, con una puerta de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
               height: 48
             },
             {
-              name: 'Gabinete 2 puertas y cajon',
+              name: 'Gabinete con un cajon y puertas',
               image: '/ProductImages/Gabinete 2 puertas y cajon.png',
-              alt: 'Gabinete 2 puertas y cajon para Mesa Modular',
+              alt: 'Gabinete de piso para laboratorio modelo GC-90-E-T, con dos puertas de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
               height: 48
             }
           ]
         },
         'estructural-fija': {
-          title: 'Gabinetes Suspendidos y Móviles',
-          color: 'bg-orange-600 hover:bg-orange-700',
-          products: [
-            {
-              name: 'Gabinete Montado con 2 Cajones',
-              image: '/ProductImages/Gabinete montado 2 cajones.png',
-              alt: 'Gabinete Montado con 2 Cajones para Mesa Estructural',
-              height: 48
-            },
-            {
-              name: 'Gabinete Montado con cajon y 2 puertas',
-              image: '/ProductImages/Gabinete montado con cajon y 2 puertas.png',
-              alt: 'Gabinete Montado con cajon y 2 puertas para Mesa Estructural',
-              height: 48
-            },
-            {
-              name: 'Gabinete Movil con Puerta',
-              image: '/ProductImages/Gabinete movil con puerta.png',
-              alt: 'Gabinete Movil con Puerta para Mesa Estructural',
-              height: 48
-            },
-            {
-              name: 'Gabinete Movil con 3 Cajones',
-              image: '/ProductImages/Gabinete movil con 3 cajones.png',
-              alt: 'Gabinete Movil con 3 Cajones para Mesa Estructural',
-              height: 48
-            }
-          ]
-        },
-        'estructural-movil': {
-          title: 'Gabinetes Suspendidos y Móviles',
-          color: 'bg-yellow-600 hover:bg-yellow-700',
-          products: [
-          {
-              name: 'Gabinete Montado con 2 Cajones',
-              image: '/ProductImages/Gabinete montado 2 cajones.png',
-              alt: 'Gabinete Montado con 2 Cajones para Mesa Estructural',
-              height: 48
-            },
-            {
-              name: 'Gabinete Montado con cajon y 2 puertas',
-              image: '/ProductImages/Gabinete montado con cajon y 2 puertas.png',
-              alt: 'Gabinete Montado con cajon y 2 puertas para Mesa Estructural',
-              height: 48
-            },
-            {
-              name: 'Gabinete Movil con Puerta',
-              image: '/ProductImages/Gabinete movil con puerta.png',
-              alt: 'Gabinete Movil con Puerta para Mesa Estructural',
-              height: 48
-            },
-            {
-              name: 'Gabinete Movil con 3 Cajones',
-              image: '/ProductImages/Gabinete movil con 3 cajones.png',
-              alt: 'Gabinete Movil con 3 Cajones para Mesa Estructural',
-              height: 48
-            }
-          ]
-        }
+    'title': 'Gabinetes Suspendidos y Móviles',
+    'color': 'bg-orange-600 hover:bg-orange-700',
+    'products': [
+{
+        'name': 'Gabinete Suspendido con 2 Cajones',
+        'image': '/ProductImages/Gabinete montado 2 cajones.png',
+        'alt': 'Gabinete suspendido para laboratorio modelo E-45D-E, con dos cajones de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
+        'height': 48
+      },
+{
+        'name': 'Gabinete Suspendido con cajon y 2 puertas',
+        'image': '/ProductImages/Gabinete montado con cajon y 2 puertas.png',
+        'alt': 'Gabinete suspendido para laboratorio modelo EC-90-E-T, con cajon y dos puertas de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
+        'height': 48
+      },
+{
+        'name': 'Gabinete Movil con Puerta',
+        'image': '/ProductImages/Gabinete movil con puerta.png',
+        'alt': 'Gabinete móvil de piso para laboratorio modelo M-45D-E, con puerta de cierre suave y entrepaño interior, fabricado en lámina galvanizada resistente a la corrosión.',
+        'height': 48
+      },
+{
+        'name': 'Gabinete Movil con 3 Cajones',
+        'image': '/ProductImages/Gabinete movil con 3 cajones.png',
+        'alt': 'Gabinete móvil de piso para laboratorio modelo M3C-45E-T, con tres cajones de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
+        'height': 48
+      }
+    ]
+  },
+  'estructural-movil': {
+    'title': 'Gabinetes Suspendidos y Móviles',
+    'color': 'bg-yellow-600 hover:bg-yellow-700',
+    'products': [
+{
+        'name': 'Gabinete Suspendido con 2 Cajones',
+        'image': '/ProductImages/Gabinete montado 2 cajones.png',
+        'alt': 'Gabinete suspendido para laboratorio modelo E-45D-E, con dos cajones de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
+        'height': 48
+      },
+{
+        'name': 'Gabinete Suspendido con cajon y 2 puertas',
+        'image': '/ProductImages/Gabinete montado con cajon y 2 puertas.png',
+        'alt': 'Gabinete suspendido para laboratorio modelo EC-90-E-T, con cajon y dos puertas de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
+        'height': 48
+      },
+{
+        'name': 'Gabinete Movil con Puerta',
+        'image': '/ProductImages/Gabinete movil con puerta.png',
+        'alt': 'Gabinete móvil de piso para laboratorio modelo M-45D-E, con puerta de cierre suave y entrepaño interior, fabricado en lámina galvanizada resistente a la corrosión.',
+        'height': 48
+      },
+{
+        'name': 'Gabinete Movil con 3 Cajones',
+        'image': '/ProductImages/Gabinete movil con 3 cajones.png',
+        'alt': 'Gabinete móvil de piso para laboratorio modelo M3C-45E-T, con tres cajones de cierre suave, fabricado en lámina galvanizada resistente a la corrosión.',
+        'height': 48
+      }
+    ]
+  }
       };
 
       const data = gabinetesData[style];
@@ -621,17 +616,87 @@ import '../../styles/global.css';
     "@type": "Product",
     "name": "Mesas Configurables para Laboratorio",
     "description": "Sistema de configuración personalizada de mesas para laboratorio en 3 pasos: elección de estilo, cubierta y accesorios",
+    "url": "https://www.santreindustrial.comproductos/mesas-configurables-para-laboratorio",
+    "image": "https://www.santreindustrial.comProductImages/Sistema Modular Fijo.png",
+    "brand": {
+      "@type": "Brand",
+      "name": "Santre Industrial"
+    },
     "manufacturer": {
       "@type": "Organization",
       "name": "Santre Industrial",
-      "url": "https://santre.org"
+      "url": "https://www.santreindustrial.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "20 de Noviembre #100, Int. 18-A",
+        "addressLocality": "Santa Catarina",
+        "addressRegion": "Nuevo León",
+        "postalCode": "66149",
+        "addressCountry": "MX"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-81-1284-8611",
+        "contactType": "customer service",
+        "availableLanguage": "Spanish"
+      }
     },
     "category": "Mobiliario de Laboratorio",
+    "hasVariant": [
+      {
+        "@type": "ProductVariant",
+        "name": "Mesa Modular",
+        "description": "Sistema modular fijo con cubierta de acero inoxidable, repisa puente, vitrinas de doble acción y puntos de servicio"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Mesa Estructural",
+        "description": "Mesa de laboratorio económica con cubierta de acero inoxidable resistente, estructura metálica y diseño modular"
+      },
+      {
+        "@type": "ProductVariant",
+        "name": "Mesa Isla",
+        "description": "Mesa isla de laboratorio con cubierta de acero inoxidable, ideal para áreas académicas con múltiples espacios de trabajo"
+      }
+    ],
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "MXN",
+      "seller": {
+        "@type": "Organization",
+        "name": "Santre Industrial"
+      }
     },
-    "keywords": "mesas configurables, mesas laboratorio, mobiliario laboratorio, mesas modulares, mesas estructurales"
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1500",
+      "bestRating": "5"
+    },
+    "keywords": "mesas configurables, mesas laboratorio, mobiliario laboratorio, mesas modulares, mesas estructurales, sistema 7 zonas, cubiertas laboratorio",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Configuración",
+        "value": "3 pasos: estilo, cubierta, accesorios"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Materiales",
+        "value": "Acero inoxidable T-304, resina fenólica, cerámica, laminado plástico"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Garantía",
+        "value": "10 años en cubiertas fenólicas"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Personalización",
+        "value": "Diseño a medida según necesidades específicas"
+      }
+    ]
   }
   </script>
 </Layout> 

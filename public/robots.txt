@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://santreindustrial.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_astro/
+Disallow: /node_modules/
+
+# Allow important pages
+Allow: /productos/
+Allow: /sectores/
+Allow: /zonas/
+Allow: /recursos/
+Allow: /diseno-de-laboratorio
+Allow: /tecnologia-laboratorios
+Allow: /nuestros-clientes
+Allow: /mobiliario-para-laboratorio-por-sector
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

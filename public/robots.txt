@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://santreindustrial.com/sitemap.xml
+Sitemap: https://www.santreindustrial.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/

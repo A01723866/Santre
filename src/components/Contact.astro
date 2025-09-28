@@ -14,6 +14,11 @@
       <!-- Contact Form -->
       <div class="bg-blue-50 rounded-2xl p-8">
         <form id="contact-form" class="space-y-6" action="https://formsubmit.co/contacto@santre.org" method="POST">
+          <!-- FormSubmit hidden fields -->
+          <input type="hidden" name="_subject" value="Nueva solicitud de propuesta de laboratorio">
+          <input type="hidden" name="_next" value="https://www.santreindustrial.com/gracias">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <div>
             <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">
               Nombre *
@@ -178,9 +183,9 @@
                <h4 class="text-lg font-semibold text-gray-900">Email</h4>
                <p class="text-xl font-bold text-blue-600">contacto@santre.org</p>
              </div>
-             <a href="mailto:contacto@santre.org" class="bg-blue-500 !text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+             <button id="open-email-modal" class="bg-blue-500 !text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
                Enviar Email
-             </a>
+             </button>
            </div>
          </div>
          <!-- Dirección -->
@@ -245,57 +250,52 @@
     </div>
   </div>
 </section> 
+<!-- Modal para Email Rápido -->
+<div id="email-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-gray-900">Contacto Rápido</h3>
+      <button id="close-email-modal" class="text-gray-500 hover:text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <form action="https://formsubmit.co/contacto@santre.org" method="POST" class="space-y-4">
+      <input type="text" name="nombre" placeholder="Nombre*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <input type="tel" name="telefono" placeholder="Teléfono*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <textarea name="mensaje" placeholder="Mensaje*" required rows="3" class="w-full px-4 py-2 rounded-lg border text-gray-900"></textarea>
+      <input type="hidden" name="_subject" value="Contacto rápido desde sitio web">
+      <input type="hidden" name="_next" value="https://www.santreindustrial.com/gracias">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+        Enviar Mensaje
+      </button>
+    </form>
+  </div>
+</div>
+
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('contact-form');
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      
-      // Obtener los datos del formulario
-      const formData = new FormData(form);
-      const nombre = formData.get('user_name');
-      const email = formData.get('user_email');
-      const telefono = formData.get('user_phone');
-      const empresa = formData.get('user_company');
-      const ciudadEstado = formData.get('user_location');
-      const areaLista = formData.get('area_ready') ? 'Sí' : 'No';
-      const tiempoInicio = formData.get('start_time');
-      
-      // Crear el asunto del email
-      const subject = `Nueva propuesta de laboratorio - ${empresa}`;
-      
-      // Crear el cuerpo del email
-      const body = `Hola equipo de Santre,
-
-He enviado una solicitud de propuesta a través del sitio web. Aquí están mis datos:
-
-📋 INFORMACIÓN PERSONAL:
-• Nombre: ${nombre}
-• Email: ${email}
-• Teléfono: ${telefono}
-
-🏢 INFORMACIÓN DE LA EMPRESA:
-• Empresa: ${empresa}
-• Ubicación: ${ciudadEstado}
-• Área lista: ${areaLista}
-• Tiempo de inicio del proyecto: ${tiempoInicio}
-
-Por favor, contactenme para agendar una cita y discutir los detalles de mi proyecto de laboratorio.
-
-Saludos cordiales,
-${nombre}`;
-
-      // Crear el enlace mailto
-      const mailtoLink = `mailto:contacto@santre.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      // Abrir el cliente de correo
-      window.location.href = mailtoLink;
-      
-      // Mostrar mensaje de confirmación
-      alert('Se abrirá tu cliente de correo para enviar la propuesta. Si no se abre automáticamente, por favor envía un correo a contacto@santre.org con la información del formulario.');
-      
-      // Limpiar el formulario
-      form.reset();
+    // Modal de email rápido
+    const emailModal = document.getElementById('email-modal');
+    const openEmailModal = document.getElementById('open-email-modal');
+    const closeEmailModal = document.getElementById('close-email-modal');
+    
+    openEmailModal.addEventListener('click', () => {
+      emailModal.classList.remove('hidden');
+    });
+    
+    closeEmailModal.addEventListener('click', () => {
+      emailModal.classList.add('hidden');
+    });
+    
+    // Cerrar modal al hacer clic fuera
+    emailModal.addEventListener('click', (e) => {
+      if (e.target === emailModal) {
+        emailModal.classList.add('hidden');
+      }
     });
   });
 </script>

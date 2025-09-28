@@ -48,9 +48,9 @@ import '../../../styles/global.css';
               <p>• 28 páginas</p>
             </div>
             <div class="flex space-x-2">
-              <a href="/recursos/centro-descargas/ver-catalogo/productos" class="flex-1 bg-blue-600 text-white px-3 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center">
-                Ver
-              </a>
+              <button id="pedir-catalogo-btn" class="flex-1 bg-blue-600 text-white px-3 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center">
+                Pedir Catálogo
+              </button>
             </div>
           </div>
 
@@ -101,180 +101,79 @@ import '../../../styles/global.css';
   <Footer />
 </Layout>
 
-<script src="https://www.google.com/recaptcha/enterprise.js?render=6Lfc9asrAAAAAKkRQK7NufDwkg_HvaC0H1j0L0b3"></script>
-
-<script is:inline>
-// @ts-nocheck
-// This script runs in the browser, TypeScript errors can be ignored
-// Formulario principal de catálogo completo
-document.getElementById("descarga-form").addEventListener("submit", async function (e) {
-  e.preventDefault();
-  document.getElementById("mensaje").textContent = "Validando...";
-  
-  try {
-    // Usar reCAPTCHA Enterprise v3 (invisible)
-    grecaptcha.enterprise.ready(async function () {
-      try {
-        const token = await grecaptcha.enterprise.execute('6Lfc9asrAAAAAKkRQK7NufDwkg_HvaC0H1j0L0b3', { action: 'submit' });
-        
-        // Crear FormData y agregar el token de reCAPTCHA
-        const formData = new FormData(e.target);
-        formData.append("_subject", "Solicitud de Catálogo Completo");
-        formData.append("_captcha", "true");
-        formData.append("g-recaptcha-response", token);
-        formData.append("catalogo", "catalogo-completo");
-        
-        document.getElementById("mensaje").textContent = "Enviando solicitud...";
-        
-        // Enviar el formulario a FormSubmit
-        const res = await fetch("https://formsubmit.co/ajax/josemsantisteban05@gmail.com", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-          },
-          body: formData,
-        });
-
-        if (res.ok) {
-          document.getElementById("mensaje").textContent = "¡Gracias! Hemos enviado el catálogo a tu correo.";
-          document.getElementById("mensaje").classList.add("text-green-600");
-          e.target.reset();
-        } else {
-          document.getElementById("mensaje").textContent = "Error al enviar el formulario. Inténtalo de nuevo.";
-          document.getElementById("mensaje").classList.add("text-red-600");
-        }
-      } catch (error) {
-        document.getElementById("mensaje").textContent = "Error en la verificación. Inténtalo de nuevo.";
-        document.getElementById("mensaje").classList.add("text-red-600");
-        console.error("Error de reCAPTCHA:", error);
-      }
-    });
-  } catch (error) {
-    document.getElementById("mensaje").textContent = "Error de conexión. Verifica tu internet e inténtalo de nuevo.";
-    document.getElementById("mensaje").classList.add("text-red-600");
-    console.error("Error general:", error);
-  }
-});
-
-// Modal para catálogos específicos
-let modal;
-let currentCatalog = "";
-
-// Crear modal dinámicamente
-function createModal() {
-  const modalHTML = `
-    <div id="catalog-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
-      <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
-        <div class="flex justify-between items-center mb-4">
-          <h3 class="text-xl font-bold text-gray-900">Solicitar Catálogo</h3>
-          <button id="close-modal" class="text-gray-500 hover:text-gray-700">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <form id="modal-form" class="space-y-4">
-          <input type="text" name="nombre" placeholder="Nombre*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
-          <input type="email" name="email" placeholder="Correo electrónico*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
-          <input type="tel" name="whatsapp" placeholder="WhatsApp*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
-          <input type="hidden" name="catalogo" id="catalog-type" value="" />
-          <input type="hidden" name="g-recaptcha-response" id="modal-recaptcha-response">
-          <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-            Enviar
-          </button>
-          <div id="modal-mensaje" class="text-center text-sm font-medium"></div>
-        </form>
-      </div>
+<!-- Modal para solicitar catálogo -->
+<div id="catalog-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-gray-900">Solicitar Catálogo de Productos</h3>
+      <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
     </div>
-  `;
+    <form action="https://formsubmit.co/contacto@santre.org" method="POST" class="space-y-4">
+      <input type="text" name="nombre" placeholder="Nombre*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <input type="email" name="email" placeholder="Correo electrónico*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <input type="tel" name="telefono" placeholder="Teléfono*" required class="w-full px-4 py-2 rounded-lg border text-gray-900" />
+      <input type="hidden" name="_subject" value="Solicitud de Catálogo de Productos">
+      <input type="hidden" name="_next" value="https://www.santreindustrial.com/gracias">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+        Solicitar Catálogo
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+// Script simple y robusto para el modal
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM cargado, configurando modal...');
   
-  document.body.insertAdjacentHTML('beforeend', modalHTML);
-  modal = document.getElementById("catalog-modal");
+  const modal = document.getElementById('catalog-modal');
+  const pedirCatalogoBtn = document.getElementById('pedir-catalogo-btn');
+  const closeModalBtn = document.getElementById('close-modal');
   
-  // Eventos del modal
-  document.getElementById("close-modal").addEventListener("click", () => {
-    modal.classList.add("hidden");
+  // Verificar que todos los elementos existen
+  if (!modal) {
+    console.error('Modal no encontrado');
+    return;
+  }
+  
+  if (!pedirCatalogoBtn) {
+    console.error('Botón pedir-catalogo-btn no encontrado');
+    return;
+  }
+  
+  if (!closeModalBtn) {
+    console.error('Botón close-modal no encontrado');
+    return;
+  }
+  
+  console.log('Todos los elementos encontrados, configurando eventos...');
+  
+  // Abrir modal
+  pedirCatalogoBtn.addEventListener('click', function() {
+    console.log('Abriendo modal...');
+    modal.classList.remove('hidden');
+  });
+  
+  // Cerrar modal con botón X
+  closeModalBtn.addEventListener('click', function() {
+    console.log('Cerrando modal...');
+    modal.classList.add('hidden');
   });
   
   // Cerrar modal al hacer clic fuera
-  modal.addEventListener("click", (e) => {
+  modal.addEventListener('click', function(e) {
     if (e.target === modal) {
-      modal.classList.add("hidden");
+      console.log('Cerrando modal (clic fuera)...');
+      modal.classList.add('hidden');
     }
   });
   
-  // Manejar envío del formulario modal
-  document.getElementById("modal-form").addEventListener("submit", async function (e) {
-    e.preventDefault();
-    document.getElementById("modal-mensaje").textContent = "Validando...";
-    document.getElementById("modal-mensaje").classList.remove("text-red-600");
-    document.getElementById("modal-mensaje").classList.add("text-blue-600");
-    
-    try {
-      // Usar reCAPTCHA Enterprise v3 (invisible)
-      grecaptcha.enterprise.ready(async function () {
-        try {
-          const token = await grecaptcha.enterprise.execute('6Lfc9asrAAAAAKkRQK7NufDwkg_HvaC0H1j0L0b3', { action: 'submit' });
-          
-          // Crear FormData y agregar el token de reCAPTCHA
-          const formData = new FormData(e.target);
-          formData.append("_subject", `Solicitud de Catálogo: ${currentCatalog}`);
-          formData.append("_captcha", "true");
-          formData.append("g-recaptcha-response", token);
-          
-          document.getElementById("modal-mensaje").textContent = "Enviando solicitud...";
-          
-          // Enviar el formulario a FormSubmit
-          const res = await fetch("https://formsubmit.co/ajax/josemsantisteban05@gmail.com", {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-            },
-            body: formData,
-          });
-          
-          if (res.ok) {
-            document.getElementById("modal-mensaje").textContent = "¡Gracias! Hemos enviado el catálogo a tu correo.";
-            document.getElementById("modal-mensaje").classList.add("text-green-600");
-            document.getElementById("modal-mensaje").classList.remove("text-blue-600");
-            e.target.reset();
-            
-            // Cerrar modal después de 3 segundos
-            setTimeout(() => {
-              modal.classList.add("hidden");
-            }, 3000);
-          } else {
-            document.getElementById("modal-mensaje").textContent = "Error al enviar el formulario. Inténtalo de nuevo.";
-            document.getElementById("modal-mensaje").classList.add("text-red-600");
-            document.getElementById("modal-mensaje").classList.remove("text-blue-600");
-          }
-        } catch (error) {
-          document.getElementById("modal-mensaje").textContent = "Error en la verificación. Inténtalo de nuevo.";
-          document.getElementById("modal-mensaje").classList.add("text-red-600");
-          document.getElementById("modal-mensaje").classList.remove("text-blue-600");
-          console.error("Error de reCAPTCHA:", error);
-        }
-      });
-    } catch (error) {
-      document.getElementById("modal-mensaje").textContent = "Error de conexión. Verifica tu internet.";
-      document.getElementById("modal-mensaje").classList.add("text-red-600");
-      document.getElementById("modal-mensaje").classList.remove("text-blue-600");
-      console.error("Error general:", error);
-    }
-  });
-}
-
-// Inicializar modal y eventos de botones
-document.addEventListener("DOMContentLoaded", () => {
-  createModal();
-  
-  // Agregar eventos a todos los botones de descarga de catálogos específicos
-  document.querySelectorAll(".catalog-download").forEach(button => {
-    button.addEventListener("click", () => {
-      currentCatalog = button.dataset.catalog;
-      document.getElementById("catalog-type").value = currentCatalog;
-      modal.classList.remove("hidden");
-    });
-  });
+  console.log('Modal configurado correctamente');
 });
 </script> 

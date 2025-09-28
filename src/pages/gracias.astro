@@ -12,17 +12,17 @@
   
   <!-- Google Tag Manager -->
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    (function(w: any,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id=GTM-5LTHFGCN'+dl;f.parentNode.insertBefore(j,f);
+    j=d.createElement(s) as HTMLScriptElement,dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id=GTM-5LTHFGCN'+dl;if(f && f.parentNode){f.parentNode.insertBefore(j,f);}else{d.head.appendChild(j);}
     })(window,document,'script','dataLayer','GTM-5LTHFGCN');
   </script>
   
   <!-- Google Tag Manager - Evento de Conversión -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ 
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({ 
       event: 'lead_submit', 
       form_name: 'contacto',
       page_location: window.location.href,

@@ -89,14 +89,15 @@ const breadcrumbItems = showBreadcrumbs && !isHomePage ? generateBreadcrumbs(cur
 		<link rel="dns-prefetch" href="//fonts.googleapis.com">
 		<link rel="dns-prefetch" href="//fonts.gstatic.com">
 		
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-594478150"></script>
-		<script>
-			(window as any).dataLayer = (window as any).dataLayer || [];
-			function gtag(...args: any[]){(window as any).dataLayer.push(args);}
-			gtag('js', new Date());
-			gtag('config', 'AW-594478150');
+		<!-- Google Tag Manager -->
+		<script is:inline>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id=GTM-5LTHFGCN'+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5LTHFGCN');
 		</script>
+		<!-- End Google Tag Manager -->
 		
 		<!-- Schema.org structured data -->
 		<script type="application/ld+json">
@@ -157,6 +158,13 @@ const breadcrumbItems = showBreadcrumbs && !isHomePage ? generateBreadcrumbs(cur
 		<title>{title}</title>
 	</head>
 	<body class={`font-sans ${isHomePage ? 'is-home' : ''}`}>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LTHFGCN"
+					height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
 		{/* Breadcrumbs */}
 		{breadcrumbItems.length > 0 && (
 			<nav class="bg-gray-50 border-b border-gray-200" aria-label="Breadcrumb">

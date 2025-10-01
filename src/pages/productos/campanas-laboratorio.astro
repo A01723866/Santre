@@ -244,21 +244,6 @@ import '../../styles/global.css';
         "description": "Brazo extractor de humos articulado y flexible para la captura de gases y polvo directamente en su origen en el laboratorio" 
       }
     ],
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "MXN",
-      "seller": {
-        "@type": "Organization",
-        "name": "Santre Industrial"
-      }
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "1500",
-      "bestRating": "5"
-    },
     "keywords": "campanas extracción laboratorio, campana química, flujo laminar, bioseguridad, ventilación laboratorio, seguridad laboratorio, campanas de humos, extractores laboratorio",
     "additionalProperty": [
       {
@@ -286,22 +271,16 @@ import '../../styles/global.css';
     const content = document.getElementById(sectionName + '-content');
     const icon = document.getElementById(sectionName + '-icon');
 
-    console.log('Toggle section:', sectionName);
-    console.log('Content element:', content);
-    console.log('Icon element:', icon);
 
     if (content && icon) {
       content.classList.toggle('hidden');
       icon.classList.toggle('rotate-180');
-      console.log('Section toggled successfully');
     } else {
-      console.log('Error: Content or icon not found');
     }
   };
 
   // Initialize all sections as OPEN by default
   function initializeSections() {
-    console.log('Initializing sections...');
     const sections = ['vitrinas', 'repisas', 'accesorios'];
     sections.forEach(section => {
       const content = document.getElementById(section + '-content');
@@ -311,9 +290,7 @@ import '../../styles/global.css';
         content.classList.remove('hidden');
         // Rotate icon to show it's open
         icon.classList.add('rotate-180');
-        console.log('Section initialized as OPEN:', section);
       } else {
-        console.log('Error initializing section:', section, 'content:', content, 'icon:', icon);
       }
     });
   }

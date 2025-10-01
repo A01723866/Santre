@@ -70,7 +70,7 @@ import '../../../styles/global.css';
               <a href="/recursos/centro-descargas/ver-catalogo/sistema-7-zonas" class="flex-1 bg-orange-600 text-white! px-3 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors text-center">
                 Ver
               </a>
-              <button data-catalog="campanas-extraccion" class="catalog-download flex-1 bg-orange-600 text-white px-3 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors">
+              <button data-catalog="campanas-laboratorio" class="catalog-download flex-1 bg-orange-600 text-white px-3 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors">
                 Descargar
               </button>
             </div>
@@ -130,7 +130,6 @@ import '../../../styles/global.css';
 <script>
 // Script simple y robusto para el modal
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM cargado, configurando modal...');
   
   const modal = document.getElementById('catalog-modal');
   const pedirCatalogoBtn = document.getElementById('pedir-catalogo-btn');
@@ -152,28 +151,23 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
   
-  console.log('Todos los elementos encontrados, configurando eventos...');
   
   // Abrir modal
   pedirCatalogoBtn.addEventListener('click', function() {
-    console.log('Abriendo modal...');
     modal.classList.remove('hidden');
   });
   
   // Cerrar modal con botón X
   closeModalBtn.addEventListener('click', function() {
-    console.log('Cerrando modal...');
     modal.classList.add('hidden');
   });
   
   // Cerrar modal al hacer clic fuera
   modal.addEventListener('click', function(e) {
     if (e.target === modal) {
-      console.log('Cerrando modal (clic fuera)...');
       modal.classList.add('hidden');
     }
   });
   
-  console.log('Modal configurado correctamente');
 });
 </script> 

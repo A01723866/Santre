@@ -164,66 +164,22 @@ import '../../styles/global.css';
   </main>
   <Footer />
 
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Vitrinas de Laboratorio y Repisas Puente",
-    "description": "Vitrinas de laboratorio y repisas puente especializadas para almacenamiento elevado, protección y organización con diseño modular",
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Santre Industrial",
-      "url": "https://www.santreindustrial.com"
-    },
-    "category": "Mobiliario de Laboratorio",
-    "hasVariant": [
-      {
-        "@type": "ProductVariant",
-        "name": "Repisa puente alta con vitrinas (mesa central)",
-        "description": "Sistema elevado con puertas de vidrio para mesa central"
-      },
-      {
-        "@type": "ProductVariant",
-        "name": "Repisa puente baja sin vitrinas (mesa central)",
-        "description": "Entrepaños abiertos de baja altura para mesa central"
-      },
-      {
-        "@type": "ProductVariant",
-        "name": "Repisa puente alta con vitrinas a muro",
-        "description": "Sistema elevado con puertas de vidrio montado a muro (tablaroca)"
-      }
-    ],
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock"
-    },
-    "keywords": "vitrinas laboratorio, repisas puente, almacenamiento elevado, vitrina exhibición, mobiliario laboratorio"
-  }
-  </script>
-
   <script is:inline>
     // Make function globally available
     window.toggleSection = function(sectionName) {
       const content = document.getElementById(sectionName + '-content');
       const icon = document.getElementById(sectionName + '-icon');
 
-      console.log('Toggle section:', sectionName);
-      console.log('Content element:', content);
-      console.log('Icon element:', icon);
 
       if (content && icon) {
         content.classList.toggle('hidden');
         icon.classList.toggle('rotate-180');
-        console.log('Section toggled successfully');
       } else {
-        console.log('Error: Content or icon not found');
       }
     };
 
     // Initialize all sections as OPEN by default
     function initializeSections() {
-      console.log('Initializing sections...');
       const sections = ['vitrinas', 'repisas', 'accesorios'];
       sections.forEach(section => {
         const content = document.getElementById(section + '-content');
@@ -233,9 +189,7 @@ import '../../styles/global.css';
           content.classList.remove('hidden');
           // Rotate icon to show it's open
           icon.classList.add('rotate-180');
-          console.log('Section initialized as OPEN:', section);
         } else {
-          console.log('Error initializing section:', section, 'content:', content, 'icon:', icon);
         }
       });
     }
@@ -321,21 +275,6 @@ import '../../styles/global.css';
         "description": "Repisa puente de laboratorio con columna alta y vitrinas doble acción"
       }
     ],
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "MXN",
-      "seller": {
-        "@type": "Organization",
-        "name": "Santre Industrial"
-      }
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "1500",
-      "bestRating": "5"
-    },
     "keywords": "vitrinas laboratorio, repisas puente, almacenamiento elevado, vitrina exhibición, mobiliario laboratorio, vidrio templado, entrepaños ajustables",
     "additionalProperty": [
       {

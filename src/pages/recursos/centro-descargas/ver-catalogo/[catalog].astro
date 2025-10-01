@@ -206,7 +206,6 @@ export function getStaticPaths() {
   // Obtener el tipo de catálogo de la URL
   const urlPath = window.location.pathname;
   const catalogType = urlPath.split('/').pop() || 'productos';
-  console.log("Tipo de catálogo:", catalogType);
   
   // Configurar el modal
   const modal = document.getElementById("download-modal");
@@ -228,13 +227,11 @@ export function getStaticPaths() {
     // Esto es crucial para que FormSubmit funcione correctamente
     // Añadimos el parámetro success=true para mostrar un mensaje de éxito
     catalogNextUrlInput.value = window.location.origin + downloadUrl + '?success=true';
-    console.log("URL de descarga configurada:", catalogNextUrlInput.value);
   }
   
   // Abrir modal desde el botón o al hacer clic en el overlay del PDF
   openModalButtons.forEach(button => {
     button.addEventListener("click", () => {
-      console.log("abriendo modal");
       modal.classList.remove("hidden");
     });
   });

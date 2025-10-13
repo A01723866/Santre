@@ -159,6 +159,17 @@ const breadcrumbItems = showBreadcrumbs && !isHomePage ? generateBreadcrumbs(cur
 		)}
 		
 		<title>{title}</title>
+
+		<!-- Google Analytics (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-594478150"></script>
+		<script is:inline>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'AW-594478150');
+		</script>
+		
 	</head>
 	<body class={`font-sans ${isHomePage ? 'is-home' : ''}`}>
 		<!-- Google Tag Manager (noscript) -->
@@ -167,6 +178,8 @@ const breadcrumbItems = showBreadcrumbs && !isHomePage ? generateBreadcrumbs(cur
 					height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
+
+	
 		
 		{/* Breadcrumbs */}
 		{breadcrumbItems.length > 0 && (
